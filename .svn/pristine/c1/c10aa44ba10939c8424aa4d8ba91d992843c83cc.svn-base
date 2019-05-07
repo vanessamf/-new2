@@ -1,0 +1,106 @@
+<section class="vbox bg-light menu-wrapper menu-container">
+	<div class="title flex flex-between">
+		<span>账号管理</span>
+	</div>
+	<div class="tool-bar clearfloat">
+		<ul class="navbar-left">
+			<li>
+				<a class="sm-round-btn sm-btn"data-url="pages/subpages/addAccount.html" data-title="报表-菜品销售报表"href="javascript:void(0);">+新增</a>
+			</li>
+			<li>
+				<a class="sm-round-btn sm-btn" href="">导出Excel</a>
+			</li>
+		</ul>
+		<ul>
+			<li class="input-group navbar-right">
+				<input type="text" class="ipt-search" placeholder="账号/姓名/微信/渠道/邮箱">
+				<span class="btn sm-round-btn input-sm">查询</span>
+			</li>
+		</ul>
+	</div>
+	<div class="desks-content table-content">
+		<div class="fixed-table-wrapper">
+			<div class="table fixed-table-header">
+				<div class="table-thead">
+					<div class="desks-title table-tr">
+						<span class="table-th">编辑</span>
+						<span class="table-th">
+													账号编号
+													<i class="iconfont icon-paixu"></i>
+												</span>
+						<span class="table-th">姓名</span>
+						<span class="table-th">联系电话</span>
+						<span class="table-th">邮箱</span>
+						<span class="table-th">岗位</span>
+						<span class="table-th">状态</span>
+					</div>
+				</div>
+			</div>
+			<div class="table-wrapper">
+				<div class="table actual-table-header">
+					<div class="table-thead">
+						<div class="desks-title table-tr">
+							<span class="table-th">编辑</span>
+							<span class="table-th">
+													账号编号
+													<i class="iconfont icon-paixu"></i>
+												</span>
+							<span class="table-th">姓名</span>
+							<span class="table-th">联系电话</span>
+							<span class="table-th">邮箱</span>
+							<span class="table-th">岗位</span>
+							<span class="table-th">状态</span>
+						</div>
+					</div>
+					<ul class="desks-list table-tbody">
+						<li class="table-tr desks-item">
+							<span class="table-td">
+													<a href="">查看</a>
+													<a href="">编辑</a>
+													<a href="">启用</a>
+													<a href="">禁用</a>
+												</span>
+							<span class="table-td">08080</span>
+							<span class="table-td">秦圈圈</span>
+							<span class="table-td">1302998099288</span>
+							<span class="table-td">21124q@qq.com</span>
+							<span class="table-td">自定义品牌</span>
+							<span class="table-td">已启用</span>
+						</li>
+						<li class="table-tr desks-item">
+							<span class="table-td">
+													<a href="">查看</a>
+													<a href="">编辑</a>
+													<a href="">启用</a>
+													<a href="">禁用</a>
+												</span>
+							<span class="table-td">071</span>
+							<span class="table-td">秘境西餐厅</span>
+							<span class="table-td">1302998099288</span>
+							<span class="table-td">秘境西餐厅-公司</span>
+							<span class="table-td">自定义品牌</span>
+							<span class="table-td">张三</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="desks-bottom">
+		<div class="row">
+			<ul id="ft_pagination_menu" class="pagination">
+			</ul>
+		</div>
+		</footer>
+</section>
+
+<script type="text/javascript">
+		subquanxuan("allChecked", "desks-item");
+		$(document).on('click', '.tool-bar li a:first-child', function(e) {
+			$("#menu_content").load($(this).attr("data-url"),function(){
+				tabSlide();
+				tabPaneHeight();
+			});
+		})
+		
+	</script>

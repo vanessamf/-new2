@@ -1,0 +1,245 @@
+<section class="vbox">
+	<nav class="m-nav-primary">
+		<ul class="left-menu">
+			<li class="left-item">
+				<a href="javascript:void(0);">
+					<i class="iconfont icon-list"></i> 报表
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/report.html" data-name="report">
+							<span>首页</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/rptMenu.html" title="菜品销售报表" data-name="rptMenu">
+							<span>菜品销售报表</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/rptSys.html"data-name="rptSys">
+							<span>系统销售报表</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="left-item">
+				<a href="javascript:void(0);">
+					<i class="iconfont icon-zhuotaiguanli"></i> 桌台管理
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/deskAreas.html" title="厅面区域" data-name="deskAreas">
+							<span>厅面区域</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/deskManagement.html" class="" data-name="deskManagement">
+							<span>桌台维护</span>
+						</a>
+					</li>
+					<li>
+						<a href="" class=""style="pointer-events: none;color: #000; " >
+							<span>消费类型</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="left-item">
+				<a href="javascript:void(0);">
+					<i class="iconfont icon-caipin"></i> 菜品管理
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/menu.html" id="" title="" class="" data-name="menu">
+							<span>菜品类别</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/menuManagement.html"data-name="menuManagement,addMenuManagement">
+							<span>菜品维护</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/methodsCategory.html" data-name="methodsCategory">
+							<span>做法类别</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/methodsManagement.html" data-name="methodsManagement">
+							<span>做法管理</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/printManagement.html" class="" data-name="printManagement,addPrinter,addLabelPrinter">
+							<span>打印设置</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/financialCategory.html" data-name="financialCategory">
+							<span>财务类别</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="left-item">
+				<a href="javasript:void(0)">
+					<i class="iconfont icon-caiwuguanli2"></i> 财务管理
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/financialManagement.html" title="付款方式" data-name="financialManagement">
+							<span>付款方式</span>
+						</a>
+					</li>
+					<li>
+						<a href=""style="pointer-events: none;color: #000; ">
+							<span>折扣原因</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/discountManagement.html" data-name="discountManagement">
+							<span>折扣模板</span>
+						</a>
+					</li>
+					<li>
+						<a href=""style="pointer-events: none;color: #000; ">
+							<span>服务费用</span>
+						</a>
+					</li>
+					<li>
+						<a href=""style="pointer-events: none;color: #000; ">
+							<span>税</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/refund.html"data-name="refund">
+							<span>反结算原因</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/returnDishes.html" data-name="returnDishes">
+							<span>退菜原因</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/giveDishes.html" data-name="giveDishes">
+							<span>赠菜原因</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/remarks.html"data-name="remarks">
+							<span>备注</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li class="left-item">
+				<a href="javascript:void(0);">
+					<i class="iconfont icon-mendian1"></i> 人员门店管理
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/storeManagement.html" title="门店管理" data-name="storeManagement,addStore">
+							<span>门店管理</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/roleManagement.html" data-name="roleManagement,addRole">
+							<span>人员角色</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/staffManagement.html" data-name="staffManagement,addStaff">
+							<span>人员维护</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="left-item">
+				<a href="javascript:void(0);">
+					<i class="iconfont icon-jiageyusuan"></i> 价格计划
+					<i class="iconfont icon-you-copy sup-arrow"></i>
+				</a>
+				<ul class="subList-nav lt" style="display: none;">
+					<li>
+						<a href="/商户自助平台new2/timeManagement.html" title="时间段" data-name="timeManagement,addTime">
+							<span>时间段</span>
+						</a>
+					</li>
+					<li>
+						<a href="/商户自助平台new2/saleTypeManagement.html" title="销售类型" data-name="saleTypeManagement">
+							<span>销售类型</span>
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="left-item">
+				<a href="">
+					<i class="iconfont icon-xitong"></i> 系统配置
+				</a>
+			</li>
+			<li class="left-item">
+				<a href="/商户自助平台new2/accountManagement.html" data-name="accountManagement,addAccount">
+					<i class="iconfont icon-renyuan1"></i> 账号管理
+				</a>
+			</li>
+		</ul>
+	</nav>
+</section>
+
+<script>
+	//侧边菜单
+$(document).on('click', '.left-menu>li>a', function(e) {
+	var $this = $(e.target);
+	//点击父菜单的时候的效果
+	if($(this).parent().find("ul").is(':visible')) {
+		$(this).find(".sup-arrow").addClass("icon-you-copy");
+		$(this).find(".sup-arrow").removeClass("icon-xia1");
+		$(this).next().slideUp(200);
+	} else {
+		$(this).parent().siblings("li").find("ul").slideUp(200);
+		$(this).parent().siblings("li").find(".sup-arrow").addClass("icon-you-copy");
+		$(this).parent().siblings("li").find(".sup-arrow").removeClass("icon-xia1");
+		$(this).find(".sup-arrow").removeClass("icon-you-copy");
+		$(this).find(".sup-arrow").addClass("icon-xia1");
+		$(this).next().slideDown(200);
+	}
+});
+	$(document).ready(function() {
+		//查询地址
+		var query = window.location.href.substring(1);
+		//分割地址
+		var pairs = query.split("/");
+		//查询最后一项
+		var args = pairs[pairs.length - 1];
+		var dataTxt = args.split(".")[0];
+		
+//		var curA = $("[data-name=" + dataTxt + "]");
+		var curA;
+		var curAList=$(".left-menu li a");
+		for(var i=0;i<curAList.length;i++){
+			var curAArray=curAList.eq(i).attr("data-name")?curAList.eq(i).attr("data-name").split(","):"";
+			if($.inArray(dataTxt, curAArray)>=0){
+				curA=curAList.eq(i);
+			}
+		}
+		$(".subList-nav").hide();
+		$(".left-menu>li").find(".sup-arrow").addClass("icon-you-copy");
+		$(".left-menu>li").find(".sup-arrow").removeClass("icon-xia1");
+		$(".left-menu>li").removeClass("active");
+		$(".subList-nav li a").removeClass("active");
+		curA.addClass("active");
+		curA.parents(".subList-nav").show();
+		curA.parents(".left-item").addClass("active");
+		curA.parents(".left-item").find(".sup-arrow").removeClass("icon-you-copy");
+		curA.parents(".left-item").find(".sup-arrow").addClass("icon-xia1");
+//	 	$("#nav").css("visibility","visible");
+	})
+</script>

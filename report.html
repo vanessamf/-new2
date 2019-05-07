@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+   
+    <link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	 <link rel="stylesheet" href="css/app.auto.css" type="text/css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header id="menu_header" class="bg-m-blue navbar">
+    </header>
+    <section>
+        <section class="hbox management-wrapper stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+            </aside>
+            <section id="rpt_menu_content" class="management-right">
+                <section class="vbox rpt-wrapper">
+                    <section class="pad-md">
+                        <div class="bg-light ap-h100">
+                            <div class="tab-panel report-tab-nav">
+                                <ul id="tab_nav" class="ul-list">
+                                    <!--<li class="tab-item current" data-tid="1">菜品销售报表<i class="tab-del">×</i></li>-->
+                                    <li class="tab-item current" data-tid="0">首页</li></ul>
+                            </div>
+                            <div class="pbox" id="tab_content">
+                                <section class="vbox rpt-box cur-show" data-itemid="0"><div class="rpt-index-bg"></div></section>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<!--模板-->
+<template id="tpl_rpt_menu">
+    <section class="vbox rpt-box">
+        <section class="y-scrollable  w-f">
+            <header class="caption row">
+                <div class="cp-title navbar-left">菜品销售报表</div>
+                <div class="back-link navbar-right"><a class="bg-light btn sm-round-btn input-sm" data-target="#op_export_report" data-toggle="modal">导出</a></div>
+            </header>
+            <section class="set-search-options">
+                <div class="row">
+                    <div class="navbar-left">
+                        <label>日期</label>
+                        <div class="calendar-panel row">
+                            <div id="dtp_st_menu" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" size="16" type="text" value="" placeholder="起始时间" readonly="">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                            <span class="bwt-line"></span>
+                            <div id="dtp_dt_menu" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+                                <input class="form-control" size="16" type="text" value="" placeholder="结束时间" readonly="">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="navbar-right ul-list">
+                        <li class="input-group">
+                            <label class="input-sm">门店</label>
+                            <div id="select_category" class="select-category-control">
+                                <div data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                    <ul class="select-choices" data-maximumsize="5" data-ids="">
+                                        <!--如果当前没有选中项，则显示提示语-->
+                                        <li class="tips tip-placeholder">请选择查询的门店</li>
+                                        <!--<li class="selected-item"><span class="selected-name">披萨意面</span>
+                                            <a class="remove-item i-close">×</a>
+                                        </li>-->
+                                    </ul>
+                                    <span class="sel-arrow"><b></b></span>
+                                </div>
+                                <div class="select-content dropdown-menu">
+                                    <div class="dropdown-content">
+                                        <ul class="category-row">
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_001">苏州直营店2</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_002">苏州直营WE店</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_01">苏州直营WC店</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_02">苏州工业园区店</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_03">苏州加盟店</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_04">苏州XO店</span>
+                                                </div>
+                                            </li>
+                                            <li class="sub-content">
+                                                <div class="sel-item">
+                                                    <label class="chk-lb"></label>
+                                                    <span class="item-lab" data-id="store_05">苏州XXOO</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><li class="btn-ico ico-search" data-target="#op_search_report" data-toggle="modal"></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="navbar-left">
+                        <div class="input-group">
+                            <label>销售类型 </label>
+                            <div class="btn-group m-r select-base">
+                                <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                    <span class="dropdown-label">请选择</span>
+                                    <span class="sel-arrow"><b></b></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-select">
+                                    <li class="active"><a href="#"><input type="radio" name="d-s-r"> 堂食</a></li>
+                                    <li><a href="#"><input type="radio" name="d-s-r"> 外卖</a></li>
+                                    <li><a href="#"><input type="radio" name="d-s-r"> 打包</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-right pull-rt-md">
+                        <div class="input-group"><label>员工</label>
+                            <select id="sea_staff_menu" class="select-base mini-wd input-sm populate placeholder"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ta-justify"> <div class="input-sm btn-more"><i class="fa fa-angle-double-down"></i><span>显示更多</span></div></div>
+                <div class="row ta-justify mg-sm-top"><span class="btn sm-round-btn input-sm">查询</span></div>
+            </section>
+            <div class="table-responsive tb-max-h">
+                <table class="rpt-mana-tb table b-t b-light">
+                    <thead>
+                    <tr>
+                        <th>菜品编号</th>
+                        <th>菜品名称</th>
+                        <th>销售数量</th>
+                        <th>数量占比</th>
+                        <th>退菜数量</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>A001</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A002</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A003</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A004</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>A005</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer class="panel-footer">
+            <div class="row">
+                <ul id="ft_pagination_menu" class="pagination"></ul>
+            </div>
+        </footer>
+    </section>
+    <script>
+        (function($){
+
+            // 点击复制菜谱中需要配置的 select选择框
+            $('#sea_staff_menu').select2({});
+
+//        分页设置
+            var options = {
+                alignment:"right",   //靠右
+                bootstrapMajorVersion:3, //对应的bootstrap版本
+                currentPage: 2,  //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+                numberOfPages: 5, //每页页数
+                totalPages:10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+                shouldShowPage:true //是否显示该按钮
+
+            };
+            $('#ft_pagination_menu').bootstrapPaginator(options);
+        })(jQuery);
+    </script>
+    <script>
+        var $startdate_menu = $('#dtp_st_menu')
+                ,$enddate_menu = $('#dtp_dt_menu')
+
+        var d_today_menu = new Date()
+                ,d_yesterday_menu = new Date() ;
+
+        d_yesterday_menu .setTime(d_yesterday_menu .getTime()- 24*60*60*1000);
+        $startdate_menu.find('input').val( d_yesterday_menu.Format('yyyy-MM-dd'));
+        $enddate_menu.find('input').val(d_today_menu.Format('yyyy-MM-dd'));
+
+        $startdate_menu.datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            autoclose: 1,
+            todayBtn:  1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        }).on('changeDate',function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            var starttime_v = ev.date;
+            if(ev.date){
+                $enddate_menu.datetimepicker('setStartDate',new Date(starttime_v.valueOf()));
+            }else{
+                $enddate_menu.datetimepicker('setStartDate',null)
+            }
+        });
+
+        $enddate_menu.datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            autoclose: 1,
+            todayBtn:  1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            pickerPosition: "bottom-left",
+            forceParse: 0
+        }).on('changeDate',function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            var endtime_v = ev.date;
+            if(ev.date){
+                $startdate_menu.datetimepicker('setEndDate',new Date(endtime_v.valueOf()))
+            }else{
+                $startdate_menu.datetimepicker('setEndDate',new Date())
+            }
+        });
+    </script>
+</template>
+<template id="tpl_rpt_staff">
+    <section class="y-scrollable  w-f">
+        <header class="caption row">
+            <div class="cp-title navbar-left">员工报表</div>
+            <div class="back-link navbar-right"><a class="bg-light btn sm-round-btn input-sm" data-target="#op_export_report" data-toggle="modal">导出</a></div>
+        </header>
+        <section class="set-search-options">
+            <div class="row">
+                <div class="navbar-left">
+                    <label>日期</label>
+                    <div class="calendar-panel row">
+                        <div id="dtp_st_staff" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" placeholder="起始时间" readonly="">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                        <span class="bwt-line"></span>
+                        <div id="dtp_dt_staff" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+                            <input class="form-control" size="16" type="text" value="" placeholder="结束时间" readonly="">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-right ul-list">
+                    <li class="input-group"><label>门店</label>
+                        <select id="sea_brand_s" class="select-base mini-wd input-sm populate placeholder"></select>
+                    </li><li class="btn-ico ico-search" data-target="#op_search_report" data-toggle="modal"></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="navbar-left">
+                    <div class="input-group">
+                        <label>销售类型 </label>
+                        <div class="btn-group m-r select-base">
+                            <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                <span class="dropdown-label">请选择</span>
+                                <span class="sel-arrow"><b></b></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-select">
+                                <li class="active"><a href="#"><input type="radio" name="d-s-r"> 堂食</a></li>
+                                <li><a href="#"><input type="radio" name="d-s-r"> 外卖</a></li>
+                                <li><a href="#"><input type="radio" name="d-s-r"> 打包</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-right pull-rt-md">
+                    <div class="input-group"><label>员工</label>
+                        <select id="sea_staff_s" class="select-base mini-wd input-sm populate placeholder"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row ta-justify"> <div class="input-sm btn-more"><i class="fa fa-angle-double-down"></i><span>显示更多</span></div></div>
+            <div class="row ta-justify mg-sm-top"><span class="btn sm-round-btn input-sm">查询</span></div>
+        </section>
+        <div class="table-responsive tb-max-h">
+            <table class="rpt-mana-tb table b-t b-light">
+                <thead>
+                <tr>
+                    <th>菜品编号</th>
+                    <th>菜品名称</th>
+                    <th>销售数量</th>
+                    <th>数量占比</th>
+                    <th>退菜数量</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>A001</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="panel-footer">
+        <div class="row">
+            <ul id="ft_pagination_staff" class="pagination"></ul>
+        </div>
+    </footer>
+    <script>
+        (function($){
+            //        Select2 选择框配置
+            $('#sea_brand_s').select2({
+                placeholder: "全部"
+            });
+            // 点击复制菜谱中需要配置的 select选择框
+            $('#sea_staff_s').select2({});
+
+//        分页设置
+            var options = {
+                alignment:"right",   //靠右
+                bootstrapMajorVersion:3, //对应的bootstrap版本
+                currentPage: 2,  //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+                numberOfPages: 5, //每页页数
+                totalPages:10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+                shouldShowPage:true //是否显示该按钮
+
+            };
+            $('#ft_pagination_staff').bootstrapPaginator(options);
+
+        })(jQuery);
+    </script>
+    <script>
+        var $startdate_staff = $('#dtp_st_staff')
+                ,$enddate_staff = $('#dtp_dt_staff')
+
+
+        var d_today_staff = new Date()
+                ,d_yesterday_staff = new Date() ;
+
+        d_yesterday_staff .setTime(d_yesterday_staff.getTime()- 24*60*60*1000);
+        $startdate_staff.find('input').val( d_yesterday_staff.Format('yyyy-MM-dd'));
+        $enddate_staff.find('input').val(d_today_staff.Format('yyyy-MM-dd'));
+
+        $startdate_staff.datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            autoclose: 1,
+            todayBtn:  1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        }).on('changeDate',function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            var starttime_v = ev.date;
+            if(ev.date){
+                $enddate_staff.datetimepicker('setStartDate',new Date(starttime_v.valueOf()));
+            }else{
+                $enddate_staff.datetimepicker('setStartDate',null)
+            }
+        });
+
+        $enddate_staff.datetimepicker({
+            language:  'zh-CN',
+            weekStart: 1,
+            autoclose: 1,
+            todayBtn:  1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        }).on('changeDate',function(ev){
+            ev.preventDefault();
+            ev.stopPropagation();
+            var endtime_v = ev.date;
+            if(ev.date){
+                $startdate_staff.datetimepicker('setEndDate',new Date(endtime_v.valueOf()))
+            }else{
+                $startdate_staff.datetimepicker('setEndDate',new Date())
+            }
+        });
+    </script>
+</template>
+<!-- 弹出层-->
+
+<!-- 导出报表-->
+<div class="modal in" id="op_export_report" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content wd-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">导出报表</h4>
+            </div>
+            <div class="modal-body">
+                <form class="rpt-export-form" action="" role="form">
+                    <div class="form-group">
+                        <div class="row">
+                            <span class="mark-ol">1</span><span class="txt-step">请选择导出类型</span>
+                        </div>
+                        <div class="row">
+                            <ul class="ul-list exp-list">
+                                <li class="choice-item"><input name="sel-exp" id="exp_pdf" type="radio" class="ipt-choice ipt-rad input-sm" checked><label class="choice-lab rad-lb" for="exp_pdf"></label><span>PDF</span></li>
+                                <li class="choice-item"><input name="sel-exp" id="exp_excel" type="radio" class="ipt-choice ipt-rad input-sm" ><label class="choice-lab rad-lb" for="exp_excel"></label><span>Excel</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group dwload-group">
+                        <div class="row"><span class="mark-ol">2</span><span class="txt-step">请选择文件存放路径</span></div>
+                        <div class="row pull-left">
+                            <div class="dwload-tpl input-sm"><span class="dwload-file-name"></span></div>
+                            <div><input type="file" id="file-export" class="file-style"><label for="file-export" class="btn-choice-file">选择文件夹</label></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">导出</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 筛选查询-->
+<div class="modal in" id="op_search_report" aria-hidden="false" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content wd-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">门店查询</h4>
+            </div>
+            <div class="modal-body">
+                <form class="rpt-search-form" action="" role="form">
+                    <div class="row modal-search-bd">
+                        <section class="modal-bd-lt pt-box">
+                            <dl class="cg-store-list">
+                                <dd class="row">
+                                    <div class="chk-store-cn wd-xs">
+                                        <input name="store-chk-cn" type="checkbox" data-role="batch-select" id="rpt_store_all" class="ipt-choice ipt-chk input-sm"/>
+                                        <label class="choice-lab" for="rpt_store_all"></label>
+                                    </div>
+                                    <span>全部门店（4）</span>
+                                </dd>
+                                <dt class="modal-tt">城市</dt>
+                                <dd class="row">
+                                    <div class="chk-store-cn wd-xs">
+                                        <input name="store-chk-cn" type="checkbox" data-role="batch-item" id="rpt_store_city" class="ipt-choice ipt-chk input-sm" checked/>
+                                        <label class="choice-lab" for="rpt_store_city"></label>
+                                    </div>
+                                    <span>苏州（3）</span>
+                                </dd>
+                                <dt class="modal-tt">门店类型</dt>
+                                <dd class="row">
+                                    <div class="chk-store-cn wd-xs">
+                                        <input name="store-chk-cn" type="checkbox" data-role="batch-item" id="rpt_store_type" class="ipt-choice ipt-chk input-sm"/>
+                                        <label class="choice-lab" for="rpt_store_type"></label>
+                                    </div>
+                                    <span>加盟（1）</span>
+                                </dd>
+                            </dl>
+                        </section>
+                        <section class="modal-bd-rt pt-box">
+                            <div class="row">
+                                <input type="text" placeholder="请输入门店名称..." class="input-sm form-ipt">
+                            </div>
+                            <section class="store-dt-ctn">
+                                <ul>
+                                    <li class="row">
+                                        <div class="chk-store-cn">
+                                            <input name="store-chk-cn" type="checkbox" data-role="batch-item" id="rpt_city_0" class="ipt-choice ipt-chk input-sm" checked/>
+                                            <label class="choice-lab" for="rpt_city_0"></label>
+                                            <span class="input-sm">苏州直营店</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="chk-store-cn">
+                                            <input name="store-chk-cn" type="checkbox" data-role="batch-item" id="rpt_city_1" class="ipt-choice ipt-chk input-sm" />
+                                            <label class="choice-lab" for="rpt_city_1"></label>
+                                            <span class="input-sm">苏州工业园区店</span>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        <div class="chk-store-cn">
+                                            <input name="store-chk-cn" type="checkbox" data-role="batch-item" id="rpt_city_2" class="ipt-choice ipt-chk input-sm" />
+                                            <label class="choice-lab" for="rpt_city_2"></label>
+                                            <span class="input-sm">苏州旗舰店</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </section>
+                        </section>
+                    </div>
+                   <!-- <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                        </ul>
+                    </div>-->
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<!-- 日期选择器-->
+<script src="javascript/date.format.js" charset="UTF-8"></script>
+<script src="javascript/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script src="javascript/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<!-- select2 -->
+<script src="javascript/select2/select2.js" cache="false"></script>
+<script src="javascript/select2/select2_zh-CN.js"></script>
+<!--Paginator-->
+<script src="javascript/bootstrap-paginator.min.js"></script>
+<script src="javascript/element.tab.cc.js" charset="UTF-8"></script>
+
+</html>

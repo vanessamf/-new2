@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>人员门店管理-新增员工账号</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+		<link rel="stylesheet" href="../css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增员工账号</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-12 no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+										<li class="tab-nav col-sm-12 no-padding">
+											<a href="#tab3" data-toggle="tab" aria-expanded="false">角色权限</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<div class="tab-form">
+												<h4 class="ta-c" id="myModalLabel">员工信息</h4>
+												<form id="f_store_info" class="form-horizontal form-box clearfloat" role="form">
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工姓名：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box"data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工编号：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true"  value="">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工密码：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box"data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">手机号：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">邮箱：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div id="tab3" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal tab-form sm-form clearfloat" role="form">
+												<div class="role-row role-all flex flex-vc clearfloat">
+													<div class="all-item">
+														<div class="item">
+															<div class="checkbox more-check">
+																<label>
+																<span class="col-sm-24 no-padding">选择全部功能</span>
+																<input class="allChecked" type="checkbox" value=""onclick="quanxuan(this,'role-item input[type=checkbox]')">
+															</label>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row-wrapper">
+													<div class="role-row flex flex-vc clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">桌台操作</span>
+    																	<input class="zhoutai-sup-item qx" type="checkbox" value=""onclick="quanxuan(this,'zhuotai')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content zhuotai-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6  col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">封账后加单</span>
+    																	<input class="zhuotai qx" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">封账后退菜</span>
+    																	<input class="zhuotai" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6  col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">分合单</span>
+    																	<input class="zhuotai" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">换桌</span>
+    																	<input class="zhuotai" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">分合桌</span>
+    																	<input class="zhuotai" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">菜品操作</span>
+    																	<input class="caipin-sup-item qx" type="checkbox" value=""onclick="quanxuan(this,'caipin')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content caipin-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">整桌操作</span>
+    																	<input class="caipin" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">点菜</span>
+    																	<input class="caipin" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">菜品沽清</span>
+    																	<input class="caipin" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">账单结算</span>
+    																	<input class="zhangdan-sup-item" type="checkbox" value=""onclick="quanxuan(this,'zhangdan')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content zhangdan-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">付款方式使用</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">付款方式撤销授权</span>
+  																	<input class="zhangdan" type="checkbox" value="">
+																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">付款方式操作授权</span>
+  																	<input class="zhangdan" type="checkbox" value="">
+																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">单品打折</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">反结算</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">发票</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">定额折扣</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">打开钱箱</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">比例折扣</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">结算</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">结账</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">账单查询</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">赠送</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">退菜</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">重打账单</span>
+    																	<input class="zhangdan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">班次操作</span>
+    																	<input class="banci-sup-item" type="checkbox" value=""onclick="quanxuan(this,'banci')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content banci-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">日结</span>
+    																	<input class="banci" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">签入签出</span>
+    																	<input class="banci" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">存现金</span>
+    																	<input class="banci" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">取现金</span>
+    																	<input class="banci" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">单据打印</span>
+    																	<input class="danju-sup-item" type="checkbox" value=""onclick="quanxuan(this,'danju')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content danju-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">客用单</span>
+    																	<input class="danju" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">对账单</span>
+    																	<input class="danju" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">会员操作</span>
+    																	<input class="huiyuan-sup-item" type="checkbox" value=""onclick="quanxuan(this,'huiyuan')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content huiyuan-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">会员</span>
+    																	<input class="huiyuan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">开卡</span>
+    																	<input class="huiyuan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">会员充值</span>
+    																	<input class="huiyuan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">会员卡信息</span>
+    																	<input class="huiyuan" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">系统设置</span>
+    																	<input class="xitong-sup-item" type="checkbox" value=""onclick="quanxuan(this,'xitong')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content xitong-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-3 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">修改密码</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4 ">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">功能设置</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">厨房监控设置</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">商户信息</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">外屏设置</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">小票打印设置</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">数据同步</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">消息中心</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">账户管理</span>
+    																	<input class="xitong" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="role-row flex flex-vc  clearfloat">
+														<div class="sup-item col-sm-6 col-md-6 col-lg-4 no-padding">
+															<div class="role-item">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">报表</span>
+    																	<input class="baobiao-sup-item" type="checkbox" value=""onclick="quanxuan(this,'baobiao')">
+  																</label>
+																</div>
+															</div>
+														</div>
+														<div class="content baobiao-sub-item col-sm-18 col-md-18 col-lg-20 no-padding">
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">菜品销售报表</span>
+    																	<input class="baobiao" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">系统销售报表</span>
+    																	<input class="baobiao" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+															<div class="role-item  col-sm-8 col-md-6 col-lg-4">
+																<div class="checkbox more-check">
+																	<label>
+																	<span class="col-sm-24 no-padding">本机离线报表</span>
+    																	<input class="baobiao" type="checkbox" value="">
+  																</label>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+<script src="../javascript/iValidate.js"></script>	
+<!--Paginator-->
+<script src="../javascript/bootstrap-paginator.min.js"></script>
+<script>
+		(function($) {
+			function subqx(supItem, subItem) {
+				$("." + subItem + " input[type=checkbox]").click(function() {
+					subquanxuan1(supItem, subItem);
+					subquanxuan1("allChecked", "sup-item");
+				});
+			}
+
+			subqx("allChecked", "sup-item");
+			//subqx("allChecked", "role-item");
+			subqx("zhoutai-sup-item", "zhuotai-sub-item");
+			subqx("caipin-sup-item", "caipin-sub-item");
+			subqx("zhangdan-sup-item", "zhangdan-sub-item");
+			subqx("banci-sup-item", "banci-sub-item");
+			subqx("danju-sup-item", "danju-sub-item");
+			subqx("huiyuan-sup-item", "huiyuan-sub-item");
+			subqx("xitong-sup-item", "xitong-sub-item");
+			subqx("baobiao-sup-item", "baobiao-sub-item");
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>
+
+</html>

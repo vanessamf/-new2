@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/app.auto.css" type="text/css">
+    <link rel="stylesheet" href="css/components.css" type="text/css">
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <div class="sel-service dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">切换至POS服务<b class="m-l-sm caret"></b> </a>
+            <ul class="dropdown-menu caret animated fadeIn">
+                <li> <a href="#">XXX</a> </li>
+                <li> <a href="#">ABCD</a> </li>
+            </ul>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">
+                    <i class="nav-ico ico-package m-r-sm"></i>下载 X-lite
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a href="#">
+                    <i class="nav-ico ico-msg"></i><span class="badge badge-sm up bg-danger m-l-n-sm count" style="display: inline-block;">3</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">13608734678<b class="m-l-sm icon-wrap"></b> </a>
+                <ul class="dropdown-menu caret animated fadeInRight">
+                    <li> <a href="my.account.html">我的账号</a> </li>
+                    <li> <a href="profile.html">用户手册</a> </li>
+                    <li> <a href="about.html">关于</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="store.management.html"><i class="ico ico-store"></i>门店配置</a></li>
+                            <li class="nav-item"><a href="staff.management.html"><i class="ico ico-user"></i>员工配置</a></li>
+                            <li class="nav-item"><a href="menu.management.html"><i class="ico ico-menu"></i>菜品配置</a></li>
+                            <li class="nav-item">
+                                <a href="#">
+                                    <i class="ico ico-report"></i>报表
+                                    <span class="pull-right">
+                                        <i class="fa fa-angle-down text"></i>
+                                        <i class="fa fa-angle-up text-active"></i>
+                                    </span>
+                                </a>
+                                <ul class="sub-nav lt">
+                                    <li> <a href="report.detail.html#"> <i class="fa fa-angle-right"></i> <span>报表Option1</span> </a> </li>
+                                    <li> <a href="report.detail.html#"> <i class="fa fa-angle-right"></i> <span>报表Option1</span> </a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <!-- Main Options -->
+            <section id="content" >
+                <section class="vbox notice-wrapper">
+                    <section class="y-scrollable padder">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel default-title">
+                                <div class="t-txt navbar-left">公告通知</div>
+                                <div class="back-link navbar-right"><a href="javascript:window.history.go(-1);">返回</a></div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="panel">
+                                <dl class="announcement-box">
+                                    <dd>
+                                        <div class="row announcement-item" >
+                                            <div class="part-ann-body">
+                                                <a href="notice.detail.html">
+                                                    <span class="ico-notice unread-notice"></span>
+                                                    <p class="notice-bd">门店申请成功，立即查看门店激活码！</p>
+                                                </a>
+                                            </div>
+                                            <div class="part-ann-time">2017-12-20</div>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="row announcement-item">
+                                            <div class="part-ann-body">
+                                                <a href="notice.detail.html">
+                                                    <span class="ico-notice read-notice"></span>
+                                                    <p class="notice-bd">您有一家“黄焖鸡园区店”门店提交开店审核中！</p>
+                                                </a>
+                                            </div>
+                                            <div class="part-ann-time">2017-12-09</div>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="row announcement-item">
+                                            <div class="part-ann-body">
+                                                <a href="notice.detail.html">
+                                                    <span class="ico-notice read-notice"></span>
+                                                    <p class="notice-bd">您有一家“黄焖鸡园区店”门店提交开店审核中！</p>
+                                                </a>
+                                            </div>
+                                            <div class="part-ann-time">2017-12-05</div>
+                                        </div>
+                                    </dd>
+                                    <dd>
+                                        <div class="row announcement-item">
+                                            <div class="part-ann-body">
+                                                <a href="notice.detail.html">
+                                                    <span class="ico-notice read-notice"></span>
+                                                    <p class="notice-bd">您有一家“黄焖鸡园区店”门店提交开店审核中！</p>
+                                                </a>
+                                            </div>
+                                            <div class="part-ann-time">2017-12-02</div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+</body>
+<script>
+</script>
+</html>

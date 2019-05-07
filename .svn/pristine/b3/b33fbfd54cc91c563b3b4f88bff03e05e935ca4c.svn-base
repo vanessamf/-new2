@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/main.comm.js"></script>
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+    			</header>
+   		 	<section>
+   		 		<section class="hbox management-wrapper stretch">
+   		 			<!-- aside -->
+		            <aside id="nav" class="as-md bg-dark">
+		            </aside>
+					<section id="rpt_menu_content" class="management-right">
+						<section class="vbox rpt-box">
+				<section class="y-scrollable  w-f">
+					<header class="caption row">
+						<div class="cp-title navbar-left">菜品销售报表</div>
+						<div class="back-link navbar-right">
+							<a class="bg-light btn sm-round-btn input-sm" data-target="#op_export_report" data-toggle="modal">导出</a>
+						</div>
+					</header>
+					<section class="set-search-options">
+						<div class="row">
+							<div class="navbar-left">
+								<label>日期</label>
+								<div class="calendar-panel row">
+									<div id="dtp_st_menu" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+										<input class="form-control" size="16" type="text" value="" placeholder="起始时间" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+									<span class="bwt-line"></span>
+									<div id="dtp_dt_menu" class="input-group date form_time" data-date="" data-date-format="yyyy-mm-dd" data-link-format="yyyy-mm-dd">
+										<input class="form-control" size="16" type="text" value="" placeholder="结束时间" readonly="">
+										<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+									</div>
+								</div>
+							</div>
+							<ul class="navbar-right ul-list">
+								<li class="input-group">
+									<label class="input-sm">门店</label>
+									<div id="select_category" class="select-category-control">
+										<div data-toggle="dropdown" class="select-btn  dropdown-toggle">
+											<ul class="select-choices" data-maximumsize="3" data-ids="">
+												<!--如果当前没有选中项，则显示提示语-->
+												<li class="tips tip-placeholder">请选择查询的门店</li>
+												<!--<li class="selected-item"><span class="selected-name">披萨意面</span>
+	                                        <a class="remove-item i-close">×</a>
+	                                    </li>-->
+											</ul>
+											<span class="sel-arrow"><b></b></span>
+										</div>
+										<div class="select-content dropdown-menu">
+											<div class="dropdown-content">
+												<ul class="category-row">
+													<li class="sub-content">
+														<div class="sel-item">
+															<label class="chk-lb"></label>
+															<span class="item-lab" data-id="store_01">苏州直营店</span>
+														</div>
+													</li>
+													<li class="sub-content">
+														<div class="sel-item">
+															<label class="chk-lb"></label>
+															<span class="item-lab" data-id="store_02">苏州工业园区店</span>
+														</div>
+													</li>
+													<li class="sub-content">
+														<div class="sel-item">
+															<label class="chk-lb"></label>
+															<span class="item-lab" data-id="store_03">苏州加盟店</span>
+														</div>
+													</li>
+													<li class="sub-content">
+														<div class="sel-item">
+															<label class="chk-lb"></label>
+															<span class="item-lab" data-id="store_04">苏州XO店</span>
+														</div>
+													</li>
+													<li class="sub-content">
+														<div class="sel-item">
+															<label class="chk-lb"></label>
+															<span class="item-lab" data-id="store_05">苏州XXOO</span>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="btn-ico ico-search" data-target="#op_search_report" data-toggle="modal"></li>
+							</ul>
+						</div>
+						<div class="row">
+							<div class="navbar-left">
+								<div class="input-group">
+									<label>销售类型 </label>
+									<div class="btn-group m-r select-base">
+										<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+	                                <span class="dropdown-label">请选择</span>
+	                                <span class="sel-arrow"><b></b></span>
+	                            </button>
+										<ul class="dropdown-menu dropdown-select">
+											<li class="active">
+												<a href="#"><input type="radio" name="d-s-r"> 堂食</a>
+											</li>
+											<li>
+												<a href="#"><input type="radio" name="d-s-r"> 外卖</a>
+											</li>
+											<li>
+												<a href="#"><input type="radio" name="d-s-r"> 打包</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="navbar-right pull-rt-md">
+								<div class="input-group"><label>员工</label>
+									<select id="sea_staff_menu" class="select-base mini-wd input-sm populate placeholder"></select>
+								</div>
+							</div>
+						</div>
+						<div class="row ta-justify">
+							<div class="input-sm btn-more"><i class="fa fa-angle-double-down"></i><span>显示更多</span></div>
+						</div>
+						<div class="row ta-justify mg-sm-top"><span class="btn sm-round-btn input-sm">查询</span></div>
+					</section>
+					<div class="table-responsive tb-max-h">
+						<table class="rpt-mana-tb table b-t b-light">
+							<thead>
+								<tr>
+									<th>菜品编号</th>
+									<th>菜品名称</th>
+									<th>销售数量</th>
+									<th>数量占比</th>
+									<th>退菜数量</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>A001</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A002</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A003</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A004</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>A005</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div id="bar_chart01" style="height: 400px; margin-top: 20px"></div>
+				</section>
+				<footer class="panel-footer">
+					<div class="row">
+						<ul id="ft_pagination_menu" class="pagination"></ul>
+					</div>
+				</footer>
+			</section>
+					</section>
+				 </section>
+			 </section>
+		</section>
+		<script>
+			(function($) {
+
+				// 点击复制菜谱中需要配置的 select选择框
+				$('#sea_staff_menu').select2({});
+
+				//        分页设置
+				var options = {
+					alignment: "right", //靠右
+					bootstrapMajorVersion: 3, //对应的bootstrap版本
+					currentPage: 2, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+					numberOfPages: 5, //每页页数
+					totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+					shouldShowPage: true //是否显示该按钮
+
+				};
+				$('#ft_pagination_menu').bootstrapPaginator(options);
+			})(jQuery);
+		</script>
+		<script>
+			var $startdate = $('#dtp_st_menu'),
+				$enddate = $('#dtp_dt_menu')
+
+			$startdate.datetimepicker({
+				language: 'zh-CN',
+				weekStart: 1,
+				autoclose: 1,
+				todayBtn: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0
+			}).on('changeDate', function(ev) {
+				ev.preventDefault();
+				ev.stopPropagation();
+				var starttime_v = ev.date;
+				if(ev.date) {
+					$enddate.datetimepicker('setStartDate', new Date(starttime_v.valueOf()));
+				} else {
+					$enddate.datetimepicker('setStartDate', null)
+				}
+			});
+
+			$enddate.datetimepicker({
+				language: 'zh-CN',
+				weekStart: 1,
+				autoclose: 1,
+				todayBtn: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0
+			}).on('changeDate', function(ev) {
+				ev.preventDefault();
+				ev.stopPropagation();
+				var endtime_v = ev.date;
+				if(ev.date) {
+					$startdate.datetimepicker('setEndDate', new Date(endtime_v.valueOf()))
+				} else {
+					$startdate.datetimepicker('setEndDate', new Date())
+				}
+			});
+		</script>
+		<!--图表-->
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/echarts.js"></script>
+		<script type="text/javascript">
+			require.config({
+				paths: {
+					echarts: './javascript'
+				}
+			});
+			require(
+				[
+					'echarts',
+					'echarts/chart/bar',
+					'echarts/chart/line'
+				],
+				function(ec) {
+					var myChart = ec.init(document.getElementById('bar_chart01'));
+
+					myChart.setOption({
+						grid: {
+							x: 40,
+							y: 50,
+							x2: 50,
+							y2: 50
+						},
+						tooltip: {
+							trigger: 'axis'
+						},
+						legend: {
+							x: 'left',
+							y: 'top',
+							data: ['净销售额', '付款金额', '礼券溢收', '折扣合计', '退单合计']
+						},
+						toolbox: {
+							show: true,
+							x: 'right',
+							y: 'top',
+							feature: {
+								dataView: {
+									show: true,
+									readOnly: false
+								},
+								magicType: {
+									show: true,
+									type: ['line', 'bar']
+								},
+								restore: {
+									show: true
+								},
+								saveAsImage: {
+									show: true
+								}
+							}
+						},
+						calculable: true,
+						xAxis: [{
+							type: 'category',
+							data: ['Store']
+						}],
+						yAxis: [{
+							type: 'value',
+							splitArea: {
+								show: true
+							}
+						}],
+						series: [{
+								name: '净销售额',
+								type: 'bar',
+								barMaxWidth: 30, //最大宽度
+								itemStyle: {
+									normal: {
+										borderRadius: 10,
+										color: (function() {
+											var zrColor = require('zrender/tool/color');
+											return zrColor.getLinearGradient(
+												0, 0, 1000, 0, [
+													[0, 'rgba(27,195,195,0.8)'],
+													[1, 'rgba(157,205,93,0.8)']
+												]
+											)
+										})()
+									}
+								},
+								data: [1012.0, 4323.9, 8901.5, 2223.2, 7825.6, 987.7, 6455.6, 2022.7, 7862.2, 3732.6, 1420.0, 2196.4],
+								markPoint: {
+									data: [{
+											type: 'max',
+											name: '最大值'
+										},
+										{
+											type: 'min',
+											name: '最小值'
+										}
+									]
+								},
+								markLine: {
+									data: [{
+										type: 'average',
+										name: '平均值'
+									}]
+								}
+							},
+							{
+								name: '付款金额',
+								type: 'bar',
+								barMaxWidth: 30, //最大宽度
+								itemStyle: {
+									normal: {
+										radius: 10,
+										color: (function() {
+											var zrColor = require('zrender/tool/color');
+											return zrColor.getLinearGradient(
+												0, 0, 1000, 0, [
+													[0, 'rgba(181,161,222,0.8)'],
+													[1, 'rgba(44,205,254,0.8)']
+												]
+											)
+										})()
+									}
+								},
+								data: [1500, 2000, 2800, 2200, 2500, 2700, 1400, 2010, 2600, 7770, 1200, 2100],
+								markPoint: {
+									data: [{
+											name: '年最高',
+											value: 7770,
+											xAxis: 9,
+											yAxis: 7770,
+											symbolSize: 20
+										},
+										{
+											name: '年最低',
+											value: 1200,
+											xAxis: 10,
+											yAxis: 1200
+										}
+									]
+								},
+								markLine: {
+									data: [{
+										type: 'average',
+										name: '平均值'
+									}]
+								}
+							},
+							{
+								name: '礼券溢收',
+								type: 'bar',
+								barMaxWidth: 30, //最大宽度
+								itemStyle: {
+									normal: {
+										radius: 10,
+										color: (function() {
+											var zrColor = require('zrender/tool/color');
+											return zrColor.getLinearGradient(
+												0, 0, 1000, 0, [
+													[0, 'rgba(87,175,239,0.8)'],
+													[1, 'rgba(44,205,254,0.8)']
+												]
+											)
+										})()
+									}
+								},
+								data: [100, 200, 200, 200, 200, 270, 100, 210, 260, 777, 120, 210],
+								markPoint: {
+									data: [{
+											name: '年最高',
+											value: 7770,
+											xAxis: 9,
+											yAxis: 7770,
+											symbolSize: 20
+										},
+										{
+											name: '年最低',
+											value: 1200,
+											xAxis: 10,
+											yAxis: 1200
+										}
+									]
+								},
+								markLine: {
+									data: [{
+										type: 'average',
+										name: '平均值'
+									}]
+								}
+							},
+							{
+								name: '折扣合计',
+								type: 'bar',
+								barMaxWidth: 30, //最大宽度
+								itemStyle: {
+									normal: {
+										radius: 10,
+										color: (function() {
+											var zrColor = require('zrender/tool/color');
+											return zrColor.getLinearGradient(
+												0, 0, 1000, 0, [
+													[0, 'rgba(239,90,161,0.8)'],
+													[1, 'rgba(254,185,124,0.8)']
+												]
+											)
+										})()
+									}
+								},
+								data: [1700, 200, 280, 220, 250, 270, 140, 200, 200, 770, 100, 200],
+								markPoint: {
+									data: [{
+											name: '年最高',
+											value: 7770,
+											xAxis: 9,
+											yAxis: 7770,
+											symbolSize: 20
+										},
+										{
+											name: '年最低',
+											value: 1200,
+											xAxis: 10,
+											yAxis: 1200
+										}
+									]
+								},
+								markLine: {
+									data: [{
+										type: 'average',
+										name: '平均值'
+									}]
+								}
+							}, {
+								name: '退单合计',
+								type: 'bar',
+								barMaxWidth: 30, //最大宽度
+								itemStyle: {
+									normal: {
+										radius: 10,
+										color: (function() {
+											var zrColor = require('zrender/tool/color');
+											return zrColor.getLinearGradient(
+												0, 0, 1000, 0, [
+													[0, 'rgba(254,185,124,0.8)'],
+													[1, 'rgba(254,185,124,0.8)']
+												]
+											)
+										})()
+									}
+								},
+								data: [1700, 200, 280, 220, 250, 270, 140, 200, 200, 770, 100, 200],
+								markPoint: {
+									data: [{
+											name: '年最高',
+											value: 7770,
+											xAxis: 9,
+											yAxis: 7770,
+											symbolSize: 20
+										},
+										{
+											name: '年最低',
+											value: 1200,
+											xAxis: 10,
+											yAxis: 1200
+										}
+									]
+								},
+								markLine: {
+									data: [{
+										type: 'average',
+										name: '平均值'
+									}]
+								}
+							}
+						]
+					});
+
+					window.onresize = function() {
+						myChart.resize();
+					};
+				}
+			);
+		</script>
+		<!--图表 结束-->
+	</body>
+
+</html>

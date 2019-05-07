@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../javascript/select2/select2.css" />
+    <link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../javascript/zoomify/zoomify.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <div class="sel-service dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">切换至POS服务<b class="m-l-sm caret"></b> </a>
+            <ul class="dropdown-menu caret animated fadeIn">
+                <li> <a href="#">XXX</a> </li>
+                <li> <a href="#">ABCD</a> </li>
+            </ul>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">
+                    <i class="nav-ico ico-package m-r-sm"></i>下载 X-lite
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a href="#">
+                    <i class="nav-ico ico-msg"></i><span class="badge badge-sm up bg-danger m-l-n-sm count" style="display: inline-block;">3</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">13608734678<b class="m-l-sm icon-wrap"></b> </a>
+                <ul class="dropdown-menu caret animated fadeInRight">
+                    <li> <a href="#">我的账号</a> </li>
+                    <li> <a href="profile.html">用户手册</a> </li>
+                    <li> <a href="about.html">关于</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item active"><a href="../menu.management.html"><i class="ico ico-menu"></i>菜谱管理</a></li>
+                            <li class="nav-item"><a href="../store.management.html"><i class="ico ico-store"></i>门店管理</a></li>
+                            <li class="nav-item"><a href="../report.detail.html"><i class="ico ico-report"></i>报表</a></li>
+                            <li class="nav-item"><a href="../user.management.html"><i class="ico ico-user"></i>账号管理</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <!-- Form -->
+            <section id="content" >
+                <section class="vbox menu-wrapper">
+                    <section class=" scrollable padder">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel default-title">
+                                <div class="t-txt navbar-left">菜谱管理 - 创建菜品</div>
+                                <div class="back-link navbar-right"><a href="javascript:window.history.go(-1);">返回</a></div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="op-menu-panel menu-pad">
+                                <form id="create_menu" class="menu-form-box" role="form" enctype="multipart/form-data">
+                                    <div class="menu-figure-title">基础信息</div>
+                                    <div class="ap-line-xs"></div>
+                                    <div class="form-group">
+                                        <label class="wd-md control-label"><span class="warn-required">*</span>菜品分类：</label>
+                                        <div class="pull-left wd-100">
+                                            <div class="btn-group sel-add-group m-r select-base">
+                                                <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    <span class="dropdown-label">主食</span>
+                                                    <span class="sel-arrow"><b></b></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li class="sel-add-item">
+                                                        <input type="text" class="txt-placeholder" name="add-item" placeholder="输入菜品分类"><span class="add-btn">添加</span>
+                                                    </li>
+                                                    <li class="active">
+                                                        <a href="#"><input type="radio" name="d-s-r" checked> 主食</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><input type="radio" name="d-s-r"> 饮料</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><input type="radio" name="d-s-r"> 甜品</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="wd-md control-label"><span class="warn-required">*</span>菜品名称：</label>
+                                        <div class="pull-left wd-100">
+                                            <input type="text" name="menu-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+                                            <div class="Validform_checktip"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="wd-md control-label">菜品描述：</label>
+                                        <div class="pull-left wd-100">
+                                            <input type="text" name="menu-desc" class="form-ipt input-sm">
+                                        </div>
+                                    </div>
+                                    <div class="form-group upload-group">
+                                        <label class="wd-md control-label"><span class="warn-required">*</span>菜品图片：</label>
+                                        <div class="pull-left wd-100">
+                                            <div class="upload-menu-pic">
+                                                <input type="file" id="file-dish-pic" class="file-style">
+                                                <label for="file-dish-pic" class="">
+                                                    <img class="pic-upload" src="../images/upload-food.png" />
+                                                </label>
+                                            </div>
+                                            <div  class="upload-btn btn sm-round-btn bg-green input-sm">上传</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="wd-md control-label"><span class="warn-required">*</span>菜品单位：</label>
+                                        <div class="pull-left wd-100">
+                                            <div class="btn-group m-r select-base">
+                                                <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    <span class="dropdown-label">份</span><span class="sel-arrow"><b></b></span>
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-select">
+                                                    <li class="active">
+                                                        <a href="#"><input type="radio" name="d-s-r" checked>份</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><input type="radio" name="d-s-r">碗</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#"><input type="radio" name="d-s-r">瓶</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="menu-figure-title">菜品规格</div>
+                                    <div class="ap-line-xs"></div>
+                                    <div class="form-group">
+                                        <dl class="dish-specification-group">
+                                            <dd>
+                                                <ul class="dish-spec-item-list">
+                                                    <li><label class="control-label"><span class="warn-required">*</span>价格：</label>
+                                                        <div class="ipt-cell-control"><input type="number" name="dish-price" min="0" class="cell-ipt" />元</div>
+                                                    </li>
+                                                    <li><label class="control-label"><span class="warn-required">*</span>餐盒费：</label>
+                                                        <div class="ipt-cell-control"><input type="number" min="0" name="lunch-box-fee" class="cell-ipt" />元</div>
+                                                    </li>
+                                                </ul>
+                                            </dd>
+                                            <!--<dd>
+                                                <ul class="dish-spec-item-list">
+                                                    <li><label class="control-label"><span class="warn-required">*</span>规格名：</label>
+                                                        <input type="text" name="spec-name" class="cell-ipt form-ipt input-sm" placeholder="比如：大、中、小" /></li>
+                                                    <li><label class="control-label"><span class="warn-required">*</span>价格：</label>
+                                                        <div class="ipt-cell-control"><input type="number" name="dish-price" class="cell-ipt" />元</div>
+                                                    </li>
+                                                    <li><label class="control-label"><span class="warn-required">*</span>餐盒费：</label>
+                                                        <div class="ipt-cell-control"><input type="number" name="lunch-box-fee" class="cell-ipt" />元</div>
+                                                    </li>
+                                                    <li class="spec-item-del"><i class="menu-ico-del"></i></li>
+                                                </ul>
+                                            </dd>-->
+                                        </dl>
+                                        <div class="menu-op-group">
+                                            <div class="add-menu-spec btn bg-green sm-round-btn input-sm"><i class="ico-add"></i>添加规格</div>
+                                            <span class="op-tip">最多添加6个</span>
+                                        </div>
+                                    </div>
+                                    <div class="menu-figure-title">菜品属性</div>
+                                    <div class="ap-line-xs"></div>
+                                    <div class="form-group">
+                                        <dl class="menu-attr-group">
+                                            <dd>
+                                                <ul class="menu-attr-list">
+                                                    <li class="attr-name">
+                                                        <label class="wd-md control-label">属性名称：</label>
+                                                        <div class="pull-left wd-sm">
+                                                            <div class="btn-group sel-add-group m-r select-base">
+                                                                <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                                    <span class="dropdown-label">请选择</span>
+                                                                    <span class="sel-arrow"><b></b></span>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-select">
+                                                                    <li class="sel-add-item"><input type="text" class="txt-placeholder" name="add-item" placeholder="请输入菜品属性"><span class="add-btn">添加</span></li>
+                                                                    <li><a href="#"><input type="radio" name="d-s-r">甜度</a></li>
+                                                                    <li><a href="#"><input type="radio" name="d-s-r">辣度</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="attr-subdivision">
+                                                        <label class="control-label">属性细分<span class="cell-tip">（至少填写两个）</span>：</label>
+                                                        <input type="text" name="sub-attr" class="sub-a-cell input-sm" /><input type="text" name="sub-attr" class="sub-a-cell input-sm" /><input type="text" name="sub-attr" class="sub-a-cell input-sm" /><input type="text" name="sub-attr" class="sub-a-cell input-sm" /><input type="text" name="sub-attr" class="sub-a-cell input-sm" />
+                                                    </li>
+                                                    <li class="attr-item-del"><i class="menu-ico-del"></i></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <div class="menu-op-group">
+                                            <div class="add-menu-attr btn bg-green sm-round-btn input-sm"><i class="ico-add"></i>添加属性</div>
+                                            <span class="op-tip">最多添加5个</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group pst-justify m-t-lg m-b-md">
+                                        <ul class="ul-list">
+                                            <li class=""><button class="form-df-btn bg-m-blue">保存</button></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+</body>
+
+
+<script src="../javascript/Validform_v5.3.2_min.js" cache="false"></script>
+<script src="../javascript/common.js" charset="UTF-8"></script>
+<!-- 菜单模块操作-->
+<script src="../javascript/modal.menu.op.js" charset="UTF-8" cache="false"></script>
+<!--查看大图-->
+<script src="../javascript/zoomify/zoomify.min.js" charset="UTF-8"></script>
+
+<script>
+    var $menu_form = $('#create_menu');
+    $menu_form.Validform({
+        tiptype:function(msg,o,cssctl){
+            var obj_tip;
+            if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                obj_tip=o.obj.siblings(".Validform_checktip");
+                cssctl(obj_tip,o.type);
+                obj_tip.text(msg);
+            }else{
+                obj_tip=o.obj.find("#msgdemo");
+                cssctl(obj_tip,o.type);
+                obj_tip.text(msg);
+            }
+        },
+        ajaxPost:true,
+        callback:function(form){
+            form[0].submit();
+            return false;
+        }
+    });
+</script>
+</html>

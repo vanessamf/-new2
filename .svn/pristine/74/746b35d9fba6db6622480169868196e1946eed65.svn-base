@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="css/app.auto.css" type="text/css">
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <div class="sel-service dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">切换至POS服务<b class="m-l-sm caret"></b> </a>
+            <ul class="dropdown-menu caret animated fadeIn">
+                <li><a href="#">XXX</a></li>
+                <li><a href="#">ABCD</a></li>
+            </ul>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">
+                    <i class="nav-ico ico-package m-r-sm"></i>下载 X-lite
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a href="#">
+                    <i class="nav-ico ico-msg"></i><span class="badge badge-sm up bg-danger m-l-n-sm count" style="display: inline-block;">3</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">13608734678<b class="m-l-sm icon-wrap"></b> </a>
+                <ul class="dropdown-menu caret animated fadeInRight">
+                    <li> <a href="#">我的账号</a> </li>
+                    <li> <a href="profile.html">用户手册</a> </li>
+                    <li> <a href="about.html">关于</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="store.management.html"><i class="ico ico-store"></i>门店配置</a></li>
+                            <li class="nav-item"><a href="staff.management.html"><i class="ico ico-user"></i>员工配置</a></li>
+                            <li class="nav-item active"><a href="#"><i class="ico ico-menu"></i>菜品配置</a></li>
+                            <li class="nav-item"><a href="report.detail.html"><i class="ico ico-report"></i>报表</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <section id="menu_content" >
+                <section class="vbox menu-wrapper">
+                    <section class="pad-md">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel menu-nav-header">
+                                <ul id="brand_list" class="ul-list brand-list">
+                                    <li class="store-item"><a href="#">黄焖鸡园区店</a></li>
+                                    <li class="store-item"><a href="#">黄焖鸡新区店</a></li>
+                                    <li class="store-item"><a href="#">黄焖鸡相城店</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="more-show dropdown-toggle" data-toggle="dropdown">更多</a>
+                                        <ul class="dropdown-menu more-nav-list animated fadeInDown">
+                                            <li> <a href="#">吉祥馄饨</a></li>
+                                            <li> <a href="#">如意馄饨</a></li>
+                                            <li> <a href="#">风味小炒</a></li>
+                                            <li> <a href="#">脏脏包</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="ul-list btn-list navbar-right">
+                                    <li class="op-item"><span class="copy-menu-op round-btn" data-target="#op_menu_copy" data-toggle="modal">复制菜谱</span></li>
+                                    <li class="op-item"><span class="del-menu-op  round-btn" data-target="#op_menu_delete" data-toggle="modal">删除菜谱</span></li>
+                                    <li class="op-item"><span class="synchronize-op round-btn" data-target="#op_st_synchronization" data-toggle="modal">同步外卖平台</span></li>
+                                </ul>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="menu-panel menu-sub-nav-header">
+                                <form action="" class="navbar-left">
+                                    <ul class="ul-list sel-list">
+                                        <li class="pst-l">
+                                            <div class="input-group">
+                                                <label>状态</label>
+                                                <div class="btn-group m-r select-base">
+                                                    <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                        <span class="dropdown-label">已上架</span>
+                                                        <span class="sel-arrow"><b></b></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-select">
+                                                        <!--<li class="disabled">
+                                                            <a href="#"><input type="radio" name="d-s-r" checked disabled="">全部</a>
+                                                        </li>-->
+                                                        <li class="active">
+                                                            <a href="#"><input type="radio" name="d-s-r"> 已上架</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><input type="radio" name="d-s-r"> 已下架</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><input type="radio" name="d-s-r"> 售罄</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!--<select id="sel_status" class="sel-status select-base input-sm">
+                                                    <option value="">已上架</option>
+                                                    <option value="">已下架</option>
+                                                    <option value="">售罄</option>
+                                                </select>-->
+                                            </div>
+                                        </li>
+                                        <li class="pst-m">
+                                            <div class="input-group"><label>类别</label>
+                                                <select id="sel_category" class="select-base mini-wd input-sm populate placeholder"></select>
+                                            </div>
+                                        </li>
+                                        <li class="pst-r">
+                                            <div class="input-group">
+                                                <input type="text" class="ipt-search input-sm" placeholder="菜品名称" />
+                                                <span class="btn comm-btn input-sm">查询</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                                <ul class="ul-list btn-list navbar-right">
+                                    <li class="op-item"><a class="create-menu-op round-btn" href="manage.menu/menu.options.html">创建菜品</a></li>
+                                    <li class="op-item"><span class="op-menu-import round-btn" data-target="#op_menu_import" data-toggle="modal">批量导入菜品</span></li>
+                                    <li class="op-item"><span class="op-menu-export round-btn" data-target="" data-toggle="modal">批量导出菜品</span></li>
+                                </ul>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="pbox">
+                               <section class="hbox stretch">
+                                   <!-- aside-->
+                                   <aside class="category-box">
+                                       <section class="vbox">
+                                           <nav class="m-nav-primary">
+                                               <ul class="category-op-list">
+                                                   <li class="category-op-item">
+                                                     <!--  <input class="category-name" name="category-name" value="主食" />-->
+                                                       <span class="category-name" contenteditable="false">主食</span>
+                                                       <ul class="ops-ico-list">
+                                                           <li class="ops-ico op-ico-up"></li>
+                                                           <li class="ops-ico op-ico-down"></li>
+                                                           <li class="ops-ico op-ico-del"></li>
+                                                           <li class="ops-ico op-ico-remarks"></li>
+                                                       </ul>
+                                                   </li>
+                                                   <li class="category-op-item">
+                                                       <span class="category-name" contenteditable="false">饮料</span>
+                                                       <ul class="ops-ico-list">
+                                                           <li class="ops-ico op-ico-up"></li>
+                                                           <li class="ops-ico op-ico-down"></li>
+                                                           <li class="ops-ico op-ico-del"></li>
+                                                           <li class="ops-ico op-ico-remarks"></li>
+                                                       </ul>
+                                                   </li>
+                                                   <li class="category-op-item">
+                                                       <span class="category-name" contenteditable="false">甜品</span>
+                                                       <ul class="ops-ico-list">
+                                                           <li class="ops-ico op-ico-up"></li>
+                                                           <li class="ops-ico op-ico-down"></li>
+                                                           <li class="ops-ico op-ico-del"></li>
+                                                           <li class="ops-ico op-ico-remarks"></li>
+                                                       </ul>
+                                                   </li>
+                                               </ul>
+                                               <div id="cre_menu_category" class="create-menu">+ 创建分类</div>
+                                           </nav>
+                                       </section>
+                                   </aside>
+                                   <!-- Menu Options -->
+                                   <section class="menu-main-wrapper">
+                                       <section class="vbox">
+                                           <section class="scrollable pad-md">
+                                               <div class="tb-title">主食</div>
+                                               <div class="table-responsive">
+                                                   <table class="menu-mana-tb table b-t b-light">
+                                                       <thead>
+                                                       <tr>
+                                                           <th>菜品名称</th>
+                                                           <th>价格</th>
+                                                           <th>状态</th>
+                                                           <th>同步状态</th>
+                                                           <th>操作</th>
+                                                       </tr>
+                                                       </thead>
+                                                       <tbody>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td class="set-price">20.00-25.00</td>
+                                                           <td>已上架</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td>20.00</td>
+                                                           <td>售罄</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt-nothing"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm-nothing"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu-nothing"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td>20.00</td>
+                                                           <td>已下架</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt-under"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm-under"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu-under"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td>20.00</td>
+                                                           <td>已上架</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td>20.00</td>
+                                                           <td>售罄</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt-nothing"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm-nothing"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu-nothing"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       <tr>
+                                                           <td>
+                                                               <div class="fd-intro">
+                                                                   <div class="fd-ico" style="background:url(images/ico-fd.png) no-repeat center;"></div>
+                                                                   <span class="fd-name">黄焖鸡米饭</span>
+                                                               </div>
+                                                           </td>
+                                                           <td>20.00</td>
+                                                           <td>已上架</td>
+                                                           <td class="td-icos">
+                                                               <ul class="ul-list take-away">
+                                                                   <li class="ta-item"><span class="ico-sm ico-mt"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-elm"></span></li>
+                                                                   <li class="ta-item"><span class="ico-sm ico-baidu"></span></li>
+                                                               </ul>
+                                                           </td>
+                                                           <td>
+                                                               <input type="button" value="复制菜品" name="op-copy" class="btn-op op-copy">
+                                                               <a href="manage.menu/menu.options.html">编辑</a>
+                                                               <input type="button" value="删除" name="op-delete" class="btn-op op-delete" />
+                                                               <input type="button" value="下架" name="op-unavailable" class="btn-op op-unavailable" />
+                                                               <input type="button" value="下移" name="op-down" class="btn-op op-down" />
+                                                               <input type="button" value="上移" name="op-up" class="btn-op op-up" />
+                                                               <a href="#op_set_soldout" data-toggle="modal" class="set-sold">售罄</a>
+                                                           </td>
+                                                       </tr>
+                                                       </tbody>
+                                                   </table>
+                                               </div>
+                                           </section>
+                                       </section>
+                                   </section>
+                               </section>
+                           </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<!-- 弹出层-->
+<!--复制菜谱-->
+<div class="modal" id="op_menu_copy" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">复制菜谱</h4>
+            </div>
+            <div class="modal-body">
+                <form action role="form">
+                    <div class="form-group">
+                        <label class="col-xs-6 col-sm-6  control-label">门店：</label>
+                        <div class="col-xs-18 col-sm-18"><span class="">黄焖鸡新区店</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-6 col-sm-6 control-label">复制至：</label>
+                        <div class="col-xs-18 col-sm-18">
+                            <select id="copy_sel_brand" class="sel-all-brand">
+                                <option>黄焖鸡沧浪店</option>
+                                <option>黄焖鸡园区店</option>
+                                <option>黄焖鸡园区店</option>
+                                <option>黄焖鸡园区店</option>
+                                <option>黄焖鸡园区店</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 同步外卖平台-->
+<div class="modal" id="op_st_synchronization" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog wd-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">同步外卖平台</h4>
+            </div>
+            <div class="modal-body">
+                <figure>
+                    <ul class="ul-list choice-platform">
+                        <li class="choice-item type-chk">
+                            <input name="sel-platform" id="chk_mt" type="checkbox" class="ipt-choice ipt-chk input-sm" checked>
+                            <label class="lg-choice-lb chk-lb" for="chk_mt"></label>
+                            <div class="ico-lg ico-mt"></div>
+                        </li>
+                        <li class="choice-item type-chk">
+                            <input name="sel-platform" id="chk_elm" type="checkbox" class="ipt-choice ipt-chk input-sm" checked>
+                            <label class="lg-choice-lb chk-lb" for="chk_elm"></label>
+                            <div class="ico-lg ico-elm"></div>
+                        </li>
+                        <li class="choice-item type-chk">
+                            <input name="sel-platform" id="chk_baidu" type="checkbox" class="ipt-choice ipt-chk input-sm" checked>
+                            <label class="lg-choice-lb chk-lb" for="chk_baidu"></label>
+                            <div class="ico-lg ico-baidu"></div>
+                        </li>
+                        <li class="choice-item type-chk">
+                            <input name="sel-platform" id="chk_wechat" type="checkbox" class="ipt-choice ipt-chk input-sm" checked>
+                            <label class="lg-choice-lb chk-lb" for="chk_wechat"></label>
+                            <div class="ico-lg ico-wechat"></div>
+                        </li>
+                    </ul>
+                </figure>
+                <ul class="op-synchronization ul-list">
+                    <li class="confirm-synchronization"><div class="btn-confirm-syn modal-btn">一键同步外卖平台</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除菜谱-->
+<div class="modal" id="op_menu_delete" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog wd-sm">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></div>
+            <div class="modal-body">
+                <form action role="form">
+                    <div class="txt-description">
+                        <div class="h1-title">是否确认删除 “某某某门店” 菜谱？</div>
+                        <p class="tip-desc">【删除菜谱】后，并【同步外卖平台】，美团/饿 了么/百度外卖菜谱也将同步清空，请谨慎操作！</p>
+                    </div>
+                    <div class="form-group ops-center">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 批量导入菜品-->
+<div class="modal" id="op_menu_import" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content wd-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">批量导出菜品</h4>
+            </div>
+            <div class="modal-body">
+                <form class="import-form"  action role="form">
+                    <div class="form-group">
+                        <span class="mark-ol">1</span><span class="txt-step"><a href="#">下载模板</a></span>
+                    </div>
+                    <div class="form-group">
+                        <span class="mark-ol">2</span><span class="txt-step">按照模板填写菜品信息</span>
+                    </div>
+                    <div class="form-group upload-group">
+                        <span class="mark-ol">3</span><span class="txt-step">导入模板</span>
+                        <div class="pull-left">
+                            <div class="upload-tpl input-sm">
+                                <span class="upload-file-name"></span>
+                                <input type="file" id="file-import-tpl" class="file-style">
+                                <label for="file-import-tpl" class="btn-choice-file">选择文件</label>
+                            </div>
+                            <div class="upload-btn btn sm-round-btn bg-green input-sm">上传</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--确认售罄-->
+<div class="modal" id="op_set_soldout" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog wd-sm">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></div>
+            <div class="modal-body">
+                <form action role="form">
+                    <div class="txt-description">
+                        <!-- 此处菜品会改变！！！-->
+                        <div class="h1-title">是否确认售罄 “黄焖鸡米饭” ？</div>
+                        <p class="tip-desc">【售罄】后，并【同步外卖平台】，美团/饿 了么/百度外卖菜谱也将同步售罄，请谨慎操作！</p>
+                    </div>
+                    <div class="form-group ops-center">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- select2 -->
+<script src="javascript/select2/select2.js" cache="false"></script>
+<script src="javascript/select2/select2_zh-CN.js"></script>
+<script src="javascript/menu.options.js" charset="UTF-8"></script>
+<script src="javascript/modal.menu.op.js" charset="UTF-8"></script>
+
+<script>
+    (function($){
+//        Select2 选择框配置
+        $('#sel_category').select2({
+            placeholder: "全部"
+        });
+        // 点击复制菜谱中需要配置的 select选择框
+        $('#copy_sel_brand').select2({});
+
+       /* $('.J_save').click(function() {
+
+            var url = "www.faxingshe.net";
+            var forms = $("form").serialize();
+            $.post(url, forms , function(res) {
+                if (res > 0) {
+                    location.href = 'www.faxingshe.net';
+                } else {
+                    return false;
+                }
+            });
+        });*/
+    })(jQuery);
+</script>
+
+<script type="text/javascript">
+    // 自适应 设置高度100%
+    function reLay(){
+        var pbox = $('#menu_content .pbox'),
+                prevAll_list = pbox.prevAll(),
+                top_H = 0
+
+        for(var i=0;i<prevAll_list.length;i++){
+            top_H += prevAll_list[i].offsetHeight;
+        }
+
+        pbox.css({top:top_H});
+    }
+    window.onresize = reLay;
+    (function($){
+        reLay();
+
+        var $brand_list = $("#brand_list");
+        // 下划线跟随导航滑动效果
+        $brand_list.lavaLamp({
+            fx: "backout",
+            speed: 700,
+            click: function(event, menuItem) {
+                return false;
+            }
+        });
+    })(jQuery);
+</script>
+</html>

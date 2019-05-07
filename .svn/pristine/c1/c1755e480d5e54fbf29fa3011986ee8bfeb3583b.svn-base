@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>财务管理</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/main.comm.js"></script>
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+				<div class="logo-box  bg-m-blue">
+					<a href="#" class="navbar-brand">易云点 · 商户自助平台</a>
+				</div>
+				<ul class="navbar navbar-right hidden-xs nav-user">
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">选择语言: zh-CN<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=en-US">英语(美国)</a>
+							</li>
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=zh-CN">中文(简体，中国)</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">下载云POS<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/DownLoad?DownLoad=windows">Windows版</a>
+							</li>
+							<li>
+								<a href="#" style="background-color:#d3d3d3">Android版</a>
+							</li>
+							<li>
+								<a href="#yydCode" data-toggle="modal">移动版</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="userId">13962519703</b><b class="m-l-sm icon-wrap"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/myaccount">我的账户</a>
+							</li>
+							<li>
+								<a href="/home/About">关于我们</a>
+							</li>
+							<li>
+								<a href="/home/SignOut">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</header>
+			<section>
+				<section class="hbox stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+						<section class="vbox">
+							<nav class="m-nav-primary">
+								<ul class="left-menu">
+									<li id="shanghuSetting.html">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-list"></i> 报表
+										</a>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-zhuotaiguanli"></i> 桌台管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="sub-nav lt" style="display: none;">
+											<li>
+												<a href="deskAreas.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>厅面区域</span>
+												</a>
+											</li>
+											<li>
+												<a href="deskManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>桌台维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="monitoringSetting.html">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-caipin"></i> 菜品管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="sub-nav lt" style="display: none;">
+											<li>
+												<a href="menu.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品类别</span>
+												</a>
+											</li>
+											<li>
+												<a href="menuManagement.html" class="active">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品维护</span>
+												</a>
+											</li>
+											<li>
+												<a href="printManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>打印设置</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="active">
+										<a href="javasript:void(0)">
+											<i class="iconfont icon-caiwuguanli2"></i> 财务管理
+											<i class="iconfont icon-xia1 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: block;">
+											<li>
+												<a href="financialManagement.html" title="付款方式">
+													<i class="iconfont icon-you3"></i>
+													<span>付款方式</span>
+												</a>
+											</li>
+											<li>
+												<a href="discountManagement.html" class="active">
+													<i class="iconfont icon-you3"></i>
+													<span>折扣模板</span>
+												</a>
+											</li>
+											<li>
+												<a href="giveDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>赠菜原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="returnDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>退菜原因</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-renyuan1"></i> 人员门店管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="storeManagement.html" title="门店管理">
+													<i class="iconfont icon-you3"></i>
+													<span>门店管理</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员角色</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="">
+											<i class="iconfont icon-mendian1"></i> 系统配置
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+					</aside>
+					<section id="menu_content">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>折扣模板</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="">
+									<li>
+										<a class="sm-round-btn sm-btn" href="#myModal" data-toggle="modal" data-target="#myModal">+新增</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="table-wrapper">
+									<div class="table ">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											编号
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">名称</span>
+												<span class="table-th">折扣</span>
+												<span class="table-th">状态</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+										<ul class="desks-list table-tbody">
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="#update"data-toggle="modal">修改</a>
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">启用</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="#update"data-toggle="modal">修改</a>
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">启用</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+		<!--新增折扣模板-->
+		<div class="public-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新增折扣模板</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal clearfloat">
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">折扣名称：</label>
+								<div class="col-sm-18">
+									<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息" placeholder="请输入20个字以内的名称">
+									<div class="Validform_checktip"></div>
+								</div>
+								<i>*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">编码：</label>
+								<div class="col-sm-18">
+									<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息" placeholder="11">
+									<div class="Validform_checktip"></div>
+								</div>
+								<i class="col-sm-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">折扣：</label>
+								<div class="col-sm-18">
+									<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息" placeholder="11">
+									<div class="Validform_checktip"></div>
+								</div>
+								<i class="col-sm-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<div class="checkbox single-checkbox col-xs-11 col-sm-18 col-sm-push-5">
+									<label>
+										<input type="checkbox" class="">  
+										<span>全单折扣</span>
+									</label>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存并继续</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--修改-->
+		<div class="public-modal modal fade" id="update" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							内置折扣模板不能修改！
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">确定</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--禁用-->
+		<div class="public-modal modal fade" id="forbidden" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							是否禁用（比例折扣）？
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">是</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--删除-->
+		<div class="public-modal modal fade" id="deleteArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							内置数据不能删除！
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">确定</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- select2 -->
+	<script src="javascript/select2/select2.js" cache="false"></script>
+	<script src="javascript/select2/select2_zh-CN.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+</html>

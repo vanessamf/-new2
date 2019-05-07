@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>财务管理</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/iValidate.css">
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/main.comm.js"></script>
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox  management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>退菜原因</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="">
+									<li>
+										<a class="sm-round-btn sm-btn" href="#myModal" data-toggle="modal" data-target="#myModal">+新增</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+													排序码
+													<i class="iconfont icon-paixu"></i>
+												</span>
+												<span class="table-th">退菜原因</span>
+												<span class="table-th">退菜类型</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+								<div class="table-wrapper">
+									<div class="table actual-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											排序码
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">退菜原因</span>
+												<span class="table-th">退菜类型</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+										<ul class="desks-list table-tbody">
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+		<!--新增退菜原因-->
+		<div class="public-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新增退菜原因</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal clearfloat">
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">退菜原因：</label>
+								<div class="col-sm-18 no-padding">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" placeholder="请输入20个字以内的名称">
+									<div class="Validform_checktip"></div>
+								</div>
+								<i class="col-sm-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">排序码：</label>
+								<div class="col-sm-18 no-padding">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" placeholder="11">
+									<div class="Validform_checktip"></div>
+								</div>
+								<i class="col-sm-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">退菜类型：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-18 no-padding radio-group">
+									<label class="radio-inline">
+       									<input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option3">临时沽清
+    									</label>
+									<label class="radio-inline">
+        									<input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option3">上退菜
+     								</label>
+									<label class="radio-inline">
+        									<input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option3">普通退菜
+     								</label>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存并继续</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- select2 -->
+	<script src="javascript/select2/select2.js" cache="false"></script>
+	<script src="javascript/select2/select2_zh-CN.js"></script>
+	<script src="javascript/iValidate.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>
+	<script type="text/javascript">
+		(function($) {
+			// 点击复制菜谱中需要配置的 select选择框
+			//			$('#sea_staff_menu').select2({});
+
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					//					debugger;
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+
+</html>

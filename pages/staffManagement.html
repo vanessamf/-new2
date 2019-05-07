@@ -1,0 +1,99 @@
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>人员维护</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="navbar-left">
+									<li>
+										<a class="sm-round-btn sm-btn" data-url="pages/subpages/addStaff.html" data-title="报表-菜品销售报表"href="javascript:void(0);">+新增</a>
+									</li>
+								</ul>
+								<ul>
+									<div class="input-group navbar-right">
+										<input type="text" class="ipt-search" placeholder="员工姓名">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</div>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">员工姓名</span>
+												<span class="table-th">
+													员工编号<span>（账号）</span>
+												<i class="iconfont icon-paixu"></i>
+												</span>
+												<span class="table-th">手机号</span>
+												<span class="table-th">邮箱</span>
+												<span class="table-th">状态</span>
+											</div>
+										</div>
+									</div>
+								<div class="table-wrapper">
+									<div class="table actual-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">员工姓名</span>
+												<span class="table-th">
+													员工编号<span>（账号）</span>
+												<i class="iconfont icon-paixu"></i>
+												</span>
+												<span class="table-th">手机号</span>
+												<span class="table-th">邮箱</span>
+												<span class="table-th">状态</span>
+											</div>
+										</div>
+										<ul class="desks-list table-tbody">
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+													<a href="">重置密码</a>
+													<a href="">编辑</a>
+													<a href="">启用</a>
+													<a href="">禁用</a>
+												</span>
+												<span class="table-td">ads</span>
+												<span class="table-td">20188972</span>
+												<span class="table-td">13090888777</span>
+												<span class="table-td">13124124@qq.com</span>
+												<span class="table-td">启用</span>
+											</li>
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+													<a href="">重置密码</a>
+													<a href="">编辑</a>
+													<a href="">启用</a>
+													<a href="">禁用</a>
+												</span>
+												<span class="table-td">ads</span>
+												<span class="table-td">20188972</span>
+												<span class="table-td">13090888777</span>
+												<span class="table-td">13124124@qq.com</span>
+												<span class="table-td">启用</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+
+	<script type="text/javascript">
+		$(document).on('click', '.tool-bar li a', function(e) {
+			$("#menu_content").load($(this).attr("data-url"),function(){
+				tabSlide();
+				tabPaneHeight();
+				dropdownSelect();
+			});
+		})
+	</script>
+

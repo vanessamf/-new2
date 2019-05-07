@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>财务管理-付款方式</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox  management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>付款方式</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="">
+									<li>
+										<a class="sm-round-btn sm-btn" href="#myModal" data-toggle="modal" data-target="#myModal">+新增</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											排序码
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">名称</span>
+												<span class="table-th">优惠</span>
+												<span class="table-th">付款方式是否可积分</span>
+												<span class="table-th">前台是否可见</span>
+												<span class="table-th">状态</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+								<div class="table-wrapper">
+									<div class="table actual-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											排序码
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">名称</span>
+												<span class="table-th">优惠</span>
+												<span class="table-th">付款方式是否可积分</span>
+												<span class="table-th">前台是否可见</span>
+												<span class="table-th">状态</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+										<ul class="desks-list table-tbody">
+											<li class="table-tr desks-item">
+												<span class="table-td">
+											<a href="">修改</a>
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">是</span>
+												<span class="table-td">是</span>
+												<span class="table-td">启用</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+											<li class="table-tr desks-item">
+												<span class="table-td">
+											<a href="">修改</a>
+											<a href="#forbidden"data-toggle="modal">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">大厅</span>
+												<span class="table-td">实收</span>
+												<span class="table-td">是</span>
+												<span class="table-td">是</span>
+												<span class="table-td">启用</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+		<!--新增付款方式-->
+		<div class="public-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新增付款方式</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal clearfloat">
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">支付类型：</label>
+								<div class="col-xs-23 col-sm-15">
+									<div class="btn-group m-r select-base">
+										<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                   			 <span class="dropdown-label">33</span>
+                                  			 <span class="sel-arrow"><b></b></span>
+                          			  	</button>
+										<ul class="dropdown-menu dropdown-select">
+											<li class="active dropdown-highlighted">
+												<a href="#"><input type="radio" name="d-s-r">34</a>
+											</li>
+											<li class="">
+												<a href="#"><input type="radio" name="d-s-r">35</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">名称：</label>
+								<div class="col-sm-15">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" placeholder="外卖支付">
+								</div>
+								<i>*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">排序码：</label>
+								<div class="col-sm-15">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" placeholder="06">
+								</div>
+								<i class="col-sm-1">*</i>
+							</div>
+							<div class="form-group  col-sm-24">
+								<label for="" class="col-sm-7 control-label">实收优免：</label>
+								<div class="col-xs-23 col-sm-15">
+									<div class="btn-group m-r select-base">
+										<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                   			 <span class="dropdown-label">实收</span>
+                                  			 <span class="sel-arrow"><b></b></span>
+                          			  	</button>
+										<ul class="dropdown-menu dropdown-select">
+											<li class="active dropdown-highlighted">
+												<a href="#"><input type="radio" name="d-s-r">实收</a>
+											</li>
+											<li class="">
+												<a href="#"><input type="radio" name="d-s-r">优免</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!--<div class="form-group col-sm-24">
+								<div id="radio-group" class="col-xs-11 col-sm-15 col-sm-push-7">
+									<label class="radio-inline">
+	       								<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"checked="checked">实收
+        								</label>
+									<label class="radio-inline">
+	        								<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">优免
+         							</label>
+								</div>
+							</div>-->
+							<div class="form-group md-form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">会员消费可积分：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-15 radio-group">
+									<label class="radio-inline">
+			       									<input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option3">是
+                									</label>
+									<label class="radio-inline">
+			        									<input type="radio" name="inlineRadioOptions1" id="inlineRadio4" value="option3">否
+                 								</label>
+								</div>
+							</div>
+							<div class="form-group md-form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">前台是否可见：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-15 radio-group">
+									<label class="radio-inline">
+			       									<input type="radio" name="inlineRadioOption2" id="inlineRadio3" value="option3">是
+                									</label>
+									<label class="radio-inline">
+			        									<input type="radio" name="inlineRadioOption2" id="inlineRadio3" value="option3">否
+                 								</label>
+								</div>
+							</div>
+							<div class="form-group md-form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">充值是否可见：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-15 radio-group">
+									<label class="radio-inline">
+			       									<input type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3">是
+                									</label>
+									<label class="radio-inline">
+			        									<input type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option3">否
+                 								</label>
+								</div>
+							</div>
+							<div class="form-group md-form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">撤销是否授权：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-15 radio-group">
+									<label class="radio-inline">
+			       									<input type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="option3">是
+                									</label>
+									<label class="radio-inline">
+			        									<input type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="option3">否
+                 								</label>
+								</div>
+							</div>
+							<div class="form-group md-form-group col-sm-24">
+								<label for="" class="col-sm-7 control-label">使用是否授权：</label>
+								<div id="radio-group" class="col-xs-11 col-sm-15 radio-group">
+									<label class="radio-inline">
+       									<input type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="option3">是
+    									</label>
+									<label class="radio-inline">
+        									<input type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="option3">否
+     								</label>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存并继续</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--禁用-->
+		<div class="public-modal modal fade" id="forbidden" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							内置付款方式不能启用或禁用！
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">确定</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--删除-->
+		<div class="public-modal modal fade" id="deleteArea" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							请先禁用，再删除！
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">确定</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="javascript/jquery-2.1.1.min.js"></script>
+	<script src="javascript/main.comm.js"></script>
+	<!-- select2 -->
+	<script src="javascript/select2/select2.js" cache="false"></script>
+	<script src="javascript/select2/select2_zh-CN.js"></script>
+	<script src="javascript/menu.options.js" charset="UTF-8"></script>
+	<script src="javascript/modal.menu.op.js" charset="UTF-8"></script>
+	<script src="javascript/iValidate.js"></script>	
+		
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					//					debugger;
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>
+</html>

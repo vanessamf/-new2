@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../javascript/select2/select2.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container admin-wrapper">
+    <header id="menu_header" class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">admin</a>
+            </li>
+            <li class="hidden-xs"><a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="admin.store.html"><i class="ico ico-store"></i>门店管理</a></li>
+                            <li class="nav-item active"><a href="#"><i class="ico ico-user"></i>账号管理</a></li>
+                            <li class="nav-item"><a href="admin.notice.html"><i class="ico ico-notice"></i>通知管理</a></li>
+                            <li class="nav-item"><a href="admin.license.html"><i class="ico ico-license"></i>License管理</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <section id="menu_content" >
+                <section class="vbox account-wrapper">
+                    <section class="scrollable padder">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel default-title">
+                                <div class="t-txt navbar-left">账号管理</div>
+                                <div class="back-link navbar-right"><a href="javascript:window.history.go(-1);">返回</a></div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="menu-panel menu-sub-nav-header">
+                                <form action="" class="navbar-right">
+                                    <ul class="ul-list sel-list">
+                                        <li class="pst-l">
+                                            <div class="input-group">
+                                                <label>状态</label>
+                                                <div class="btn-group m-r select-base">
+                                                    <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                        <span class="dropdown-label">全部</span>
+                                                        <span class="sel-arrow"><b></b></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu dropdown-select">
+                                                        <li class="active">
+                                                            <a href="#"><input type="radio" name="d-s-r"> 全部</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><input type="radio" name="d-s-r"> 已上架</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><input type="radio" name="d-s-r"> 已下架</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#"><input type="radio" name="d-s-r"> 售罄</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="pst-r">
+                                            <div class="input-group">
+                                                <input type="text" class="ipt-search input-sm" placeholder="账号，姓名，微信，渠道，邮箱" />
+                                                <span class="btn comm-btn input-sm">查询</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="panel">
+                                <div class="table-responsive">
+                                    <table class="account-mana-tb table b-t b-light">
+                                        <thead>
+                                        <tr>
+                                            <th style="width: 60px;">序号</th>
+                                            <th>账号</th>
+                                            <th>姓名</th>
+                                            <th>微信</th>
+                                            <th>邮箱</th>
+                                            <th>渠道</th>
+                                            <th>状态</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>01</td>
+                                            <td>13518798221</td>
+                                            <td>林双双</td>
+                                            <td>DH199089412</td>
+                                            <td>DanielChan@cuscapi.com</td>
+                                            <td>客凯易</td>
+                                            <td class="mark-state">已启用</td>
+                                            <td>
+                                                <ul class="status-st-toggle active">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>02</td>
+                                            <td>13518798229</td>
+                                            <td>秦圈圈</td>
+                                            <td>小仙女199589412</td>
+                                            <td>LeeLemon@cuscapi.com</td>
+                                            <td>客凯易</td>
+                                            <td class="mark-state">已启用</td>
+                                            <td>
+                                                <ul class="status-st-toggle active">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>03</td>
+                                            <td>13518700221</td>
+                                            <td>韩梅梅</td>
+                                            <td>中年少女47552</td>
+                                            <td></td>
+                                            <td>客凯易</td>
+                                            <td class="mark-state">已停用</td>
+                                            <td>
+                                                <ul class="status-st-toggle">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>04</td>
+                                            <td>13518798891</td>
+                                            <td>李雷</td>
+                                            <td>Ucc47552</td>
+                                            <td></td>
+                                            <td>客凯易</td>
+                                            <td class="mark-state">已启用</td>
+                                            <td>
+                                                <ul class="status-st-toggle active">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <footer class="panel-footer">
+                                    <div class="row">
+                                        <ul id="ft_pagination" class="pagination"></ul>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<!-- 弹出层-->
+
+</body>
+
+<!-- select2 -->
+<script src="../javascript/select2/select2.js" cache="false"></script>
+<script src="../javascript/select2/select2_zh-CN.js"></script>
+<!--Paginator-->
+<script src="../javascript/bootstrap-paginator.min.js"></script>
+
+<script src="../javascript/menu.options.js" charset="UTF-8"></script>
+<script src="../javascript/admin.main.options.js" charset="UTF-8"></script>
+
+<script>
+    (function($) {
+//        Select2 选择框配置
+        $('#sel_category').select2({
+            placeholder: "全部"
+        });
+        // 点击复制菜谱中需要配置的 select选择框
+        $('#copy_sel_brand').select2({});
+
+        //        分页设置
+        var options = {
+            alignment: "right",  //靠右
+            bootstrapMajorVersion: 3, //对应的bootstrap版本
+            currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+            numberOfPages: 5, //每页页数
+            totalPages: 4, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+            shouldShowPage: true,  //是否显示该按钮
+            /*
+             //点击事件
+             onPageClicked: function (event, originalEvent, type, page) {
+             location.href = "url/&page=" + page;
+             }*/
+        };
+        $('#ft_pagination').bootstrapPaginator(options);
+
+    })(jQuery)
+</script>
+
+<script type="text/javascript">
+    // 自适应 设置高度100%
+    function reLay(){
+        var pbox = $('#menu_content .pbox'),
+                prevAll_list = pbox.prevAll(),
+                top_H = 0
+
+        for(var i=0;i<prevAll_list.length;i++){
+            top_H += prevAll_list[i].offsetHeight;
+        }
+
+        pbox.css({top:top_H});
+    }
+    window.onresize = reLay;
+    (function($){
+        reLay();
+
+        var $brand_list = $("#brand_list");
+        // 下划线跟随导航滑动效果
+        $brand_list.lavaLamp({
+            fx: "backout",
+            speed: 700,
+            click: function(event, menuItem) {
+                return false;
+            }
+        });
+    })(jQuery);
+</script>
+</html>

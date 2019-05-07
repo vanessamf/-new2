@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>菜品管理-新增套餐类别</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/jquery.editable-select.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="../css/bootstrap-switch.min.css" />
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+		<link rel="stylesheet" href="../css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增套餐类别</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-6  no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+										<li class="tab-nav col-sm-6  no-padding">
+											<a href="#tab2" data-toggle="tab" aria-expanded="false">添加菜品</a>
+										</li>
+										<li class="tab-nav col-sm-6  no-padding">
+											<a href="#tab4" data-toggle="tab" aria-expanded="false">其他</a>
+										</li>
+										<li class="tab-nav col-sm-6  no-padding">
+											<a href="#tab5" data-toggle="tab" aria-expanded="false">图片</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<form id="f_store_info" class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">套餐名称：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5  no-padding control-label">排序码：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">英文名称：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17  no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">速查码：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" placeholder="101">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">单位：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group sel-add-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+				                                                    <span class="dropdown-label">克</span>
+				                                                    <span class="sel-arrow"><b></b></span>
+				                                                </button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="sel-add-item">
+																		<input type="text" class="txt-placeholder" name="add-item" placeholder="输入单位"><span class="add-btn">添加</span>
+																	</li>
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked="">克</a>
+																	</li>
+																	<li class="">
+																		<a href="#"><input type="radio" name="d-s-r"> 饮料</a>
+																	</li>
+																	<li class="">
+																		<a href="#"><input type="radio" name="d-s-r"> 甜品</a>
+																	</li>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">条形码：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">价格：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="text" name="usr-name" class="form-control ">
+													</div>
+
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">类别：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">2</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</form>
+										</div>
+										<div id="tab2" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div id="" class="clearfloat">
+													<div class="form-group col-sm-12">
+														<a class="sm-round-btn sm-btn" href="#addMenu" data-toggle="modal" data-target="#addMenu">添加菜品</a>
+													</div>
+												</div>
+												<div class="col-sm-24">
+													<div class="desks-content table-content no-padding">
+														<div class="fixed-table-wrapper">
+															<div class="table fixed-table-header">
+																<div class="table-thead">
+																	<div class="desks-title table-tr">
+																		<span class="table-th">操作</span>
+																		<span class="table-th">
+													主备类型
+												</span>
+																		<span class="table-th">名称</span>
+																		<span class="table-th">单价</span>
+																		<span class="table-th">数量</span>
+																		<span class="table-th">价格</span>
+																		<span class="table-th">差价</span>
+																	</div>
+																</div>
+															</div>
+															<div class="table-wrapper2">
+																<div class="table actual-table-header">
+																	<div class="table-thead">
+																		<div class="desks-title table-tr">
+																			<span class="table-th">操作</span>
+																			<span class="table-th">
+																				主备类型
+																			</span>
+																			<span class="table-th">名称</span>
+																			<span class="table-th">单价</span>
+																			<span class="table-th">数量</span>
+																			<span class="table-th">价格</span>
+																			<span class="table-th">差价</span>
+																		</div>
+																	</div>
+																	<ul class="desks-list table-tbody">
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>200</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																		<li class="table-tr desks-item">
+																			<span class="table-td">
+																				<a href="#deleteMenu" data-toggle="modal">删除</a>
+																				<a href="">备选</a>
+																			</span>
+																			<span class="table-td">主</span>
+																			<span class="table-td">汉堡</span>
+																			<span class="table-td">1500.00</span>
+																			<span class="table-td">
+																				<i class="iconfont icon-jian3"></i>
+																				<span>2</span>
+																				<i class="iconfont icon-jia3"></i>
+																			</span>
+																			<span class="table-td">3000.00</span>
+																			<span class="table-td">1500.00</span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab4" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">允许折扣：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">外带价格：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">外送价格：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">预订价格：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">自提价格：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">扫点价格：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-12">
+													<label for="" class="col-sm-7 col-lg-5 no-padding control-label ta-c">启用时间段：</label>
+													<div class="col-xs-22 col-sm-15 col-lg-17 no-padding ta-c">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab5" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">名称：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="" class="form-control" placeholder="" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-6 col-lg-5 no-padding control-label">排序码：</label>
+													<div class="col-xs-22 col-sm-16 col-lg-17 no-padding">
+														<input type="" class="form-control" id="" placeholder="" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label class="col-sm-6 col-md-6 col-lg-5 control-label">菜品图片：</label>
+													<div class="col-sm-16 col-md-16 col-lg-17 no-padding" style="position: relative;">
+														<div class="img-container"></div>
+														<input class="img-upload sm-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+														<div id="" class="flex flex-between img-btn-wrapper">
+															<span class="img-btn upload-btn">上传图片</span>
+															<span class="img-btn">清空</span>
+														</div>
+														<span class="tips">提示：图片&lt;1024KB</span>
+													</div>
+												</div>
+												<div class="form-group col-sm-12 img-detail" style="font-size:0">
+													<label class="col-sm-6 col-md-6 col-lg-5 control-label">菜品描述：</label>
+													<div class="col-sm-16 col-md-16 col-lg-17 no-padding" style="position: relative;">
+														<textarea class="txt-content" name="" rows="" cols=""></textarea>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!--弹框-->
+		<!--添加菜品-->
+		<div class="public-modal  modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog lg-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">添加菜品</h4>
+					</div>
+					<div class="modal-body deleteTableBody">
+						<form class="form-horizontal clearfloat">
+							<div id="" class="clearfloat">
+								<div class="form-group sm-form-group col-sm-10">
+									<label for="" class="col-sm-8 col-lg-8 no-padding control-label">名称：</label>
+									<div class="col-xs-11 col-sm-14 col-lg-14 no-padding">
+										<input type="text" class="form-control ipt-search" placeholder="">
+									</div>
+								</div>
+								<div class="form-group sm-form-group col-sm-14">
+									<div class="input-group navbar-right">
+										<input type="text" class="form-control ipt-search" placeholder="排序码，名称，速查码">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-24">
+								<div class="menu-type method-type">
+									<div class="type-title dish-title checkbox ">
+										<label class="check no-padding">
+										<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+											
+													<input class="allDishChecked" type="checkbox" onclick="quanxuan(this,'qxDish')"> 
+											
+										</span>
+										<span class="col-xs-3 col-sm-3 no-padding">菜品排序码</span>
+										<span class="col-xs-8 col-sm-8 no-padding">菜品名称</span>
+										<span class="col-xs-4 col-sm-4 no-padding">价格</span>
+										<span class="col-xs-3 col-sm-3 no-padding">单位</span>
+										<span class="col-xs-4 col-sm-4 no-padding">菜品类别</span>
+										</label>
+									</div>
+									<ul class="dish-list  list-container">
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li><li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li><li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li><li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li><li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<script src="../javascript/iValidate.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+	<script src="../javascript/select2/jquery.editable-select.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.fr.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-switch.min.js"></script>
+	<!--Paginator-->
+	<script src="../javascript/bootstrap-paginator.min.js"></script>
+	<script>
+		(function($) {
+			subquanxuan("allDishChecked", "list-container");
+			$('[name="status"]').bootstrapSwitch({
+				onText: "开",
+				offText: "关",
+				onColor: "info",
+				offColor: "info",
+				size: "large",
+				state: false,
+				//			animate:false,
+				onSwitchChange: function(event, state) {
+					if(state == true) {
+						$(this).val("1");
+					} else {
+						$(this).val("2");
+					}
+				}
+			});
+		})(jQuery);
+		(function($) {
+			scrollWidth1 = $(".type-list").width() - $(".type-list li").outerWidth();
+			scrollWidth2 = $(".dish-list").width() - $(".dish-list li").outerWidth();
+			paddingRight1 = (15 + scrollWidth1) + "px";
+			paddingRight2 = (15 + scrollWidth2) + "px";
+			$(".type-title").eq(0).css("paddingRight", paddingRight2);
+			$(".type-title").eq(1).css("paddingRight", paddingRight2);
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			$(".validity-date").datetimepicker({
+				language: "zh-CN",
+				format: 'hh:ii:ss',
+				//				todayBtn : 1,
+				autoclose: true,
+				startView: 0,
+				minView: 0,
+				maxView: 0,
+				pickerPosition: 'top-left',
+				minuteStep: 5,
+				//				startDate:"2018-11-11"
+				//				bootcssVer:3
+			}).on('changeDate', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				var startTime = event.date;
+				$(".deadline-date").datetimepicker('setStartDate', startTime);
+				$(".deadline-date").val("");
+			});
+
+			$(".deadline-date").datetimepicker({
+				language: "zh-CN",
+				format: 'hh:ii:ss',
+				autoclose: true,
+				startView: 0,
+				minView: 0,
+				maxView: 0,
+				pickerPosition: 'top-left',
+				//				bootcssVer:2
+			}).on('changeDate', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				var endTime = event.date;
+				$('.validity-date').datetimepicker('setEndDate', endTime);
+			});
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//类型数据
+			var initdata = ["请选择", "克", "加盟"];
+			$('#sel_category').select2({
+				data: initdata,
+				//				tags: true
+			});
+		})(jQuery);
+	</script>
+
+</html>

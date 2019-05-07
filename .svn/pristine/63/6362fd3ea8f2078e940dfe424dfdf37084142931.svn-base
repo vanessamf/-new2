@@ -1,0 +1,60 @@
+/**
+ * Created by Vanessa.
+ */
+//确认操作、提示信息
+function openDialog(id, title, content, leftBtn, rightBtn, width) {
+	var html = "";
+	html += '<div class="public-modal modal fade" id="' + id + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
+	html += '<div class="modal-dialog sm-dialog" role="document" style="width:' + (width==""?"300px":width)+ '">';
+	html += '<div class="modal-content">';
+	html += '<div class="modal-header">';
+	html += '<h4 class="modal-title" id="myModalLabel">' + title + '</h4>';
+	html += '</div>';
+	html += '<div class="modal-body">';
+	html += '<div class="del-content">' + content + '</div>';
+	html += '</div>';
+	html += '<div class="mf modal-footer">';
+	html += '<button type="button" class="btn modal-btn">' + leftBtn + '</button>';
+	html += '<button type="button" class="btn modal-btn" data-dismiss="modal">' + rightBtn + '</button>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	//	html+='';
+	//	return html;
+	$('body').append(html);
+}
+//新增
+function openLgDialog(id, title, leftBtn, rightBtn, width, url) {
+	var html = "";
+	html += '<div class="public-modal modal fade" id="' + id + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">';
+	html += '<div class="modal-dialog sm-dialog" role="document" style="width:' + width + '">';
+	html += '<div class="modal-content">';
+	html += '<div class="modal-header">';
+	html += '<h4 class="modal-title" id="myModalLabel">' + title + '</h4>';
+	html += '</div>';
+	html += '<div class="modal-body">';
+	//	html+='<div class="del-content">'+content+'</div>';
+	html += '</div>';
+	html += '<div class="mf modal-footer">';
+	html += '<button type="button" class="btn modal-btn">' + leftBtn + '</button>';
+	html += '<button type="button" class="btn modal-btn" data-dismiss="modal">' + rightBtn + '</button>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	html += '</div>';
+	//	html+='';
+	//	return html;
+	$('body').append(html);
+	$("#" + id + " .modal-body").load(url);
+}
+
+//function closeDialog() {
+//	$(".modal").remove();
+//}
+//
+//$(document).ready(function() {
+//	$(".button-cancel").click(function() {
+//		closeDialog();
+//	});
+//});

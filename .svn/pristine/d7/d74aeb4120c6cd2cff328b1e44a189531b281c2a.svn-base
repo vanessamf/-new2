@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>人员门店管理-新增员工账号</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+		<link rel="stylesheet" href="../css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增员工账号</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat"style="display: none;">
+										<li class="tab-nav col-sm-12 no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<div class="tab-form">
+												<h4 class="ta-c" id="myModalLabel">员工信息</h4>
+												<form id="f_store_info" class="form-horizontal form-box clearfloat" role="form">
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">人员角色：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<div class="pull-left wd-100">
+																<div class="btn-group m-r select-base">
+																	<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																	<ul class="dropdown-menu dropdown-select">
+																		<li class="active dropdown-highlighted">
+																			<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																		</li>
+																		<li>
+																			<a href="#"><input type="radio" name="d-s-r">2</a>
+																		</li>
+																		<li>
+																			<a href="#"><input type="radio" name="d-s-r">3</a>
+																		</li>
+																		<li>
+																			<a href="#"><input type="radio" name="d-s-r">4</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工姓名：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工编号：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true" value="">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">员工密码：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">手机号：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-2 no-padding">*</i>
+													</div>
+													<div class="form-group">
+														<label for="" class="col-sm-6 col-lg-4 no-padding control-label">邮箱：</label>
+														<div class="col-xs-22 col-sm-16 col-lg-18 no-padding">
+															<input type="text" name="usr-name" class="form-control">
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+	<script src="../javascript/iValidate.js"></script>
+	<!--Paginator-->
+	<script src="../javascript/bootstrap-paginator.min.js"></script>
+	<script>
+		(function($) {
+			function subqx(supItem, subItem) {
+				$("." + subItem + " input[type=checkbox]").click(function() {
+					subquanxuan1(supItem, subItem);
+					subquanxuan1("allChecked", "sup-item");
+				});
+			}
+
+			subqx("allChecked", "sup-item");
+			//subqx("allChecked", "role-item");
+			subqx("zhoutai-sup-item", "zhuotai-sub-item");
+			subqx("caipin-sup-item", "caipin-sub-item");
+			subqx("zhangdan-sup-item", "zhangdan-sub-item");
+			subqx("banci-sup-item", "banci-sub-item");
+			subqx("danju-sup-item", "danju-sub-item");
+			subqx("huiyuan-sup-item", "huiyuan-sub-item");
+			subqx("xitong-sup-item", "xitong-sub-item");
+			subqx("baobiao-sup-item", "baobiao-sub-item");
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>
+
+</html>

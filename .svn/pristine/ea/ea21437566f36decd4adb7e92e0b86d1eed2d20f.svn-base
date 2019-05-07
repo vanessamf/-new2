@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>菜品管理-新增菜品维护</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+				<div class="logo-box  bg-m-blue">
+					<a href="#" class="navbar-brand">易云点 · 商户自助平台</a>
+				</div>
+				<ul class="navbar navbar-right hidden-xs nav-user">
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">选择语言: zh-CN<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=en-US">英语(美国)</a>
+							</li>
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=zh-CN">中文(简体，中国)</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">下载云POS<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/DownLoad?DownLoad=windows">Windows版</a>
+							</li>
+							<li>
+								<a href="#" style="background-color:#d3d3d3">Android版</a>
+							</li>
+							<li>
+								<a href="#yydCode" data-toggle="modal">移动版</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="userId">13962519703</b><b class="m-l-sm icon-wrap"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/myaccount">我的账户</a>
+							</li>
+							<li>
+								<a href="/home/About">关于我们</a>
+							</li>
+							<li>
+								<a href="/home/SignOut">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+						<section class="vbox">
+							<nav class="m-nav-primary">
+								<ul class="left-menu">
+									<li id="shanghuSetting.html">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-list"></i> 报表
+										</a>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-zhuotaiguanli"></i> 桌台管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../deskAreas.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>厅面区域</span>
+												</a>
+											</li>
+											<li>
+												<a href="../deskManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>桌台维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-caipin"></i> 菜品管理
+											<i class="iconfont icon-xia1 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: block;">
+											<li>
+												<a href="../menu.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品类别</span>
+												</a>
+											</li>
+											<li>
+												<a href="../menuManagement.html" class="active">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品维护</span>
+												</a>
+											</li>
+											<li>
+												<a href="../printManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>打印设置</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javasript:void(0)">
+											<i class="iconfont icon-caiwuguanli2"></i> 财务管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../financialManagement.html" title="付款方式">
+													<i class="iconfont icon-you3"></i>
+													<span>付款方式</span>
+												</a>
+											</li>
+											<li>
+												<a href="../discountManagement.html">
+													<i class="iconfont icon-you3"></i>
+													<span>折扣模板</span>
+												</a>
+											</li>
+											<li>
+												<a href="../giveDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>赠菜原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="../returnDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>退菜原因</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-renyuan1"></i> 人员门店管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../storeManagement.html" title="门店管理">
+													<i class="iconfont icon-you3"></i>
+													<span>门店管理</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员角色</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="">
+											<i class="iconfont icon-mendian1"></i> 系统配置
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增菜品维护</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-1-5  no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+										<li class="tab-nav col-sm-1-5  no-padding">
+											<a href="#tab2" data-toggle="tab" aria-expanded="false">做法</a>
+										</li>
+										<li class="tab-nav col-sm-1-5  no-padding">
+											<a href="#tab3" data-toggle="tab" aria-expanded="false">多价格</a>
+										</li>
+										<li class="tab-nav col-sm-1-5  no-padding">
+											<a href="#tab4" data-toggle="tab" aria-expanded="false">高级</a>
+										</li>
+										<li class="tab-nav col-sm-1-5  no-padding">
+											<a href="#tab5" data-toggle="tab" aria-expanded="false">图片</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<form id="f_store_info" class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">中文名称：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息">
+														<div class="Validform_checktip"></div>
+													</div>
+													<i class="col-sm-1 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2  no-padding control-label">排序码：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息">
+														<div class="Validform_checktip"></div>
+													</div>
+													<i class="col-sm-1 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">外文名称：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9  no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">菜品类别：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<i class="col-sm-1 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">速查码：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="101">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">单位：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">堂食价格：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+													<i class="col-sm-1 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">外带价格：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+													<i class="col-sm-1 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">财务类别：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">条形码：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+												</div>
+												<div class="form-group col-sm-6 calendar-wrapper">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">有效期：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input class="validity-date form-control form-control" type="text" value="2018-01-01" readonly="readonly">
+														<i class="iconfont icon-rili1"></i>
+													</div>
+												</div>
+												<div class="form-group col-sm-6 calendar-wrapper">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">截止日期：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input class="deadline-date form-control form-control" type="text" value="2018-01-01" readonly="readonly">
+														<i class="iconfont icon-rili1"></i>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab2" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div id="" class="clearfloat">
+													<div class="form-group sm-form-group col-sm-5">
+														<label for="" class="col-sm-3 col-lg-2 no-padding control-label">名称：</label>
+														<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+															<input type="text" name="usr-name" class="form-control" datatype="*" nullmsg="请填写信息" placeholder="">
+															<div class="Validform_checktip"></div>
+														</div>
+														<i class="col-sm-1 no-padding">*</i>
+													</div>
+													<div class="form-group sm-form-group col-sm-7">
+														<div class="input-group navbar-right">
+															<input type="text" class="form-control ipt-search" placeholder="排序码，名称，速查码">
+															<span class="btn sm-round-btn input-sm">查询</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-5">
+													<div class="menu-type">
+														<div class="checkbox type-title">
+															<label>
+        													<input class="allChecked" type="checkbox" onclick="quanxuan(this,'qx')"> 全部选中（0/171）
+      												</label>
+														</div>
+														<ul class="type-list">
+															<li class="checkbox">
+																<label>
+        													<input type="checkbox" class="qx"> 中式菜（0/18）
+      												</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        													<input type="checkbox" class="qx"> 中式菜（0/18）
+      												</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+															<li class="checkbox">
+																<label>
+        														<input type="checkbox" class="qx"> 中式菜（0/18）
+      													</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="col-sm-7">
+													<div class="menu-type">
+														<div class="type-title">
+															<span class="col-xs-1 col-sm-1 no-padding"></span>
+															<span class="col-xs-3 col-sm-3 no-padding">菜品排序码</span>
+															<span class="col-xs-5 col-sm-5 no-padding">菜品名称</span>
+															<span class="col-xs-3 col-sm-3 no-padding">速查码</span>
+														</div>
+														<ul class="dish-list">
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+
+															<li class="checkbox clearfloat">
+																<span class="col-xs-1 col-sm-1 no-padding">
+															<label class="check">
+        															<input type="checkbox">
+      														</label>
+														</span>
+																<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+																<span class="col-xs-5 col-sm-5 no-padding">蒜蓉茄子</span>
+																<span class="col-xs-3 col-sm-3 no-padding">sfsged</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab3" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">名称：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">排序码：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" id="" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for=" " class="col-sm-3 col-lg-2 no-padding control-label">微信外卖：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" id="" placeholder="">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">微信扫点：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" id="" placeholder="">
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab4" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">名称：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">排序码：</label>
+													<div class="col-xs-11 col-sm-8 col-lg-9 no-padding">
+														<input type="" class="form-control" id="" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+																<span class="col-sm-11 no-padding">临时菜（可改菜名）</span>
+			    													<input class="col-sm-1 no-padding" type="checkbox" value="">
+			  												</label>
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+															<span class="col-sm-11 no-padding">可变价（可在前台修改价格）</span>
+		    													<input class="col-sm-1 no-padding" type="checkbox" value="">
+		  												</label>
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+															<span class="col-sm-11 no-padding">是否启用</span>
+		    													<input class="col-sm-1 no-padding" type="checkbox" value="">
+		  												</label>
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+															<span class="col-sm-11 no-padding">需称重（河海鲜菜）</span>
+		    													<input class="col-sm-1" type="checkbox" value="">
+		  												</label>
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+															<span class="col-sm-11 no-padding">是否能折扣</span>
+		    													<input class="col-sm-1 no-padding" type="checkbox" value="">
+		  												</label>
+													</div>
+												</div>
+												<div class=" col-sm-4">
+													<div class="checkbox more-check">
+														<label>
+															<span class="col-sm-11 no-padding">是否作料</span>
+		    													<input class="col-sm-1 no-padding" type="checkbox" value="">
+		  												</label>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab5" class="tab-pane">
+											<form class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">名称：</label>
+													<div class="col-xs-11 col-sm-9 col-lg-9 no-padding">
+														<input type="" class="form-control" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label for="" class="col-sm-3 col-lg-2 no-padding control-label">排序码：</label>
+													<div class="col-xs-11 col-sm-9 col-lg-9 no-padding">
+														<input type="" class="form-control" id="" placeholder=""readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group col-sm-6">
+													<label class="col-sm-3 col-md-3 col-lg-2 control-label">logo图片：</label>
+													<div class="col-sm-9 col-md-9 col-lg-9 no-padding" style="position: relative;">
+														<div class="img-container"></div>
+														<input class="img-upload sm-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+														<div id="" class="flex flex-between img-btn-wrapper">
+															<span class="img-btn upload-btn">上传图片</span>
+															<span class="img-btn">清空</span>
+														</div>
+														<span class="tips">提示：图片&lt;1024KB</span>
+													</div>
+												</div>
+												<div class="form-group col-sm-6 img-detail" style="font-size:0">
+													<label class="col-sm-3 col-md-3 col-lg-2 control-label">菜品描述：</label>
+													<div class="col-sm-9 col-md-9 col-lg-9 no-padding" style="position: relative;">
+														<textarea class="txt-content" name="" rows="" cols=""></textarea>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+	<script src="../javascript/Validform_v5.3.2_min.js" cache="false"></script>
+	<!--日期-->
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-datetimepicker.fr.js"></script>
+	<script>
+		(function($) {
+			subquanxuan("allChecked", "type-list");
+		})(jQuery);
+		(function($) {
+			scrollWidth1 = $(".type-list").width() - $(".type-list li").outerWidth();
+			scrollWidth2 = $(".dish-list").width() - $(".dish-list li").outerWidth();
+			paddingRight1 = (15 + scrollWidth1) + "px";
+			paddingRight2 = (15 + scrollWidth2) + "px";
+			$(".type-title").eq(0).css("paddingRight", paddingRight1);
+			$(".type-title").eq(1).css("paddingRight", paddingRight2);
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			$(".validity-date").datetimepicker({
+				language: "zh-CN",
+				format: 'yyyy-mm-dd',
+				autoclose: true,
+				minView: 2,
+				pickerPosition: 'top-left',
+//				setStartDate:"2018-01-01"
+				//			bootcssVer:3
+			}); 
+//			$(".validity-date").datetimepicker("setStartDate","2018-01-01");
+			$(".deadline-date").datetimepicker({
+				language: "zh-CN",
+				format: 'yyyy-mm-dd',
+				autoclose: true,
+				minView: 2,
+				pickerPosition: 'top-left',
+				//			bootcssVer:3
+			});
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			$(".form-horizontal").Validform({
+				tiptype: function(msg, o, cssctl) {
+					var obj_tip;
+					if(!o.obj.is("form")) { //验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+						obj_tip = o.obj.siblings(".Validform_checktip");
+						cssctl(obj_tip, o.type);
+						obj_tip.text(msg);
+					} else {
+						obj_tip = o.obj.find("#msgdemo");
+						cssctl(obj_tip, o.type);
+						obj_tip.text(msg);
+					}
+				},
+				ajaxPost: true,
+				callback: function(form) {
+					form[0].submit();
+					return false;
+				}
+			});
+		})(jQuery);
+	</script>
+</html>

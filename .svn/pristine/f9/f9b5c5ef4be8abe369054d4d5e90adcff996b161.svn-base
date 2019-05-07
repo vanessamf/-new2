@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>报表-菜品销售报表</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/main.comm.js"></script>
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>菜品销售报表</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="fl">
+									<li class="">
+										<a class="sm-round-btn sm-btn" href="">导出</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="input-group form-horizontal">
+										<label for="" class="control-label date-label">日期：</label>
+										<div class="form-group calendar-panel ">
+											<div class="start-date  date no-padding clearfloat" id="datetimepicker" data-date="" data-date-format="dd-mm-yyyy">
+												<input class="span2 form-control" type="text" value="" readonly="readonly">
+												<span class="add-on"><i class="icon-th iconfont icon-rili1"></i></span>
+											</div>
+											<span class="bwt-line"></span>
+											<div class="end-date  date  no-padding">
+												<input class="span2 form-control" type="text" value="" readonly="readonly">
+												<span class="add-on"><i class="icon-th iconfont icon-rili1"></i></span>
+											</div>
+										</div>
+									</li>
+									<li class="input-group">
+										<li class="input-group">
+											<label class="control-label">销售类型：</label>
+											<div id="select_category" class="select-category-control">
+												<div data-toggle="dropdown" class="select-btn  dropdown-toggle">
+													<ul class="select-choices" data-maximumsize="3000" data-ids="">
+														<!--如果当前没有选中项，则显示提示语-->
+														<li class="tips tip-placeholder">请选择查询的销售类型</li>
+													</ul>
+													<span class="sel-arrow"><b></b></span>
+												</div>
+												<div class="select-content dropdown-menu">
+													<div class="dropdown-content">
+														<ul class="category-row">
+															<li class="sub-content">
+																<div class="sel-item">
+																	<label class="chk-lb"></label>
+																	<span class="item-lab" data-id="store_01">苏州直营店</span>
+																</div>
+															</li>
+															<li class="sub-content">
+																<div class="sel-item">
+																	<label class="chk-lb"></label>
+																	<span class="item-lab" data-id="store_02">苏州工业园区店</span>
+																</div>
+															</li>
+															<li class="sub-content">
+																<div class="sel-item">
+																	<label class="chk-lb"></label>
+																	<span class="item-lab" data-id="store_03">苏州加盟店</span>
+																</div>
+															</li>
+															<li class="sub-content">
+																<div class="sel-item">
+																	<label class="chk-lb"></label>
+																	<span class="item-lab" data-id="store_04">苏州店</span>
+																</div>
+															</li>
+															<li class="sub-content">
+																<div class="sel-item">
+																	<label class="chk-lb"></label>
+																	<span class="item-lab" data-id="store_05">加盟店</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+									<li class="input-group">
+										<label for="" class="control-label">员工：</label>
+										<div class="category-select">
+											<div class="pull-left wd-100">
+												<div class="btn-group m-r select-base">
+													<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                            								<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                        								</button>
+													<ul class="dropdown-menu dropdown-select">
+														<li class="active dropdown-highlighted">
+															<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">2</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">3</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">4</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="input-group">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead ">
+											<div class="desks-title table-tr">
+												<span class="table-th">菜品排序码</span>
+												<span class="table-th">菜品名称</span>
+												<span class="table-th">销售数量</span>
+												<span class="table-th">销售数量占比（%）</span>
+												<span class="table-th">退菜数量</span>
+												<span class="table-th">退菜数量占比（%）</span>
+												<span class="table-th">净销售额</span>
+												<span class="table-th">净销售额占比（%）</span>
+												<span class="table-th">菜品折扣</span>
+												<span class="table-th">菜品折扣占比（%）</span>
+											</div>
+										</div>
+									</div>
+									<div class="table-wrapper">
+										<div class="table actual-table-header">
+											<div class="table-thead ">
+												<div class="desks-title table-tr">
+													<span class="table-th">菜品排序码</span>
+													<span class="table-th">菜品名称</span>
+													<span class="table-th">销售数量</span>
+													<span class="table-th">销售数量占比（%）</span>
+													<span class="table-th">退菜数量</span>
+													<span class="table-th">退菜数量占比（%）</span>
+													<span class="table-th">净销售额</span>
+													<span class="table-th">净销售额占比（%）</span>
+													<span class="table-th">菜品折扣</span>
+													<span class="table-th">菜品折扣占比（%）</span>
+												</div>
+											</div>
+											<ul class="desks-list table-tbody">
+												<li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li><li class="table-tr desks-item">
+													<span class="table-td">A0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">30000</span>
+													<span class="table-td">50%</span>
+													<span class="table-td">3000</span>
+													<span class="table-td">6%</span>
+													<span class="table-td">23334</span>
+													<span class="table-td">98%</span>
+													<span class="table-td">8099</span>
+													<span class="table-td">76%</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+	</body>
+	<!-- select2 -->
+	<script src="javascript/select2/select2-4.js" cache="false"></script>
+	<script src="javascript/select2/select2_zh-CN.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+	<!--日期-->
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.fr.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			$(".start-date").datetimepicker({
+				language: "zh-CN",
+				format: 'yyyy-mm-dd',
+				//				todayBtn : 1,
+				autoclose: true,
+				startView: 2,
+				minView: 2,
+				pickerPosition: 'bottom-left',
+				minuteStep: 5,
+				//				startDate:"2018-11-11"
+				//				bootcssVer:3
+			}).on('changeDate', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				var startTime = event.date;
+				$(".end-date").datetimepicker('setStartDate', startTime);
+				$(".end-date").val("");
+			});
+
+			$(".end-date").datetimepicker({
+				language: "zh-CN",
+				format: 'yyyy-mm-dd',
+				autoclose: true,
+				startView: 2,
+				minView: 2,
+				pickerPosition: 'bottom-left',
+				//				bootcssVer:2
+			}).on('changeDate', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				var endTime = event.date;
+				$('.start-date').datetimepicker('setEndDate', endTime);
+			});
+		})(jQuery);
+	</script>
+</html>

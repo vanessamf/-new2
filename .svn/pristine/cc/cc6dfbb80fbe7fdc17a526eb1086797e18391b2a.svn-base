@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>桌台管理-消费类型</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>消费类型</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="navbar-left">
+									<li>
+										<a class="sm-round-btn sm-btn" href="#addConsumeType" data-toggle="modal" data-target="#addConsumeType">+新增</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+													排序码
+													<i class="iconfont icon-paixu"></i>
+												</span>
+												<span class="table-th">区域名称</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+									<div class="table-wrapper">
+										<div class="table actual-table-header">
+											<div class="table-thead">
+												<div class="desks-title table-tr">
+													<span class="table-th">操作</span>
+													<span class="table-th">
+													编码
+													<i class="iconfont icon-paixu"></i>
+												</span>
+													<span class="table-th">区域名称</span>
+													<span class="table-th">最后更新人</span>
+													<span class="table-th">最后更新时间</span>
+												</div>
+											</div>
+											<ul class="desks-list table-tbody">
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<a href="">修改</a>
+											<a href="#deleteMenu" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">大厅</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<a href="">修改</a>
+											<a href="#deleteMenu" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">大厅</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<a href="">修改</a>
+											<a href="#deleteMenu" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">大厅</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<a href="">修改</a>
+											<a href="#deleteMenu" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">大厅</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<a href="">修改</a>
+											<a href="#deleteMenu" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">大厅</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+		<!--新增消费类型-->
+		<div class="public-modal  modal fade" id="addConsumeType" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog lg-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新增消费类型</h4>
+					</div>
+					<div class="modal-body deleteTableBody">
+						<form class="form-horizontal clearfloat">
+							<div id="" class="clearfloat">
+								<div class="form-group sm-form-group col-sm-24">
+									<label for="" class="col-sm-3 col-lg-3 no-padding control-label">类型名称：</label>
+									<div class="col-xs-8 col-sm-8 col-lg-8 no-padding">
+										<input type="text" class="form-control ipt-search ivalidate-box" placeholder="请输入名称" data-validate-options="required: true">
+									</div>
+									<i class="col-sm-1 no-padding">*</i>
+									<span class="btn sm-round-btn input-sm" data-toggle="modal" data-target="#addMenu">增加</span>
+								</div>
+								<div class="tips col-sm-24 mt0 mb10">
+									（提示：数量可以为0 ，为0时表示：不固定数量，具体数量按开台时的人数确认）
+								</div>
+							</div>
+							<div class="col-sm-24">
+								<div class="menu-type">
+									<div class="type-title ta-c">
+										<span class="col-xs-6 col-sm-6 no-padding">菜品名称</span>
+										<span class="col-xs-6 col-sm-6 no-padding">数量</span>
+										<span class="col-xs-6 col-sm-6 no-padding">单价（元）</span>
+										<span class="col-xs-6 col-sm-6 no-padding">操作</span>
+									</div>
+									<ul class="dish-list">
+										<li class="checkbox clearfloat">
+											<span class="col-xs-6 col-sm-6 no-padding">菜品名称</span>
+											<span class="col-xs-6 col-sm-6 no-padding">124124</span>
+											<span class="col-xs-6 col-sm-6 no-padding">88.00</span>
+											<span class="col-xs-6 col-sm-6 no-padding">sfwe</span>
+										</li>
+										<li class="checkbox clearfloat">
+											<span class="col-xs-6 col-sm-6 no-padding">菜品名称</span>
+											<span class="col-xs-6 col-sm-6 no-padding">124124</span>
+											<span class="col-xs-6 col-sm-6 no-padding">88.00</span>
+											<span class="col-xs-6 col-sm-6 no-padding">sfwe</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--新增菜品-->
+		<div class="public-modal  modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog lg-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">添加菜品</h4>
+					</div>
+					<div class="modal-body deleteTableBody">
+						<form class="form-horizontal clearfloat">
+							<div id="" class="clearfloat">
+								<div class="form-group sm-form-group col-sm-10">
+									<label for="" class="col-sm-8 col-lg-8 no-padding control-label">名称：</label>
+									<div class="col-xs-11 col-sm-14 col-lg-14 no-padding">
+										<input type="text" class="form-control ipt-search" placeholder="">
+									</div>
+								</div>
+								<div class="form-group sm-form-group col-sm-14">
+									<div class="input-group navbar-right">
+										<input type="text" class="form-control ipt-search" placeholder="排序码，名称，速查码">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-24">
+								<div class="menu-type method-type">
+									<div class="type-title dish-title checkbox ">
+										<label class="check no-padding">
+										<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+											
+													<input class="allDishChecked" type="checkbox" onclick="quanxuan(this,'qxDish')"> 
+											
+										</span>
+										<span class="col-xs-3 col-sm-3 no-padding">菜品排序码</span>
+										<span class="col-xs-8 col-sm-8 no-padding">菜品名称</span>
+										<span class="col-xs-4 col-sm-4 no-padding">价格</span>
+										<span class="col-xs-3 col-sm-3 no-padding">单位</span>
+										<span class="col-xs-4 col-sm-4 no-padding">菜品类别</span>
+										</label>
+									</div>
+									<ul class="dish-list  list-container">
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+										<li class="checkbox clearfloat">
+											<label class="check no-padding">
+											<span class="col-xs-2 col-sm-2 no-padding overflow-visible">
+    													<input type="checkbox" class="qxDish ">
+											</span>
+											<span class="col-xs-3 col-sm-3 no-padding">1111</span>
+											<span class="col-xs-8 col-sm-8 no-padding">蒜蓉茄子</span>
+											<span class="col-xs-4 col-sm-4 no-padding">sfsged</span>
+											<span class="col-xs-3 col-sm-3 no-padding">份</span>
+											<span class="col-xs-4 col-sm-4 no-padding">热菜</span>
+												</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script src="javascript/jquery-2.1.1.min.js"></script>
+	<script src="javascript/main.comm.js"></script>
+	<script src="javascript/iValidate.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+	<script type="text/javascript">
+		subquanxuan("allDishChecked", "list-container");
+		$(document).ready(function() {
+			//			$("#nav").load("common/nav.html");
+		});
+	</script>
+	<script type="text/javascript">
+		//校验
+		// 显示位置配置
+		var config = {
+			position: {
+				at: 'center right' // tip显示位置
+			}
+		}
+		// 初始化验证对象
+		$(".ivalidate-box").each(function() {
+			iValidate.init(this, config);
+		});
+	</script>
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+
+</html>

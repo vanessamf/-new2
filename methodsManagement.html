@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>菜品管理-做法管理</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox  management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>做法管理</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="navbar-left">
+									<li>
+										<a class="sm-round-btn sm-btn" href="#myModal" data-toggle="modal" data-target="#myModal">+新增</a>
+									</li>
+								</ul>
+								<ul>
+									<div class="input-group navbar-right">
+										<input type="text" class="ipt-search" placeholder="排序码，名称，速查码 ">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</div>
+								</ul>
+							</div>
+							<div class="desks-content table-content ">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead ">
+											<div class="desks-title table-tr ">
+												<span class="table-th ">操作</span>
+												<span class="table-th ">
+													排序码
+													<i class="iconfont icon-paixu "></i>
+												</span>
+												<span class="table-th ">做法名称</span>
+												<span class="table-th ">速查码</span>
+												<span class="table-th ">加价方式</span>
+												<span class="table-th ">做法价格</span>
+												<span class="table-th">是否折扣</span>
+												<span class="table-th ">状态</span>
+												<span class="table-th ">最后更新人</span>
+												<span class="table-th ">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+								<div class="table-wrapper ">
+									<div class="table actual-table-header ">
+										<div class="table-thead ">
+											<div class="desks-title table-tr ">
+												<span class="table-th ">操作</span>
+												<span class="table-th ">
+													排序码
+													<i class="iconfont icon-paixu "></i>
+												</span>
+												<span class="table-th ">做法名称</span>
+												<span class="table-th ">速查码</span>
+												<span class="table-th ">加价方式</span>
+												<span class="table-th ">做法价格</span>
+												<span class="table-th">是否折扣</span>
+												<span class="table-th ">状态</span>
+												<span class="table-th ">最后更新人</span>
+												<span class="table-th ">最后更新时间</span>
+												
+											</div>
+										</div>
+										<ul class="desks-list table-tbody ">
+											<li class="table-tr desks-item ">
+												<span class="table-td " >
+													<a href=" ">修改</a>
+													<a href=" ">禁用</a>
+													<a href=" ">删除</a>
+												</span>
+												<span class="table-td ">071</span>
+												<span class="table-td ">不要香菜</span>
+												<span class="table-td ">20188972</span>
+												<span class="table-td ">数量加价</span>
+												<span class="table-td ">0.00</span>
+												<span class="table-td ">是</span>
+												<span class="table-td ">启用</span>
+												<span class="table-td ">efwer</span>
+												<span class="table-td ">2018-10-15 11:19:30</span>
+											</li>
+											<li class="table-tr desks-item ">
+												<span class="table-td ">
+													<a href=" ">修改</a>
+													<a href=" ">禁用</a>
+													<a href=" ">删除</a>
+												</span>
+												<span class="table-td ">071</span>
+												<span class="table-td ">不要香菜</span>
+												<span class="table-td ">20188972</span>
+												<span class="table-td ">数量加价</span>
+												<span class="table-td ">0.00</span>
+												<span class="table-td ">是</span>
+												<span class="table-td ">启用</span>
+												<span class="table-td ">efwer</span>
+												<span class="table-td ">2018-10-15 11:19:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							</div>
+							<footer class="desks-bottom ">
+								<div class="row ">
+									<ul id="ft_pagination_menu " class="pagination ">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+		<!--新增做法管理-->
+		<div class="public-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">新增做法管理</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal clearfloat">
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5  control-label">做法名称：</label>
+								<div class="col-xs-23 col-sm-18 no-padding">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" placeholder="请输入汉字，数字或英文"data-validate-options="required: true">
+								</div>
+								<i class="col-sm-1 col-xs-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">排序码：</label>
+								<div class="col-xs-23 col-sm-18 no-padding">
+									<input type="text" name="usr-name" class="form-control ivalidate-box" placeholder="101"data-validate-options="required: true">
+								</div>
+								<i class="col-sm-1 col-xs-1">*</i>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">做法类别：</label>
+								<div class="col-xs-23 col-sm-18 no-padding">
+									<div class="btn-group m-r select-base">
+										<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                   			 <span class="dropdown-label">33</span>
+                                  			 <span class="sel-arrow"><b></b></span>
+                          			  	</button>
+										<ul class="dropdown-menu dropdown-select">
+											<li class="active dropdown-highlighted">
+												<a href="#"><input type="radio" name="d-s-r">34</a>
+											</li>
+											<li class="">
+												<a href="#"><input type="radio" name="d-s-r">35</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="inputPassword3" class="col-sm-5 control-label">速查码：</label>
+								<div class="col-xs-23 col-sm-18 no-padding">
+									<input type="" class="form-control" id="inputPassword3" placeholder="">
+								</div>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="inputPassword3" class="col-sm-5 control-label">做法价格：</label>
+								<div class="col-xs-23 col-sm-18 no-padding">
+									<input type="text" name="usr-name" class="form-control" placeholder="">
+								</div>
+							</div>
+							<div class="form-group col-sm-24">
+								<label for="" class="col-sm-5 control-label">是否折扣：</label>
+									<div class="col-sm-18  col-xs-23 btn-group no-padding btn-group-sm is-zhekou" role="group" aria-label="...">
+										<button type="button" class="btn btn-default active">是</button>
+										<button type="button" class="btn btn-default">否</button>
+									</div>
+							</div>
+						</form>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">保存并继续</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="javascript/jquery-2.1.1.min.js "></script>
+	<script src="javascript/main.comm.js "></script>
+	<!--<script src="javascript/Validform_v5.3.2_min.js " cache="false "></script>-->
+	<script src="javascript/iValidate.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js "></script>
+	<script>
+		(function($) {
+//			$(".form-horizontal ").Validform({
+//				tiptype: function(msg, o, cssctl) {
+//					var obj_tip;
+//					if(!o.obj.is("form ")) { //验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+//						obj_tip = o.obj.siblings(".Validform_checktip ");
+//						cssctl(obj_tip, o.type);
+//						obj_tip.text(msg);
+//					} else {
+//						obj_tip = o.obj.find("#msgdemo ");
+//						cssctl(obj_tip, o.type);
+//						obj_tip.text(msg);
+//					}
+//				},
+//				ajaxPost: true,
+//				callback: function(form) {
+//					form[0].submit();
+//					return false;
+//				}
+//			});
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+		})(jQuery);
+	</script>
+
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+
+</html>

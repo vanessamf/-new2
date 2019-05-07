@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>门店管理</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/bootstrap-switch.min.css" />
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+			
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+		<link rel="stylesheet" href="../css/iValidate.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增门店</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-8 no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">基本信息</a>
+										</li>
+										<li class="tab-nav col-sm-8 no-padding">
+											<a href="#tab3" data-toggle="tab" aria-expanded="false">其它设置</a>
+										</li>
+										<li class="tab-nav advanced-nav col-sm-8 no-padding">
+											<a href="#tab5" data-toggle="tab" aria-expanded="false">高级</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<form id="f_store_info" class="form-horizontal tab-form clearfloat">
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">店铺类型：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">店铺</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>店铺</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">直属上级：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">店铺名称：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6  no-padding control-label max-w-120">店铺排序码：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">速查码：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="101">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">品牌：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">抹零处理：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">精确度：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">菜品打印顺序：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">下单模式：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">自动注销时间：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">小票样式：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                                    							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                                							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12 calendar-wrapper">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">营业日期：</label>
+													<div class="validity-date  date col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding" id="datetimepicker" data-date="" data-date-format="dd-mm-yyyy">
+														<input class="span2 form-control" type="datetime" value="" readonly="readonly">
+														<span class="add-on"><i class="icon-th iconfont icon-rili1"></i></span>
+													</div>
+												</div>
+												<div class="form-group col-sm-12 calendar-wrapper">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">上次日结日期：</label>
+													<div class="deadline-date  date  col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input class="span2 form-control" type="datetime" value="" readonly="readonly">
+														<span class="add-on"><i class="icon-th iconfont icon-rili1"></i></span>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">UI地址：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control" >
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">KDS服务器地址：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">客用单打印：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                            							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                        							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-120">经营模式：</label>
+													<div class="col-xs-22 col-sm-11 col-md-13 col-lg-16 no-padding">
+														<input type="text" name="usr-name" class="form-control" placeholder="">
+													</div>
+												</div>
+												
+											</form>
+										</div>
+										<div id="tab3" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal tab-form clearfloat" role="form">
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">通知短信账户：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control" >
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">短信密码：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">营销短信账户：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">短信密码：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">门店负责人：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">负责人手机：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">门店电话：</label>
+													<div class="col-xs-24 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<input type="text" name="usr-name" class="form-control">
+													</div>
+												</div>
+												<div class="form-group col-sm-12">
+													<label for="" class="col-sm-12 col-md-8 col-lg-6 no-padding control-label max-w-no">门店业态：</label>
+													<div class="col-xs-22 col-sm-12 col-md-16 col-lg-18 no-padding">
+														<div class="pull-left wd-100">
+															<div class="btn-group m-r select-base">
+																<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                            							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                                        							</button>
+																<ul class="dropdown-menu dropdown-select">
+																	<li class="active dropdown-highlighted">
+																		<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">2</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">3</a>
+																	</li>
+																	<li>
+																		<a href="#"><input type="radio" name="d-s-r">4</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group col-sm-24">
+													<label for="" class="col-sm-6 col-md-4 col-lg-3 no-padding control-label max-w-no">门店地址：</label>
+													<div class="col-xs-24 col-sm-18 col-md-20 col-lg-21 no-padding">
+														<textarea type="text" name="usr-name" class="form-control"rows="3"style="resize:none" >
+														</textarea>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab5" class="tab-pane advanced-setup">
+											<form id="f_store_info" class="form-horizontal tab-form clearfloat" role="form">
+											    <!--<div class="status-container clearfloat" >-->
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">结账完成不打印结账单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">小票打印机不打印退菜单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">厨房打印机不打印退菜单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">外卖单结单完成不打印退菜单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">外卖单菜品不打印外卖备注：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">结账单，客用单相同菜品不合并：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用快速刷卡：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用快速现金：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用快速扫码：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用快速加菜：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用快速反结算：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快餐启用输入牌号：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">0元菜可以销售：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">称重菜需多次确认重量：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">允许一桌多单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">允许一个员工号登陆多台机器：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">营业日期设置：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">餐别设置：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">中餐强制选择桌台开单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">快速开单（中快餐模式）：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">日结允许有未结账单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">日结允许有未结外卖账单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">启用排版：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">自动套餐：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">外卖单自动接单：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">外卖单自动送厨房：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">登陆系统自动更新：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+													<label for="" class="control-label max-w-no">小票显示第二语言：</label>
+													<div class="">
+														<input name="status" type="checkbox" checked="checked">
+													</div>
+												</div>
+												<div class="form-group status col-sm-8">
+                                                    <label for="" class="control-label max-w-no">29：</label>
+                                                    <div class="">
+                                                        <input name="status" type="checkbox" checked="checked">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group status col-sm-8">
+                                                    <label for="" class="control-label max-w-no">30：</label>
+                                                    <div class="">
+                                                        <input name="status" type="checkbox" checked="checked">
+                                                    </div>
+                                                </div>
+                                                <!--<div class="form-group status col-sm-8">
+                                                    <label for="" class="control-label max-w-no">31：</label>
+                                                    <div class="">
+                                                        <input name="status" type="checkbox" checked="checked">
+                                                    </div>
+                                                </div>-->
+											    <!--</div>-->
+											    <!--<div class="sup-dish-footer clearfloat">
+                                                    <span class="col-sm-6 sup-prev  col-xs-6">上一页</span>
+                                                    <span class="col-sm-6 sup-next col-xs-6">下一页</span>
+                                                 </div>-->
+											</form>
+											 <div class="page-btn clearfloat">
+                                                <span class="sup-prev sm-round-btn grey-btn">上一页</span>
+                                                <span class="sup-next sm-round-btn grey-btn">下一页</span>
+                                             </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+	<script src="../javascript/iValidate.js"></script>
+	<script type="text/javascript" src="../javascript/bootstrap-switch.min.js"></script>
+	<!--Paginator-->
+<script src="../javascript/bootstrap-paginator.min.js"></script>
+	<script>
+		(function($) {
+			subquanxuan("allDishChecked", "list-container");
+			$('[name="status"]').bootstrapSwitch({
+				onText: "开",
+				offText: "关",
+				onColor: "info",
+				offColor: "info",
+				size: "large",
+				state: false,
+				//			animate:false,
+				onSwitchChange: function(event, state) {
+					if(state == true) {
+						$(this).val("1");
+					} else {
+						$(this).val("2");
+					}
+				}
+			});
+		})(jQuery);
+	</script>
+<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+		
+		
+		//翻页
+//		$(document).on("click", ".tab-nav.advanced-nav", function() {
+//		   
+//		var index=0;
+//      var liNum=24;
+//       var formHeight=$(".status").outerHeight(true)*liNum/3;
+//      $(".advanced-setup.active .tab-form").height(formHeight);
+//      var translateHeight=$(".status").outerHeight(true)*liNum/3;
+////      var translateHeight=$(".advanced-setup.active .tab-form").height();
+//      var totalHeight=$(".advanced-setup.active .tab-form").get(0).scrollHeight;
+//      var totalLi=$(".status").length;
+//      var maxIndex=Math.ceil(totalLi/liNum);
+////      var maxIndex=Math.ceil(totalHeight/translateHeight);
+//      $(".sup-next").on('click', function() {
+//          if(index==maxIndex-1){
+//          }else if(index<maxIndex-1){
+//              index++;
+//              $(".advanced-setup.active .tab-form").animate({scrollTop: translateHeight*index}, 300);
+//              }
+//          })
+//      $(".sup-prev").on('click', function() {
+//          if(index==0){
+//          }else if(index>=1){
+//              index--;
+//              $(".advanced-setup.active .tab-form").animate({scrollTop: translateHeight*index}, 300);
+//          }
+//      })
+//      })
+	</script>
+</html>

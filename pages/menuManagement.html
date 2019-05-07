@@ -1,0 +1,498 @@
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>菜品维护</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="">
+									<li>
+										<a class="sm-round-btn sm-btn" data-url="pages/subpages/addMenuManagement.html" data-title="报表-菜品销售报表"href="javascript:void(0);">+新增</a>
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="">导出菜品模板</a>
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="">复制菜谱</a>
+									</li>
+									<li class="file">
+										<span class="sm-round-btn sm-btn btn-grey">选择文件</span>
+										<input class="file-select" type="text" id="avatval" placeholder="未选择任何文件" readonly="readonly" />
+										<input class="file-btn" type="file" id="exampleInputFile" data-toggle="modal" data-target="#fileModal">
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="" data-toggle="modal">批量导入</a>
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="#forbidden" data-toggle="modal">批量禁用</a>
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="#deleteAll" data-toggle="modal">批量删除</a>
+									</li>
+								</ul>
+								<ul>
+									<li class="input-group">
+										<label for="" class="control-label">菜品类别：</label>
+										<div class="category-select">
+											<div class=" wd-100">
+												<div class="btn-group m-r select-base">
+													<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                            							<span class="dropdown-label">1</span><span class="sel-arrow"><b></b></span>
+                        							</button>
+													<ul class="dropdown-menu dropdown-select">
+														<li class="active dropdown-highlighted">
+															<a href="#"><input type="radio" name="d-s-r" checked>1</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">2</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">3</a>
+														</li>
+														<li>
+															<a href="#"><input type="radio" name="d-s-r">4</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="input-group">
+										<label for="" class="control-label">查询条件：</label>
+										<input type="text" class="ipt-search" placeholder="排序码，名称，速查码">
+										<span class="btn sm-round-btn input-sm">查询</span>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead ">
+											<div class="desks-title table-tr">
+												<span class="table-th">
+												<input class="allChecked" type="checkbox" onclick="quanxuan(this,'menu-item')">
+											</span>
+												<span class="table-th">操作</span>
+												<span class="table-th">
+												排序码
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">菜品名称</span>
+												<span class="table-th">速查码</span>
+												<span class="table-th">价格</span>
+												<span class="table-th">单位</span>
+												<span class="table-th">菜品类别</span>
+												<span class="table-th">状态</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+									<div class="table-wrapper">
+										<div class="table actual-table-header">
+											<div class="table-thead ">
+												<div class="desks-title table-tr">
+													<span class="table-th">
+											<input class="allChecked" type="checkbox" onclick="quanxuan(this,'menu-item')">
+										</span>
+													<span class="table-th">操作</span>
+													<span class="table-th">
+														排序码
+														<i class="iconfont icon-paixu"></i>
+													</span>
+													<span class="table-th">菜品名称</span>
+													<span class="table-th">速查码</span>
+													<span class="table-th">价格</span>
+													<span class="table-th">单位</span>
+													<span class="table-th">菜品类别</span>
+													<span class="table-th">状态</span>
+													<span class="table-th">最后更新人</span>
+													<span class="table-th">最后更新时间</span>
+												</div>
+											</div>
+											<ul class="desks-list table-tbody">
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item" >
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">0712</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+												<li class="table-tr desks-item">
+													<span class="table-td">
+											<input type="checkbox" class="menu-item">
+										</span>
+													<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+													<span class="table-td">071</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">b099</span>
+													<span class="table-td">5</span>
+													<span class="table-td">份</span>
+													<span class="table-td">咖啡</span>
+													<span class="table-td">启用</span>
+													<span class="table-td">zhgxr001</span>
+													<span class="table-td">2018-10-05 11:19:30</span>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+		<!-- 弹出层-->
+		<!--请导入正确格式的文件-->
+		<div class="public-modal modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">提示信息</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							请导入正确格式的文件！
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">确定</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--批量禁用-->
+		<div class="public-modal modal fade" id="forbidden" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">确认操作</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							确认禁用已选择的菜品？
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">是</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--批量删除-->
+		<div class="public-modal modal fade" id="deleteAll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog sm-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel">确认操作</h4>
+					</div>
+					<div class="modal-body">
+						<div class="del-content">
+							确认删除已选择的菜品？
+						</div>
+					</div>
+					<div class="mf modal-footer">
+						<button type="button" class="btn modal-btn">是</button>
+						<button type="button" class="btn modal-btn" data-dismiss="modal">否</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript">
+		subquanxuan("allChecked", "desks-item");
+		$(document).on('click', '.tool-bar li a:first-child', function(e) {
+			$("#menu_content").load($(this).attr("data-url"),function(){
+				tabSlide();
+				tabPaneHeight();
+			});
+		})
+		
+	</script>
+

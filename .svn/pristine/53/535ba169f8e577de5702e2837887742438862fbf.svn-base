@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>菜品管理-打印设置</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<script src="javascript/jquery-2.1.1.min.js"></script>
+		<script src="javascript/main.comm.js"></script>
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox  management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox bg-light menu-wrapper menu-container">
+							<div class="title flex flex-between">
+								<span>打印设置</span>
+							</div>
+							<div class="tool-bar clearfloat">
+								<ul class="">
+									<li>
+										<a class="sm-round-btn sm-btn" href="manage.menu/addPrinter.html">+新增</a>
+									</li>
+									<li>
+										<a class="sm-round-btn sm-btn" href="manage.menu/addLabelPrinter.html">新增标签打印机</a>
+									</li>
+								</ul>
+							</div>
+							<div class="desks-content table-content">
+								<div class="fixed-table-wrapper">
+									<div class="table fixed-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											编号
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">打印名称</span>
+												<span class="table-th">标签打印机</span>
+												<span class="table-th">类型</span>
+												<span class="table-th">打印机地址</span>
+												<span class="table-th">端口地址</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+									</div>
+								<div class="table-wrapper">
+									<div class="table actual-table-header">
+										<div class="table-thead">
+											<div class="desks-title table-tr">
+												<span class="table-th">操作</span>
+												<span class="table-th">
+											编号
+											<i class="iconfont icon-paixu"></i>
+										</span>
+												<span class="table-th">打印名称</span>
+												<span class="table-th">标签打印机</span>
+												<span class="table-th">类型</span>
+												<span class="table-th">打印机地址</span>
+												<span class="table-th">端口地址</span>
+												<span class="table-th">最后更新人</span>
+												<span class="table-th">最后更新时间</span>
+											</div>
+										</div>
+										<ul class="desks-list table-tbody">
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">咖啡</span>
+												<span class="table-td">b099</span>
+												<span class="table-td">5</span>
+												<span class="table-td">份</span>
+												<span class="table-td">咖啡</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+											<li class="table-tr desks-item">
+												<span class="table-td" style="width:20%;">
+											<a href="">修改</a>
+											<a href="">禁用</a>
+											<a href="#deleteArea" data-toggle="modal">删除</a>
+										</span>
+												<span class="table-td">071</span>
+												<span class="table-td">咖啡</span>
+												<span class="table-td">b099</span>
+												<span class="table-td">5</span>
+												<span class="table-td">份</span>
+												<span class="table-td">咖啡</span>
+												<span class="table-td">zhgxr001</span>
+												<span class="table-td">2018-10-05 11:19:30</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+								</div>
+							<footer class="desks-bottom">
+								<div class="row">
+									<ul id="ft_pagination_menu" class="pagination">
+									</ul>
+								</div>
+							</footer>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+		<!-- 弹出层-->
+	</body>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+
+	<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				},
+				onPageClicked: function(type, page) {
+					if(page.data.page === 1) {
+						$("ul.pagination li:nth-child(3) a").css({
+							"color": "#ffffff",
+							"background-color": "#1a5cc6",
+							"border-color": "#1a5cc6"
+						})
+					}
+				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		})(jQuery);
+	</script>
+
+</html>

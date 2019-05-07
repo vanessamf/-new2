@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="css/app.auto.css" type="text/css">
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-light navbar nav-header">
+        <div class="logo-box">
+            <a href="#" class="navbar-brand">商户自助管理平台</a>
+           <!-- <a href="#" class="navbar-brand" data-toggle="fullscreen"><img src="images/selfservice-blue-logo.png" class="m-r-sm">Cuscapi会员管理系统</a>-->
+        </div>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- Form -->
+            <section id="content" >
+                <section class="vbox forgot-pw-wrapper">
+                    <section class="scrollable">
+                        <div class="ap-h100 bg-light">
+                            <div class="menu-panel">
+                                <section class="panel">
+                                   <nav>
+                                        <ul class="ul-list step-instr progressbar">
+                                            <li class="step-item active">验证账号</li>
+                                            <li class="step-item">重置密码</li>
+                                        </ul>
+                                    </nav>
+                                    <div class="panel-body">
+                                        <form id="" class="progress-box form-box" role="form">
+                                            <figure data-toggle="0" class="progress-item active">
+                                                <div class="form-group">
+                                                    <label class="col-sm-6 control-label">您绑定的手机号：</label>
+                                                    <div class="col-sm-16">
+                                                        <div class="input-group mx-wd-md">
+                                                            <input name="phone" type="text" class="input-md form-control js-user-login__phone-code-value" placeholder="输入手机号">
+                                                            <span class="input-group-btn"><button class="input-md ipt-btn btn-default forgot-pwd__phone-vaild-btn" type="button" style="width:135px;">获取手机动态码</button></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-6 control-label">短信动态码：</label>
+                                                    <div class="col-sm-16">
+                                                        <input type="text" name="code" class="form-ipt input-md" >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pst-justify m-t-lg m-b-md">
+                                                    <div class="btn-box col-sm-offset-6 col-sm-16 col-md-16">
+                                                        <ul class=" ul-list">
+                                                            <li><div  class="next form-df-btn bg-m-blue">下一步</div></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                            <figure class="reset-pwd progress-item" data-toggle="1">
+                                                <div class="form-group">
+                                                    <label class="col-sm-6 control-label">创建新密码：</label>
+                                                    <div class="col-sm-16">
+                                                        <input type="password" name="npwd" class="form-ipt input-md"  datatype="*6-16" nullmsg="请输入新密码" errormsg="密码范围在6~16位之间！">
+                                                        <div class="Validform_checktip"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-6 control-label">确认新密码：</label>
+                                                    <div class="col-sm-16">
+                                                        <input type="password" name="verifypwd" class="form-ipt input-md"  recheck="npwd" datatype="*" nullmsg="请确认新密码" errormsg="您两次输入的账号密码不一致！">
+                                                        <div class="Validform_checktip"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group pst-justify m-t-lg m-b-md">
+                                                    <div class="btn-box col-sm-offset-6 col-sm-16 col-md-16">
+                                                        <ul class=" ul-list">
+                                                            <li><button type='submit' class="form-df-btn bg-m-blue">保存</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </figure>
+                                        </form>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+</body>
+
+<script src="javascript/Validform_v5.3.2_min.js" cache="false"></script>
+<script src="javascript/jquery.easing.min.js" charset="UTF-8"></script>
+<script src="javascript/log.question.js" charset="UTF-8"></script>
+<script>
+    (function($){
+
+        $('.form-box').Validform({
+            tiptype:function(msg,o,cssctl){
+                var obj_tip;
+                if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                    obj_tip=o.obj.siblings(".Validform_checktip");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }else{
+                    obj_tip=o.obj.find("#msgdemo");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }
+            },
+            ajaxPost:true,
+            callback:function(form){
+                form[0].submit();
+                return false;
+            }
+        });
+    })(jQuery);
+</script>
+</html>

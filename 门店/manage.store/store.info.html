@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="../javascript/select2/select2.css" />
+    <link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+    <script src="../javascript/jquery-2.1.1.min.js"></script>
+    <script src="../javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <div class="sel-service dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">切换至POS服务<b class="m-l-sm caret"></b> </a>
+            <ul class="dropdown-menu animated fadeIn">
+                <li> <a href="#">XXX</a> </li>
+                <li> <a href="#">ABCD</a> </li>
+            </ul>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">
+                    <i class="nav-ico ico-package m-r-sm"></i>下载 X-lite
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a href="#">
+                    <i class="nav-ico ico-msg"></i><span class="badge badge-sm up bg-danger m-l-n-sm count" style="display: inline-block;">3</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">13608734678<b class="m-l-sm icon-wrap"></b> </a>
+                <ul class="dropdown-menu animated fadeInRight">
+                    <li> <a href="#">我的账号</a> </li>
+                    <li> <a href="#">用户手册</a> </li>
+                    <li> <a href="#">关于</a> </li>
+                    <li> <a href="#" data-toggle="ajaxModal">退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item active"><a href="../store.management.html"><i class="ico ico-store"></i>门店配置</a></li>
+                            <li class="nav-item"><a href="../user.management.html"><i class="ico ico-user"></i>员工配置</a></li>
+                            <li class="nav-item"><a href="../menu.management.html"><i class="ico ico-menu"></i>菜品配置</a></li>
+                            <li class="nav-item"><a href="../report.detail.html"><i class="ico ico-report"></i>报表</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <!-- Form -->
+            <section id="content" >
+                <section class="vbox store-st-wrapper">
+                    <section class=" scrollable padder">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel default-title">
+                                <div class="t-txt navbar-left">门店管理 - 创建门店</div>
+                                <div class="back-link navbar-right"><a href="javascript:window.history.go(-1);">返回</a></div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="menu-panel">
+                                <section class="panel">
+                                    <nav>
+                                        <div class="ul-list step-instr">
+                                            <div class="col-sm-6 col-md-6 ta-r step-item txt-st active">门店信息</div>
+                                        </div>
+                                    </nav>
+                                    <div class="panel-body">
+                                        <form id="f_store_info" class="form-box" role="form">
+                                            <div class="form-group">
+                                                <label class="col-sm-6 col-md-6 control-label"><span class="warn-required">*</span>品牌：</label>
+                                                <div class="col-sm-16 col-md-16">
+                                                    <input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+                                                    <div class="Validform_checktip"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-6 col-md-6 control-label"><span class="warn-required">*</span>门店名称：</label>
+                                                <div class="col-sm-16 col-md-16">
+                                                    <input type="tel" name="telephone" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+                                                    <div class="Validform_checktip"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-6 col-md-6 control-label"><span class="warn-required">*</span>类型：</label>
+                                                <div class="col-sm-16 col-md-16">
+                                                    <select id="sel_category" class="input-sm st-w100"></select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-6 col-md-6 control-label"><span class="warn-required">*</span>地址：</label>
+                                                <div class="col-sm-18 col-md-18">
+                                                    <ul class="ul-list">
+                                                        <li class="address-item">
+                                                            <select id="loc_province" class=""></select></li>
+                                                        <li class="address-item">
+                                                            <select id="loc_city" class=""></select></li>
+                                                        <li class="address-item">
+                                                            <select id="loc_town"></select>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-6 col-md-6 control-label"><span class="warn-required">*</span>地图：</label>
+                                                <div class="col-sm-16 col-md-16">
+                                                    <input class="input-sm form-ipt" type="text" placeholder="详细地址"/>
+                                                    <button id="address_dt_sea" class="comm-btn input-sm">搜索</button>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-6 col-md-offset-6 btn-box col-sm-16 col-md-16">
+                                                    <div class="pst-map-box"></div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pst-justify m-t-lg m-b-md">
+                                                <button class="btn form-df-btn bg-m-blue">提交审核</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+</body>
+
+<script src="../javascript/Validform_v5.3.2_min.js" cache="false"></script>
+<!-- select2 -->
+<script src="../javascript/select2/select2.min.js"></script>
+<script src="../javascript/select2/select2_zh-CN.js"></script>
+<script type="text/javascript" src="../javascript/area/location.js"></script>
+<script type="text/javascript" src="../javascript/area/area.js"></script>
+
+<script>
+
+    (function($){
+
+        $('#sel_category').select2({
+         /*   ajax: {
+                url: "url",
+                dataType: 'json',
+                delay: 250,
+                data: function (term, page) {
+                    console.log(term);
+                    return {
+                        keyword : term,//输入的内容，会发给服务器进行查找
+                        //以下两行可以在数据量大的时候用到（当下拉框往下拉的时候会加载下一页），数据量不大的时候，可以直接注释
+                        pagesize : 20,//页面大小
+                        page : page //当前页
+                    };
+                },
+                results: function (data, page) {
+                    var more = (page * ${tpagesize}) < data.total;   //判断是还有记录
+                    return {
+                        results: data.rows , more : more
+                    };
+                }
+            },*/
+            escapeMarkup: function (markup) { return markup; },
+            //  minimumInputLength: 1,
+            formatResult: function(row) {//选中后select2显示的 内容
+                return row.name;
+            },
+            formatSelection: function(row) { //选择的时候，需要保存选中的id
+                $("#personid").val(row.id);
+                return row.name;//选择时需要显示的列表内容
+            }
+        });
+
+        $("#f_store_info").Validform({
+            tiptype:function(msg,o,cssctl){
+                var obj_tip;
+                if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                    obj_tip=o.obj.siblings(".Validform_checktip");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }else{
+                    obj_tip=o.obj.find("#msgdemo");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }
+            },
+            ajaxPost:true,
+            callback:function(form){
+                form[0].submit();
+                return false;
+            }
+        });
+
+    })(jQuery);
+</script>
+</html>

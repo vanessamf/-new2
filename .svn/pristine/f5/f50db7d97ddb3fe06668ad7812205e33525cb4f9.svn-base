@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>门店管理</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="../css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/select2-4.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="../css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="../fonts/iconfont.css">
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+				<div class="logo-box  bg-m-blue">
+					<a href="#" class="navbar-brand">易云点 · 商户自助平台</a>
+				</div>
+				<ul class="navbar navbar-right hidden-xs nav-user">
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">选择语言: zh-CN<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=en-US">英语(美国)</a>
+							</li>
+							<li>
+								<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=zh-CN">中文(简体，中国)</a>
+							</li>
+						</ul>
+					</li>
+					<li class="sel-service dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">下载云POS<b class="m-l-sm caret"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/DownLoad?DownLoad=windows">Windows版</a>
+							</li>
+							<li>
+								<a href="#" style="background-color:#d3d3d3">Android版</a>
+							</li>
+							<li>
+								<a href="#yydCode" data-toggle="modal">移动版</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="userId">13962519703</b><b class="m-l-sm icon-wrap"></b> </a>
+						<ul class="dropdown-menu animated fadeInRight">
+							<li>
+								<a href="/home/myaccount">我的账户</a>
+							</li>
+							<li>
+								<a href="/home/About">关于我们</a>
+							</li>
+							<li>
+								<a href="/home/SignOut">退出</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav" class="as-md bg-dark">
+						<section class="vbox">
+							<nav class="m-nav-primary">
+								<ul class="left-menu">
+									<li id="shanghuSetting.html">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-list"></i> 报表
+										</a>
+									</li>
+									<li id="">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-zhuotaiguanli"></i> 桌台管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../deskAreas.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>厅面区域</span>
+												</a>
+											</li>
+											<li>
+												<a href="../deskManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>桌台维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="monitoringSetting.html">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-caipin"></i> 菜品管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../menu.html" title="厅面区域">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品类别</span>
+												</a>
+											</li>
+											<li>
+												<a href="../menuManagement.html" class="active">
+													<i class="iconfont icon-you3"></i>
+													<span>菜品维护</span>
+												</a>
+											</li>
+											<li>
+												<a href="../printManagement.html" class="">
+													<i class="iconfont icon-you3"></i>
+													<span>打印设置</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javasript:void(0)">
+											<i class="iconfont icon-caiwuguanli2"></i> 财务管理
+											<i class="iconfont icon-you3 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="../financialManagement.html" title="付款方式">
+													<i class="iconfont icon-you3"></i>
+													<span>付款方式</span>
+												</a>
+											</li>
+											<li>
+												<a href="../discountManagement.html">
+													<i class="iconfont icon-you3"></i>
+													<span>折扣模板</span>
+												</a>
+											</li>
+											<li>
+												<a href="../giveDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>赠菜原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="../returnDishes.html">
+													<i class="iconfont icon-you3"></i>
+													<span>退菜原因</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="" class="active">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-renyuan1"></i> 人员门店管理
+											<i class="iconfont icon-xia1 sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: block;">
+											<li>
+												<a href="../storeManagement.html" title="门店管理" class="active">
+													<i class="iconfont icon-you3"></i>
+													<span>门店管理</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员角色</span>
+												</a>
+											</li>
+											<li>
+												<a href="">
+													<i class="iconfont icon-you3"></i>
+													<span>人员维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li id="">
+										<a href="">
+											<i class="iconfont icon-mendian1"></i> 系统配置
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+					</aside>
+					<section id="menu_content" class="management-right">
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增门店</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-4 no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+										<li class="tab-nav col-sm-4 no-padding">
+											<a href="#tab3" data-toggle="tab" aria-expanded="false">头部设置</a>
+										</li>
+										<li class="tab-nav col-sm-4 no-padding">
+											<a href="#tab5" data-toggle="tab" aria-expanded="false">尾部设置</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<div class="">
+												<h4 class="ta-c" id="myModalLabel">门店信息</h4>
+											</div>
+											<form id="f_store_info" class="form-box" role="form">
+												<div class="form-group">
+													<label class="col-sm-3 col-md-3 control-label"><span class="warn-required">*</span>品牌：</label>
+													<div class="col-sm-8 col-md-8">
+														<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														<div class="Validform_checktip"></div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 col-md-3 control-label"><span class="warn-required">*</span>门店名称：</label>
+													<div class="col-sm-8 col-md-8">
+														<input type="tel" name="telephone" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														<div class="Validform_checktip"></div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 col-md-3 control-label"><span class="warn-required">*</span>类型：</label>
+													<div class="col-sm-8 col-md-8">
+														<select id="sel_category" class="input-sm st-w100">
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 col-md-3 control-label"><span class="warn-required">*</span>地址：</label>
+													<div class="col-sm-8 col-md-8">
+														<ul class="address-list flex flex-between">
+															<li class="address-item">
+																<select id="loc_province" class=""></select>
+															</li>
+															<li class="address-item">
+																<select id="loc_city" class=""></select>
+															</li>
+															<li class="address-item">
+																<select id="loc_town"></select>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 col-md-3 control-label"><span class="warn-required">*</span>地图：</label>
+													<div class="col-xs-12 col-sm-8 col-md-8">
+														<input class="input-sm form-ipt" type="text" placeholder="详细地址">
+													</div>
+													<button id="address_dt_sea" class="comm-btn input-sm col-xs-2  col-sm-1 col-md-1">搜索</button>
+												</div>
+												<div class="form-group">
+													<div class="col-sm-offset-3 col-md-offset-3 btn-box col-sm-8 col-md-8">
+														<div class="pst-map-box"></div>
+													</div>
+												</div>
+
+											</form>
+										</div>
+										<div id="tab3" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal store-form" role="form">
+												<div class="col-sm-7 col-lg-8">
+													<div class="form-group">
+														<div class="col-sm-11 col-sm-push-1">
+															<div class="form-group col-sm-6 no-padding mg-b-clear">
+																<label class="col-sm-6 col-md-6 control-label"></span>排序方式：</label>
+																<div class="col-sm-6 col-md-6  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                    <span class="dropdown-label">左</span><span class="sel-arrow"><b></b></span>
+							                                                </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active">
+																					<a href="#"><input type="radio" name="d-s-r" checked>左</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">中</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">右</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group col-sm-6  no-padding mg-b-clear">
+																<label class="col-sm-6 col-md-6 control-label">字体：</label>
+																<div class="col-sm-6 col-md-6  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                     <span class="dropdown-label">默认</span><span class="sel-arrow"><b></b></span>
+							                                                 </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active">
+																					<a href="#"><input type="radio" name="d-s-r" checked>默认</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍高</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍宽</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍大小</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">1：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">2：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">3：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">4：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">5：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">6：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-5 col-lg-4">
+													<div class="form-group">
+														<label class="col-sm-12 col-md-12 control-label logo-txt">logo图片：</label>
+														<div class="col-sm-12 col-md-12" style="position: relative;">
+															<div class="img-container"></div>
+															<input class="img-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+															<div id="" class="flex flex-between img-btn-wrapper">
+																<span class="img-btn upload-btn">上传图片</span>
+																<span class="img-btn">清空</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab5" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal store-form" role="form">
+												<div class="col-sm-7 col-lg-8">
+													<div class="form-group">
+														<div class="col-sm-11 col-sm-push-1">
+															<div class="form-group col-sm-6 no-padding mg-b-clear">
+																<label class="col-sm-6 col-md-6 control-label"></span>排序方式：</label>
+																<div class="col-sm-6 col-md-6  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                    <span class="dropdown-label">左</span><span class="sel-arrow"><b></b></span>
+							                                                </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active">
+																					<a href="#"><input type="radio" name="d-s-r" checked>左</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">中</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">右</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group col-sm-6  no-padding mg-b-clear">
+																<label class="col-sm-6 col-md-6 control-label">字体：</label>
+																<div class="col-sm-6 col-md-6  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                     <span class="dropdown-label">默认</span><span class="sel-arrow"><b></b></span>
+							                                                 </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active">
+																					<a href="#"><input type="radio" name="d-s-r" checked>默认</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍高</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍宽</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍大小</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">1：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">2：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">3：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">4：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">5：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-1 col-md-1 control-label">6：</label>
+														<div class="col-sm-11 col-md-11">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-5 col-lg-4">
+													<div class="form-group">
+														<label class="col-sm-12 col-md-12 control-label logo-txt">尾部图片：</label>
+														<div class="col-sm-12 col-md-12" style="position: relative;">
+															<div class="img-container"></div>
+															<input class="img-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+															<div id="" class="flex flex-between img-btn-wrapper">
+																<span class="img-btn upload-btn">上传图片</span>
+																<span class="img-btn">清空</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="../javascript/jquery-2.1.1.min.js"></script>
+	<script src="../javascript/main.comm.js"></script>
+	<script src="../javascript/tab.js"></script>
+	<!-- select2 -->
+	<script src="../javascript/select2/select2-4.js" cache="false"></script>
+	<script src="../javascript/select2/select2_zh-CN.js"></script>
+	<script type="text/javascript" src="../javascript/area/location.js"></script>
+	<script type="text/javascript" src="../javascript/area/area.js"></script>
+	<script src="../javascript/Validform_v5.3.2_min.js" cache="false"></script>
+	<script>
+		(function($) {
+			//tab滑动
+			var tabWidth = $(".tab-nav").eq(0).outerWidth();
+			var tabContentWidth = $(".tab-content").outerWidth();
+			$(".line").outerWidth(tabWidth);
+			var curLeft = $(".line").css("left");
+			var isMouseOver = true; //控制鼠标移上移下事件和click事件的冲突
+			$(".tab-nav").hover(function() {
+				isMouseOver = true;
+				//				var i = $(this).index();
+				//				var leftWidth = tabWidth * i + "px";
+				//				$(".line").css("left", leftWidth);
+			}, function() {
+				if(isMouseOver) {
+					$(".line").css("left", curLeft);
+				}
+			})
+			$(".tab-nav").on("click", function() {
+				isMouseOver = false;
+				var i = $(this).index();
+				var leftWidth = tabWidth * i + "px";
+				curLeft = leftWidth;
+				$(".line").css("left", leftWidth);
+				setTranslateX(-i * tabContentWidth);
+			})
+			var setTranslateX = function(translateX) {
+				$(".tab-content>.tab-pane").css({
+					"transform": "translateX(" + translateX + "px)",
+					"webkitTransform": "translateX(" + translateX + "px)",
+				});
+			}
+		})(jQuery);
+	</script>
+	<script>
+		(function($) {
+			//类型数据
+			var initdata = ["请选择", "直营", "加盟"];
+			$('#sel_category').select2({
+				/*ajax: {
+				     url: "url",
+				     dataType: 'json',
+				     delay: 250,
+				     data: function (term, page) {
+				         return {
+				             keyword : term,//输入的内容，会发给服务器进行查找
+				             //以下两行可以在数据量大的时候用到（当下拉框往下拉的时候会加载下一页），数据量不大的时候，可以直接注释
+				             pagesize : 20,//页面大小
+				             page : page //当前页
+				         };
+				     },
+				     results: function (data, page) {
+				         var more = (page * ${tpagesize}) < data.total;   //判断是还有记录
+				         return {
+				             results: data.rows , more : more
+				         };
+				     }
+				}, */
+				//				placeholder: "全部",
+				data: initdata,
+				escapeMarkup: function(markup) {
+					return markup;
+				},
+				//  minimumInputLength: 1,
+				formatResult: function(row) { //选中后select2显示的 内容
+					return row.name;
+				},
+				formatSelection: function(row) { //选择的时候，需要保存选中的id
+					$("#personid").val(row.id);
+					return row.name; //选择时需要显示的列表内容
+				}
+			});
+
+			$("#f_store_info").Validform({
+				tiptype: function(msg, o, cssctl) {
+					var obj_tip;
+					if(!o.obj.is("form")) { //验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+						obj_tip = o.obj.siblings(".Validform_checktip");
+						cssctl(obj_tip, o.type);
+						obj_tip.text(msg);
+					} else {
+						obj_tip = o.obj.find("#msgdemo");
+						cssctl(obj_tip, o.type);
+						obj_tip.text(msg);
+					}
+				},
+				ajaxPost: true,
+				callback: function(form) {
+					form[0].submit();
+					return false;
+				}
+			});
+		})(jQuery);
+	</script>
+
+</html>

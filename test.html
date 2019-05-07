@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+
+	<head>
+		<meta charset="utf-8" />
+		<title>报表-首页</title>
+		<meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/select2.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/theme.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="javascript/select2/jquery.editable-select.css" type="text/css" cache="false" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+		<link rel="stylesheet" href="css/app.auto.css" type="text/css">
+		<link rel="stylesheet" href="fonts/iconfont.css">
+		<link rel="stylesheet" href="css/iValidate.css">
+
+	</head>
+
+	<body>
+		<section class="vbox gc-container">
+			<header id="menu_header" class="bg-m-blue navbar">
+			</header>
+			<section>
+				<section class="hbox management-wrapper stretch">
+					<!-- aside -->
+					<aside id="nav1" class="as-md bg-dark">
+						<section class="vbox">
+							<nav class="m-nav-primary">
+								<ul class="left-menu">
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-list"></i> 报表
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a data-url="pages/report.html" data-title="报表-首页">
+													<span>首页</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/rptMenu.html" data-title="报表-菜品销售报表" title="菜品销售报表">
+													<span>菜品销售报表</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/rptSys.html" data-title="报表-菜品销售报表" data-name="rptSys">
+													<span>系统销售报表</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-zhuotaiguanli"></i> 桌台管理
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a data-url="pages/deskAreas.html" data-title="桌台管理-厅面区域" title="厅面区域" >
+													<span>厅面区域</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/deskManagement.html" data-title="桌台管理-桌台维护" >
+													<span>桌台维护</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" class="" style="pointer-events: none;color: #000; ">
+													<span>消费类型</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-caipin"></i> 菜品管理
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="javascript:void(0);" data-url="pages/menu.html" data-title="菜品管理-菜品类别" data-name="menu">
+													<span>菜品类别</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/menuManagement.html" data-title="菜品管理-菜品维护">
+													<span>菜品维护</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/methodsCategory.html" data-title="菜品管理-做法类别">
+													<span>做法类别</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/methodsManagement.html" data-title="菜品管理-做法管理">
+													<span>做法管理</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/printManagement.html" data-title="菜品管理-打印设置">
+													<span>打印设置</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/financialCategory.html" data-title="菜品管理-财务类别">
+													<span>财务类别</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="left-item">
+										<a href="javasript:void(0)">
+											<i class="iconfont icon-caiwuguanli2"></i> 财务管理
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="javascript:void(0);" data-url="pages/financialManagement.html" data-title="财务管理-付款方式" title="付款方式">
+													<span>付款方式</span>
+												</a>
+											</li>
+											<li>
+												<a href="" style="pointer-events: none;color: #000; ">
+													<span>折扣原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/discountManagement.html" data-title="财务管理-折扣模板">
+													<span>折扣模板</span>
+												</a>
+											</li>
+											<li>
+												<a href="" style="pointer-events: none;color: #000; ">
+													<span>服务费用</span>
+												</a>
+											</li>
+											<li>
+												<a href="" style="pointer-events: none;color: #000; ">
+													<span>税</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/refund.html" data-title="财务管理-反结算原因">
+													<span>反结算原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/returnDishes.html" data-title="财务管理-退菜原因">
+													<span>退菜原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/giveDishes.html" data-title="财务管理-赠菜原因">
+													<span>赠菜原因</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/remarks.html" data-title="财务管理-备注">
+													<span>备注</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-mendian1"></i> 人员门店管理
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="javascript:void(0);" data-url="pages/storeManagement.html" data-title="人员门店管理-门店管理" title="门店管理">
+													<span>门店管理</span>
+												</a>
+											</li>
+											<li>
+												<a href="" data-name="" style="pointer-events: none;color: #000; ">
+													<span>人员角色</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/staffManagement.html" data-title="人员门店管理-人员维护">
+													<span>人员维护</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-jiageyusuan"></i> 价格计划
+											<i class="iconfont icon-you-copy sup-arrow"></i>
+										</a>
+										<ul class="subList-nav lt" style="display: none;">
+											<li>
+												<a href="javascript:void(0);" data-url="pages/timeManagement.html" data-title="价格计划-时间段" title="时间段">
+													<span>时间段</span>
+												</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);" data-url="pages/saleTypeManagement.html" data-title="价格计划-销售类型" title="销售类型">
+													<span>销售类型</span>
+												</a>
+											</li>
+										</ul>
+									</li>
+									<li class="left-item">
+										<a href="javascript:void(0);">
+											<i class="iconfont icon-xitong"></i> 系统配置
+										</a>
+									</li>
+									<li class="left-item">
+										<a href="javascript:void(0);" data-url="pages/accountManagement.html" data-title="账号管理">
+											<i class="iconfont icon-renyuan1"></i> 账号管理
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</section>
+					</aside>
+					<section id="menu_content" class="management-right">
+
+					</section>
+				</section>
+			</section>
+		</section>
+	</body>
+	<script src="javascript/jquery-2.1.1.min.js"></script>
+	<script src="javascript/main.comm.js"></script>
+	<script src="javascript/tab.js"></script>
+	<script src="javascript/iValidate.js"></script>
+	<script src="javascript/dialog.js"></script>
+	<!-- select2 -->
+	<script src="javascript/select2/select2-4.js" cache="false"></script>
+	<script src="javascript/select2/select2_zh-CN.js"></script>
+	<!--Paginator-->
+	<script src="javascript/bootstrap-paginator.min.js"></script>
+	<script type="text/javascript" src="javascript/area/location.js"></script>
+	<script type="text/javascript" src="javascript/area/area.js"></script>
+	<script src="javascript/select2/jquery.editable-select.js"></script>
+	<!--日期-->
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.zh-CN.js"></script>
+	<script type="text/javascript" src="javascript/bootstrap-datetimepicker.fr.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".m-nav-primary .left-menu .left-item").find("a").first().trigger("click");
+			$(".m-nav-primary .left-menu .left-item").find(".subList-nav a").first().trigger("click");
+		});
+		//侧边菜单
+		$(document).on('click', '.left-menu>li>a', function(e) {
+			var $this = $(e.target);
+			//点击父菜单的时候的效果
+			if($(this).parent().find("ul").is(':visible')) {
+				$(this).find(".sup-arrow").addClass("icon-you-copy");
+				$(this).find(".sup-arrow").removeClass("icon-xia1");
+				$(this).next().slideUp(200);
+			} else {
+				$(this).parent().siblings("li").find("ul").slideUp(200);
+				$(this).parent().siblings("li").find(".sup-arrow").addClass("icon-you-copy");
+				$(this).parent().siblings("li").find(".sup-arrow").removeClass("icon-xia1");
+				$(this).find(".sup-arrow").removeClass("icon-you-copy");
+				$(this).find(".sup-arrow").addClass("icon-xia1");
+				$(this).next().slideDown(200);
+			}
+		});
+		$(document).on('click', '.left-menu li a', function(e) {
+			if($(this).parent().children("ul").length == 0) {
+				$(".left-menu>li").removeClass("active");
+				$(".subList-nav li a").removeClass("active");
+				$(this).parents(".left-item").addClass("active");
+				$(this).addClass("active");
+			}
+			$("#menu_content").load($(this).attr("data-url"), function() {
+				paginator();
+				tableWrapperHeight();
+				autoWidth();
+				dropdownSelect();
+			});
+			$(document).attr("title", $(this).attr("data-title"));
+		});
+
+		var paginator = function() {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				},
+				//				onPageClicked: function(type, page) {
+				//					if(page.data.page === 1) {
+				//						$("ul.pagination li:nth-child(3) a").css({
+				//							"color": "#ffffff",
+				//							"background-color": "#1a5cc6",
+				//							"border-color": "#1a5cc6"
+				//						})
+				//					}
+				//				}
+			};
+			$('#ft_pagination_menu').bootstrapPaginator(options);
+		}
+	</script>
+
+</html>

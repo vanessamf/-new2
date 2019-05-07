@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/components.css" type="text/css" cache="false" />
+    <link rel="stylesheet" href="css/app.auto.css" type="text/css">
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+</head>
+<body>
+<section class="vbox gc-container">
+    <header class="bg-m-blue navbar">
+        <div class="logo-box  bg-m-blue">
+            <a href="#" class="navbar-brand">商户自助平台</a>
+        </div>
+        <div class="sel-service dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">切换至POS服务<b class="m-l-sm caret"></b> </a>
+            <ul class="dropdown-menu caret animated fadeIn">
+                <li><a href="#">XXX</a></li>
+                <li><a href="#">ABCD</a></li>
+            </ul>
+        </div>
+        <ul class="navbar navbar-right hidden-xs nav-user">
+            <li class="hidden-xs">
+                <a href="#" class="">
+                    <i class="nav-ico ico-package m-r-sm"></i>下载 X-lite
+                </a>
+            </li>
+            <li class="hidden-xs">
+                <a href="#">
+                    <i class="nav-ico ico-msg"></i><span class="badge badge-sm up bg-danger m-l-n-sm count" style="display: inline-block;">3</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">13608734678<b class="m-l-sm icon-wrap"></b> </a>
+                <ul class="dropdown-menu caret animated fadeInRight">
+                    <li> <a href="#">我的账号</a> </li>
+                    <li> <a href="profile.html">用户手册</a> </li>
+                    <li> <a href="about.html">关于</a> </li>
+                    <li> <a href="modal.lockme.html" data-toggle="ajaxModal">退出</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section>
+        <section class="hbox stretch">
+            <!-- aside -->
+            <aside id="nav" class="as-md bg-dark">
+                <section class="vbox">
+                    <nav class="m-nav-primary">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="store.management.html"><i class="ico ico-store"></i>门店配置</a></li>
+                            <li class="nav-item active"><a href="#"><i class="ico ico-user"></i>员工配置</a></li>
+                            <li class="nav-item"><a href="menu.management.html"><i class="ico ico-menu"></i>菜品配置</a></li>
+                            <li class="nav-item"><a href="report.detail.html"><i class="ico ico-report"></i>报表</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </aside>
+            <!-- Main Options -->
+            <section id="content" >
+                <section class="vbox staff-wrapper">
+                    <section class="scrollable padder">
+                        <div class="bg-light ap-h100">
+                            <div class="menu-panel default-title">
+                                <div class="t-txt navbar-left">员工管理</div>
+                                <div class="back-link navbar-right"><a href="javascript:window.history.go(-1);">返回</a></div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="menu-panel menu-nav-header">
+                                <ul id="brand_list" class="ul-list brand-list">
+                                    <li class="store-item"><a href="#">黄焖鸡园区店</a></li>
+                                    <li class="store-item"><a href="#">黄焖鸡新区店</a></li>
+                                    <li class="store-item"><a href="#">黄焖鸡相城店</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="more-show dropdown-toggle" data-toggle="dropdown">更多</a>
+                                        <ul class="dropdown-menu more-nav-list animated fadeInDown">
+                                            <li> <a href="#">吉祥馄饨</a></li>
+                                            <li> <a href="#">如意馄饨</a></li>
+                                            <li> <a href="#">风味小炒</a></li>
+                                            <li> <a href="#">脏脏包</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="menu-panel menu-sub-nav-header default-title">
+                                <ul class="ul-list navbar-left">
+                                    <li> <a class="sm-round-btn input-sm" href="#cre_mod_staff" data-toggle="modal">+ 创建员工账号</a></li>
+                                </ul>
+                                <div class="input-group navbar-right">
+                                    <input type="text" class="store-name ipt-search" placeholder="员工姓名">
+                                    <span class="btn sm-round-btn input-sm">查询</span>
+                                </div>
+                            </div>
+                            <div class="ap-line"></div>
+                            <div class="panel">
+                                <div class="table-responsive">
+                                    <table class="staff-mana-tb table b-t b-light">
+                                        <thead>
+                                        <tr>
+                                            <th>权限</th>
+                                            <th>员工姓名</th>
+                                            <th>员工编号<span class="detail-desc">（账号）</span></th>
+                                            <th>管理权限</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>管理组</td>
+                                            <td>Daniel</td>
+                                            <td>001</td>
+                                            <td>管理平台、TC store</td>
+                                            <td>
+                                                <a class="staff-st-op" href="#cre_mod_staff" data-toggle="modal">编辑</a>
+                                                <ul class="status-st-toggle">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>管理组</td>
+                                            <td>Sea</td>
+                                            <td>003</td>
+                                            <td>管理平台、TC store</td>
+                                            <td>
+                                                <a class="staff-st-op" href="#cre_mod_staff" data-toggle="modal">编辑</a>
+                                                <ul class="status-st-toggle">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工组</td>
+                                            <td>Agnes</td>
+                                            <td>004</td>
+                                            <td>TC store</td>
+                                            <td>
+                                                <a class="staff-st-op" href="#cre_mod_staff" data-toggle="modal">编辑</a>
+                                                <ul class="status-st-toggle active">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>员工组</td>
+                                            <td>Tony</td>
+                                            <td>006</td>
+                                            <td>TC store</td>
+                                            <td>
+                                                <a class="staff-st-op" href="#cre_mod_staff" data-toggle="modal">编辑</a>
+                                                <ul class="status-st-toggle active">
+                                                    <li class="status-disabled"><span>停用</span></li>
+                                                    <li class="status-enabled"><span>启用</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <footer class="panel-footer">
+                                    <div class="row">
+                                        <ul id="ft_pagination" class="pagination"></ul>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+<div class="modal" id="modal_delivery_st" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">配送设置</h4>
+            </div>
+            <div class="modal-body">
+                <form action role="form">
+                    <div class="form-group">
+                        <label class="col-xs-5 col-sm-5 col-md-5 control-label">配送范围：</label>
+                        <div class="col-xs-19 col-sm-19 col-md-19">
+                            <input type="text" name="delivery-km" class="form-ipt input-sm"> 公里（方圆）
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-5 col-sm-5 col-md-5 control-label">起送费：</label>
+                        <div class="col-xs-19 col-sm-19 col-md-19">
+                            <input type="text" name="delivery-km" class="form-ipt input-sm"> 元
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-5 col-sm-5 col-md-5 control-label">配送费：</label>
+                        <div class="col-xs-19 col-sm-19 col-md-19">
+                            <input type="text" name="delivery-km" class="form-ipt input-sm"> 元
+                        </div>
+                    </div>
+                    <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 创建编辑员工信息-->
+<div class="modal" id="cre_mod_staff" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content wd-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">创建员工账号</h4>
+            </div>
+            <div class="modal-body">
+                <form class="staff-info-form" action role="form">
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">权限：</label>
+                        <div class="col-sm-19 btn-group m-r select-base">
+                            <button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+                                <span class="dropdown-label">员工组</span>
+                                <span class="sel-arrow"><b></b></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-select">
+                                <li class="active"><a href="#"><input type="radio" name="d-s-r"> 员工组</a></li>
+                                <li><a href="#"><input type="radio" name="d-s-r"> 管理组</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">员工姓名：</label>
+                        <div class="col-sm-19">
+                            <input type="text" name="delivery-km" class="form-ipt input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">员工编号：</label>
+                        <div class="col-sm-19">
+                            <input type="text" name="delivery-km" class="form-ipt input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">密码：</label>
+                        <div class="col-sm-19">
+                            <input type="password" name="password" class="form-ipt input-sm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-5 control-label">状态：</label>
+                        <div class="col-sm-19">
+                            <ul class="ul-list">
+                                <li class="choice-item"><input name="sel-time" id="rad_status_enabled" type="radio" class="ipt-choice ipt-rad input-sm" checked=""><label class="choice-lab rad-lb" for="rad_status_enabled"></label><span>启用</span></li>
+                                <li class="choice-item"><input name="sel-time" id="rad_status_disabled" type="radio" class="ipt-choice ipt-rad input-sm"><label class="choice-lab rad-lb" for="rad_status_disabled"></label><span>停用</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form-group ops-group">
+                        <ul class="ul-list modal-ops">
+                            <li><a class="modal-btn bg-light-blue" data-dismiss="modal" aria-hidden="true">取消</a></li>
+                            <li><a class="modal-btn bg-m-blue">确定</a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="javascript/menu.options.js" charset="UTF-8"></script>
+<script src="javascript/modal.menu.op.js" charset="UTF-8"></script>
+<!--Paginator-->
+<script src="javascript/bootstrap-paginator.min.js"></script>
+
+<script>
+    (function($){
+
+        // 下划线跟随导航滑动效果
+        var $brand_list = $("#brand_list");
+        $brand_list.lavaLamp({
+            fx: "backout",
+            speed: 700,
+            click: function(event, menuItem) {
+                return false;
+            }
+        });
+
+//        分页设置
+        var options = {
+            alignment:"right",   //靠右
+            bootstrapMajorVersion:3, //对应的bootstrap版本
+            currentPage: 2,  //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+            numberOfPages: 5, //每页页数
+            totalPages:10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+            shouldShowPage:true,  //是否显示该按钮
+/*
+           //点击事件
+            onPageClicked: function (event, originalEvent, type, page) {
+                location.href = "url/&page=" + page;
+            }*/
+        };
+        $('#ft_pagination').bootstrapPaginator(options);
+
+    })(jQuery);
+</script>
+</html>

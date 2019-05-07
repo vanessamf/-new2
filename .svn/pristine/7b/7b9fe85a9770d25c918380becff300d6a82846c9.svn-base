@@ -1,0 +1,212 @@
+<div class="logo-box  bg-m-blue">
+	<a href="#" class="navbar-brand">易云点 · 商户自助平台</a>
+</div>
+<ul class="navbar navbar-right hidden-xs nav-user">
+	<li class="sel-service dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">选择语言: zh-CN<b class="m-l-sm caret"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=en-US">英语(美国)</a>
+			</li>
+			<li>
+				<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=zh-CN">中文(简体，中国)</a>
+			</li>
+		</ul>
+	</li>
+	<li class="sel-service dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">下载云POS<b class="m-l-sm caret"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/home/DownLoad?DownLoad=windows">Windows版</a>
+			</li>
+			<li>
+				<a href="#" style="background-color:#d3d3d3">Android版</a>
+			</li>
+			<li>
+				<a href="#yydCode" data-toggle="modal">移动版</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="userId">13962519703</b><b class="m-l-sm icon-wrap"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/home/myaccount">我的账户</a>
+			</li>
+			<li>
+				<a href="#changeStore" data-toggle="modal">切换门店</a>
+			</li>
+			<li>
+				<a href="/home/About">关于我们</a>
+			</li>
+			<li>
+				<a href="/home/SignOut">退出</a>
+			</li>
+		</ul>
+	</li>
+</ul>
+
+<!--切换门店-->
+<div class="public-modal  modal fade" id="changeStore" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog md-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel">切换门店</h4>
+			</div>
+			<div class="modal-body changeStoreBody">
+				<form class="form-horizontal clearfloat">
+					<div class="form-group sm-form-group col-sm-24" style="margin-bottom: 15px;">
+						<div class="input-group">
+							<input type="text" class="form-control ipt-search" placeholder="排序码，名称">
+							<span class="btn sm-round-btn input-sm">查询</span>
+						</div>
+					</div>
+					<div class="col-sm-24">
+						<div class="menu-type method-type">
+							<!--<div class="checkbox type-title" style="padding-right: 22px;">
+								<label class="clearfloat">
+										<input style="display: none;">
+										<span class="col-sm-6">排序码</span>
+										<span class="col-sm-18">门店名称</span>
+								</label>
+							</div>-->
+							<ul class="dish-list store-list">
+								<li class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										<!--<span class="col-sm-6">1001</span>-->
+										<span class="col-sm-24">蒸菜系列做法</span>
+								</label>
+								</li>
+								<li class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										<!--<span class="col-sm-6">1001</span>-->
+										<span class="col-sm-24">门店一</span>
+								</label>
+								</li>
+								<li class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+										<span class="col-sm-6">1001</span>
+										<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<!--<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>-->
+								<li class="radio">
+									<label>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<span class="col-sm-6">1001</span>
+											<span class="col-sm-18">蒸菜系列做法蒸菜系列做dadasfasfas法蒸菜系列做法</span>
+									</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+				<div class="change-store-bottom">
+					<div class="row">
+						<ul id="ft_pagination_store" class="pagination"><li class="active disabled"><a title="Go to first page">第一页</a></li><li class="active disabled"><a title="Go to previous page">&lt;</a></li><li class="active disabled"><a title="Current page is 1">1</a></li><li><a title="Go to page 2">2</a></li><li><a title="Go to page 3">3</a></li><li><a title="Go to page 4">4</a></li><li><a title="Go to page 5">5</a></li><li><a title="Go to next page">&gt;</a></li><li><a title="Go to last page">末页</a></li></ul>
+					</div>
+				</div>
+		</div>
+			<!--<div class="mf modal-footer">
+				<button type="button" class="btn modal-btn">保存</button>
+				<button type="button" class="btn modal-btn" data-dismiss="modal">退出</button>
+			</div>-->
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+		(function($) {
+			//        分页设置
+			var options = {
+				alignment: "", //靠右
+				bootstrapMajorVersion: 3, //对应的bootstrap版本
+				currentPage: 1, //当前页数，EL表达式${currentPage }，获取从后台传过来的值
+				numberOfPages: 5, //每页页数
+				totalPages: 10, //总页数，EL表达式${totalPages }，获取从后台传过来的值
+				shouldShowPage: true, //是否显示该按钮
+				itemTexts: function(type, page, current) {
+					switch(type) {
+						case "first":
+							return "第一页";
+						case "prev":
+							return "<";
+						case "next":
+							return ">";
+						case "last":
+							return "末页";
+						case "page":
+							return page;
+					}
+				},
+				itemContainerClass: function(type, page, current) {
+					if(page === current) {
+						if(page === 1 || page === this.totalPages) {
+							return "active disabled";
+						} else {
+							return "active"
+						}
+					} else return ""
+				}
+			};
+			$('#ft_pagination_store').bootstrapPaginator(options);
+		})(jQuery);
+	</script>

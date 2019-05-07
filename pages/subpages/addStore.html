@@ -1,0 +1,359 @@
+						<section class="vbox menu-wrapper menu-container">
+							<div class="sub-title flex flex-between">
+								<span class="title-content">新增门店</span>
+								<span>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:void(0);">保存</a>
+									<a class="sm-round-btn sm-btn grey-btn" href="javascript:window.history.go(-1);">返回</a>
+						</span>
+							</div>
+							<div id="" class="detail-wrapper">
+								<div class="content-panel">
+									<ul class="nav nav-pills sub-nav tab-list clearfloat">
+										<li class="tab-nav col-sm-8 no-padding active">
+											<a href="#tab1" data-toggle="tab" aria-expanded="false">常规</a>
+										</li>
+										<li class="tab-nav col-sm-8 no-padding">
+											<a href="#tab3" data-toggle="tab" aria-expanded="false">头部设置</a>
+										</li>
+										<li class="tab-nav col-sm-8 no-padding">
+											<a href="#tab5" data-toggle="tab" aria-expanded="false">尾部设置</a>
+										</li>
+										<li class="line no-padding"></li>
+									</ul>
+									<div class="tab-content">
+										<div id="tab1" class="tab-pane active">
+											<div class="tab-form">
+												<h4 class="ta-c" id="myModalLabel">门店信息</h4>
+												<form id="f_store_info" class="form-horizontal form-box" role="form">
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label">品牌：</label>
+													<div class="col-sm-16 col-md-16 no-padding">
+														<input type="text" name="usr-name" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label">门店名称：</label>
+													<div class="col-sm-16 col-md-16 no-padding">
+														<input type="text" class="form-control ivalidate-box" data-validate-options="required: true">
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label">类型：</label>
+													<div class="col-sm-16 col-md-16 no-padding">
+														<select id="sel_category" class="input-sm st-w100">
+														</select>
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label">地址：</label>
+													<div class="col-sm-16 col-md-16 no-padding">
+														<ul class="address-list flex flex-between">
+															<li class="address-item">
+																<select id="loc_province" class=""></select>
+															</li>
+															<li class="address-item">
+																<select id="loc_city" class=""></select>
+															</li>
+															<li class="address-item">
+																<select id="loc_town"></select>
+															</li>
+														</ul>
+													</div>
+													<i class="col-sm-2 no-padding">*</i>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label">地图：</label>
+													<div class="col-xs-24 col-sm-16 col-md-16 no-padding">
+														<input class="form-control ivalidate-box" type="text" placeholder="详细地址" data-validate-options="required: true">
+													</div>
+													<i class="">*</i>
+													<button id="address_dt_sea" class="comm-btn input-sm col-xs-2 col-sm-2 col-md-1">搜索</button>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-6 col-md-6 col-lg-4 control-label"></label>
+													<div class="btn-box col-sm-16 col-md-16 no-padding">
+														<div class="pst-map-box"></div>
+													</div>
+												</div>
+											</form>
+										</div>
+										</div>
+										<div id="tab3" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal tab-form store-form clearfloat" role="form">
+												<div class="col-sm-14 col-lg-16">
+													<div class="form-group">
+														<div class="col-sm-22 col-sm-push-2">
+															<div class="form-group col-sm-12 no-padding mg-b-clear">
+																<label class="col-sm-12 col-md-12 control-label"></span>排序方式：</label>
+																<div class="col-sm-12 col-md-12  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                    <span class="dropdown-label">左</span><span class="sel-arrow"><b></b></span>
+							                                                </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active dropdown-highlighted">
+																					<a href="#"><input type="radio" name="d-s-r" checked>左</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">中</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">右</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group col-sm-12  no-padding mg-b-clear">
+																<label class="col-sm-12 col-md-12 control-label">字体：</label>
+																<div class="col-sm-12 col-md-12  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                     <span class="dropdown-label">默认</span><span class="sel-arrow"><b></b></span>
+							                                                 </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active dropdown-highlighted">
+																					<a href="#"><input type="radio" name="d-s-r" checked>默认</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍高</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍宽</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍大小</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">1：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">2：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">3：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">4：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">5：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">6：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-10 col-lg-8">
+													<div class="form-group">
+														<label class="col-sm-24 col-md-24 control-label logo-txt">logo图片：</label>
+														<div class="col-sm-24 col-md-24" style="position: relative;">
+															<div class="img-container"></div>
+															<input class="img-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+															<div id="" class="flex flex-between img-btn-wrapper">
+																<span class="img-btn upload-btn">上传图片</span>
+																<span class="img-btn">清空</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div id="tab5" class="tab-pane">
+											<form id="f_store_info" class="form-horizontal tab-form store-form clearfloat" role="form">
+												<div class="col-sm-14 col-lg-16">
+													<div class="form-group">
+														<div class="col-sm-22 col-sm-push-2">
+															<div class="form-group col-sm-12 no-padding mg-b-clear">
+																<label class="col-sm-12 col-md-12 control-label"></span>排序方式：</label>
+																<div class="col-sm-12 col-md-12  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                    <span class="dropdown-label">左</span><span class="sel-arrow"><b></b></span>
+							                                                </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active dropdown-highlighted">
+																					<a href="#"><input type="radio" name="d-s-r" checked>左</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">中</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">右</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="form-group col-sm-12  no-padding mg-b-clear">
+																<label class="col-sm-12 col-md-12 control-label">字体：</label>
+																<div class="col-sm-12 col-md-12  no-padding">
+																	<div class="pull-left wd-100">
+																		<div class="btn-group m-r select-base">
+																			<button data-toggle="dropdown" class="select-btn  dropdown-toggle">
+							                                                     <span class="dropdown-label">默认</span><span class="sel-arrow"><b></b></span>
+							                                                 </button>
+																			<ul class="dropdown-menu dropdown-select">
+																				<li class="active dropdown-highlighted">
+																					<a href="#"><input type="radio" name="d-s-r" checked>默认</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍高</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍宽</a>
+																				</li>
+																				<li>
+																					<a href="#"><input type="radio" name="d-s-r">2倍大小</a>
+																				</li>
+																			</ul>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">1：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">2：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">3：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">4：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">5：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+													<div class="form-group">
+														<label class="col-sm-2 col-md-2 control-label">6：</label>
+														<div class="col-sm-22 col-md-22">
+															<input type="text" name="usr-name" class="form-ipt input-sm" datatype="*" nullmsg="请填写信息">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-10 col-lg-8">
+													<div class="form-group">
+														<label class="col-sm-24 col-md-24 control-label logo-txt">尾部图片：</label>
+														<div class="col-sm-24 col-md-24" style="position: relative;">
+															<div class="img-container"></div>
+															<input class="img-upload" type="file" id="test-image-file" name="test" accept="image/gif, image/jpeg, image/png, image/jpg">
+															<div id="" class="flex flex-between img-btn-wrapper">
+																<span class="img-btn upload-btn">上传图片</span>
+																<span class="img-btn">清空</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+	<script>
+		(function($) {
+			//类型数据
+			var initdata = ["请选择", "直营", "加盟"];
+			$('#sel_category').select2({
+				/*ajax: {
+				     url: "url",
+				     dataType: 'json',
+				     delay: 250,
+				     data: function (term, page) {
+				         return {
+				             keyword : term,//输入的内容，会发给服务器进行查找
+				             //以下两行可以在数据量大的时候用到（当下拉框往下拉的时候会加载下一页），数据量不大的时候，可以直接注释
+				             pagesize : 20,//页面大小
+				             page : page //当前页
+				         };
+				     },
+				     results: function (data, page) {
+				         var more = (page * ${tpagesize}) < data.total;   //判断是还有记录
+				         return {
+				             results: data.rows , more : more
+				         };
+				     }
+				}, */
+				//				placeholder: "全部",
+				data: initdata,
+				escapeMarkup: function(markup) {
+					return markup;
+				},
+				//  minimumInputLength: 1,
+				formatResult: function(row) { //选中后select2显示的 内容
+					return row.name;
+				},
+				formatSelection: function(row) { //选择的时候，需要保存选中的id
+					$("#personid").val(row.id);
+					return row.name; //选择时需要显示的列表内容
+				}
+			});
+		})(jQuery);
+	</script>
+<script>
+		(function($) {
+			//校验
+			// 显示位置配置
+			var config = {
+				position: {
+					at: 'center right' // tip显示位置
+				}
+			}
+			// 初始化验证对象
+			$(".ivalidate-box").each(function() {
+				iValidate.init(this, config);
+			});
+
+		})(jQuery);
+	</script>

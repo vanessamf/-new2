@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" class="app gn-noscroll">
+<head>
+    <meta charset="utf-8" />
+    <title>Notebook | Web Application</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script src="javascript/jquery-2.1.1.min.js"></script>
+    <script src="javascript/main.comm.js"></script>
+    <script src="javascript/main.js"></script>
+</head>
+<body>
+<section class="vbox login-box gc-container">
+    <section class="lg-wrapper scrollable">
+        <div class="content-wrapper  navbar-right col-sm-24 col-md-14">
+            <section class="modal-form-box">
+                <!-- 登录即注册 -->
+                <figure class="quick-form animated" style="display: block;">
+                    <div class="form-title">商户自助管理登录系统</div>
+                    <div class="form-group">
+                        <span class="">账号登录</span>
+                        <div class="navbar-right toggle-translate">普通方式登录</div>
+                    </div>
+                    <form id="phone_login_form" class="modal-form" action="/user/phone/register" role="form">
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-ipt input-md" placeholder="仅支持大陆手机号" datatype="m" nullmsg="请填写信息">
+                            <div class="Validform_checktip"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input name="code" type="text" class="input-md form-control js-user-login__phone-code-value" placeholder="短信验证码">
+                                <span class="input-group-btn"><button class="input-md ipt-btn btn-default js-user-login__phone-vaild-btn" style="width:96px;" type="button">获取验证码</button></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="comm-btn input-md">登录</button>
+                        </div>
+                        <div class="form-group">
+                            <div class="tip-box">提示： 登录时将自动注册平台账号，且代表您已同意 <a href="#">《商户自助管理平台用户协议》</a></div>
+                        </div>
+                    </form>
+                </figure>
+                <!-- 普通登录方式 手机号+ 密码-->
+                <figure class="static-form animated">
+                    <div class="form-title">商户自助管理登录系统</div>
+                    <div class="form-group">
+                        <span class="">账号登录</span>
+                        <div class="navbar-right toggle-translate">手机动态登录</div>
+                    </div>
+                    <form id="normal_login_form" class="modal-form" action="/user/phone/register" role="form">
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-ipt input-md" placeholder="仅支持大陆手机号" datatype="m" nullmsg="请输入手机号">
+                            <div class="Validform_checktip"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-ipt input-md" placeholder="密码" datatype="*" nullmsg="请输入密码">
+                            <div class="Validform_checktip"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="captchaInput input-group">
+                                <input name="cap" type="text" class="input-md form-control" placeholder="请输入图中的验证码">
+                                <span class="input-group-btn">
+                                <a id="loginReloadCaptcha" href="javascript:void(0)"><img data-src="/user/captcha?w=140&amp;h=40" class="captcha" width="140" height="40" src="/user/captcha?w=240&amp;h=50"></a>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="comm-btn input-md">登录</button>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox navbar-left"><label><input name="remember" type="checkbox" value="1" checked> 7天内自动登录</label></div>
+                            <div class="navbar-right"><a class="forgot-link" href="forgot.passwd.html">忘记密码</a></div>
+                        </div>
+                    </form>
+                </figure>
+            </section>
+        </div>
+        <div class="banner-wrapper col-sm-24 col-md-10">
+            <header class="hed-logo"><a href="#" class="navbar-brand" data-toggle="fullscreen">商户自助管理平台</a></header>
+            <div class="banner"></div>
+        </div>
+    </section>
+</section>
+</body>
+
+<script src="javascript/log.question.js" cache="false" charset="UTF-8"></script>
+<script src="javascript/Validform_v5.3.2_min.js" cache="false" charset="UTF-8"></script>
+<script>
+    (function($){
+        $(".modal-form").Validform({
+            tiptype:function(msg,o,cssctl){
+                var obj_tip;
+                if(!o.obj.is("form")){//验证表单元素时o.obj为该表单元素，全部验证通过提交表单时o.obj为该表单对象;
+                    obj_tip=o.obj.siblings(".Validform_checktip");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }else{
+                    obj_tip=o.obj.find("#msgdemo");
+                    cssctl(obj_tip,o.type);
+                    obj_tip.text(msg);
+                }
+            },
+            ajaxPost:true,
+            callback:function(form){
+                form[0].submit();
+                return false;
+            }
+        });
+    })(jQuery);
+</script>
+</html>

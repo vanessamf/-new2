@@ -1,0 +1,44 @@
+<div class="logo-box  bg-m-blue">
+	<a href="#" class="navbar-brand">易云点 · 商户自助平台</a>
+</div>
+<ul class="navbar navbar-right hidden-xs nav-user">
+	<li class="sel-service dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">选择语言: zh-CN<b class="m-l-sm caret"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=en-US">英语(美国)</a>
+			</li>
+			<li>
+				<a href="/Home/SetLanguage?returnUrl=%2fstore%2fdesk%2fEmployee&amp;culture=zh-CN">中文(简体，中国)</a>
+			</li>
+		</ul>
+	</li>
+	<li class="sel-service dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">下载云POS<b class="m-l-sm caret"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/home/DownLoad?DownLoad=windows">Windows版</a>
+			</li>
+			<li>
+				<a href="#" style="background-color:#d3d3d3">Android版</a>
+			</li>
+			<li>
+				<a href="#yydCode" data-toggle="modal">移动版</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b id="userId">13962519703</b><b class="m-l-sm icon-wrap"></b> </a>
+		<ul class="dropdown-menu animated fadeInRight">
+			<li>
+				<a href="/home/myaccount">我的账户</a>
+			</li>
+			<li>
+				<a href="/home/About">关于我们</a>
+			</li>
+			<li>
+				<a href="/home/SignOut">退出</a>
+			</li>
+		</ul>
+	</li>
+</ul>
