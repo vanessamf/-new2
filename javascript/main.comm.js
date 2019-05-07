@@ -701,8 +701,8 @@ function($) {
 
 
 $(document).ready(function() {
-	$("#menu_header").load("-new2/common/header.html");
-	$("#nav").load("-new2/common/nav.html");
+	$("#menu_header").load("/-new2/common/header.html");
+	$("#nav").load("/-new2/common/nav.html");
 });
 
 function quanxuan(a, b) {
